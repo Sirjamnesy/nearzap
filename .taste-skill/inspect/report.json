@@ -1,6 +1,6 @@
 {
  "url": "http://localhost:3222/",
- "at": "2026-11-14T18:31:53.539Z",
+ "at": "2026-11-14T18:53:40.393Z",
  "allow": [],
  "viewports": [
   {
@@ -28,7 +28,7 @@
      "h": 900
     },
     "page": {
-     "height": 3514,
+     "height": 3498,
      "screens": 3.9,
      "words": 260,
      "img": 0,
@@ -269,27 +269,6 @@
       "kind": "heading"
      },
      {
-      "text": "Near Zap",
-      "words": 2,
-      "chars": 8,
-      "lines": 1,
-      "size": 220,
-      "vw": 15.3,
-      "font": "Albert Sans",
-      "weight": 600,
-      "tracking": -0.035,
-      "leading": 1,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.92,
-      "top": 2946,
-      "tag": "h2",
-      "kind": "heading"
-     },
-     {
       "text": "Get paid from any chain, settled with NEAR Intents.",
       "words": 9,
       "chars": 51,
@@ -306,9 +285,30 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.31,
-      "top": 3190,
+      "top": 2970,
       "tag": "p",
       "kind": "statement"
+     },
+     {
+      "text": "Near Zap",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 220,
+      "vw": 15.3,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 3238,
+      "tag": "h2",
+      "kind": "heading"
      }
     ],
     "headingSummary": {
@@ -501,7 +501,7 @@
      "w": 1440,
      "h": 900
     },
-    "pageH": 3514,
+    "pageH": 3498,
     "margins": {
      "left": 40,
      "right": 65
@@ -626,7 +626,7 @@
       "sel": "footer.lp-foot2",
       "tag": "footer",
       "top": 2850,
-      "height": 665,
+      "height": 649,
       "words": 29,
       "media": 1,
       "middle": 13,
@@ -636,9 +636,9 @@
        "tag": "h2"
       },
       "left": 60,
-      "right": 316,
+      "right": 188,
       "textLeft": 60,
-      "textRight": 316,
+      "textRight": 188,
       "fullBleed": false,
       "footer": true,
       "hero": false,
@@ -695,18 +695,17 @@
    "width": 768,
    "height": 1024,
    "load": "load",
-   "screens": 5,
+   "screens": 4,
    "filled": [
-    1,
     1,
     1,
     1,
     1
    ],
    "motion": {
-    "elements": 12,
+    "elements": 7,
     "css": 0,
-    "transitions": 12,
+    "transitions": 7,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -717,7 +716,7 @@
      "h": 1024
     },
     "page": {
-     "height": 4102,
+     "height": 4094,
      "screens": 4,
      "words": 243,
      "img": 0,
@@ -973,8 +972,8 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.94,
-      "top": 3724,
+      "widthRatio": 1,
+      "top": 3941,
       "tag": "h2",
       "kind": "heading"
      }
@@ -1166,10 +1165,10 @@
      "w": 768,
      "h": 1024
     },
-    "pageH": 4102,
+    "pageH": 4094,
     "margins": {
      "left": 23,
-     "right": 113
+     "right": 68
     },
     "sections": [
      {
@@ -1291,7 +1290,7 @@
       "sel": "footer.lp-foot2",
       "tag": "footer",
       "top": 3670,
-      "height": 432,
+      "height": 424,
       "words": 29,
       "media": 0,
       "middle": 0,
@@ -1301,9 +1300,9 @@
        "tag": "h2"
       },
       "left": 23,
-      "right": 113,
+      "right": 68,
       "textLeft": 23,
-      "textRight": 113,
+      "textRight": 68,
       "fullBleed": false,
       "footer": true,
       "hero": false,
@@ -1355,9 +1354,9 @@
     1
    ],
    "motion": {
-    "elements": 12,
+    "elements": 7,
     "css": 0,
-    "transitions": 12,
+    "transitions": 7,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -1368,7 +1367,7 @@
      "h": 844
     },
     "page": {
-     "height": 3943,
+     "height": 3935,
      "screens": 4.7,
      "words": 243,
      "img": 0,
@@ -1645,8 +1644,8 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.92,
-      "top": 3570,
+      "widthRatio": 1,
+      "top": 3849,
       "tag": "h2",
       "kind": "heading"
      }
@@ -1838,7 +1837,7 @@
      "w": 390,
      "h": 844
     },
-    "pageH": 3943,
+    "pageH": 3935,
     "margins": {
      "left": 16,
      "right": 27
@@ -1963,7 +1962,7 @@
       "sel": "footer.lp-foot2",
       "tag": "footer",
       "top": 3530,
-      "height": 413,
+      "height": 405,
       "words": 29,
       "media": 0,
       "middle": 0,
@@ -1973,9 +1972,9 @@
        "tag": "h2"
       },
       "left": 16,
-      "right": 53,
+      "right": 35,
       "textLeft": 16,
-      "textRight": 53,
+      "textRight": 35,
       "fullBleed": false,
       "footer": true,
       "hero": false,
@@ -2059,7 +2058,7 @@
    "level": "FAIL",
    "id": "off-centre",
    "width": 768,
-   "message": "The page sits off-centre: its content comes to 23px from the left edge but only to 113px from the right, at 768px.",
+   "message": "The page sits off-centre: its content comes to 23px from the left edge but only to 68px from the right, at 768px.",
    "fix": "Give the page one pair of equal margins. Check the wrapper for a max-width without margin-inline: auto, a grid with an empty last column, or padding on one side only. If one side is meant to hold air, it must still be closed by something that reaches the margin (a picture, the navigation's last item, a figure)."
   }
  ],
