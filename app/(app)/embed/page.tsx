@@ -17,8 +17,8 @@ export default function Embed() {
 
   return (
     <>
-      <div className="iconh"><span className="ic"><Icon name="code" /></span><h1 style={{ margin: 0 }}>Pay button for your site</h1></div>
-      <p className="mut">Paste two lines on any website. Visitors click, choose any chain and token, and you receive exactly what they send.</p>
+      <div className="iconh"><span className="ic"><Icon name="code" /></span><h1 style={{ margin: 0 }}>Checkout button for your site</h1></div>
+      <p className="mut">Paste two lines on any website. Visitors click, pay from whatever wallet and chain they hold, and you receive exactly what they send.</p>
       <div className="card">
         <label>Your Pay me handle</label>
         <input value={handle} onChange={e => setHandle(e.target.value)} placeholder="ada" autoCapitalize="none" />
@@ -40,7 +40,7 @@ export default function Embed() {
         <h2>Your snippet</h2>
         <pre className="addr" style={{ overflowX: "auto", whiteSpace: "pre-wrap" }}><code>{snippet}</code></pre>
         <p><button onClick={copy} disabled={!clean}><Icon name={copied ? "check" : "copy"} /> {copied ? "Copied" : "Copy snippet"}</button></p>
-        <p className="hint">Works in plain HTML, Webflow, Framer, WordPress or Notion embeds. It is a link to your Pay me page, so there is nothing to host and no keys to share.</p>
+        <p className="hint">Works in plain HTML and should work anywhere that accepts a custom HTML snippet, such as Webflow, Framer, WordPress or a Shopify theme. It is a link to your Pay me page, so there is nothing to host and no keys to share.</p>
       </div>
     </>
   );

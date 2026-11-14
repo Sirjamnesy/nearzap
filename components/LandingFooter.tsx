@@ -7,9 +7,6 @@ export default function LandingFooter() {
   return (
     <footer className="lp-foot2">
       <div className="lp-foot2-in">
-        <h2 className="lp-word" aria-label="NearZap">
-          <span>Near</span><Logo /><span>Zap</span>
-        </h2>
         <p className="lp-foot2-tag">Get paid from any chain, settled with NEAR Intents.</p>
         <div className="lp-social" aria-hidden="true">
           <svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
@@ -18,10 +15,13 @@ export default function LandingFooter() {
           <svg viewBox="0 0 24 24" {...stroke}><path d="M21 12a8.5 8.5 0 0 1-12.4 7.5L3 21l1.6-5.4A8.5 8.5 0 1 1 21 12z" /></svg>
         </div>
         <nav className="lp-foot2-nav" aria-label="Footer">
-          <a href="/roadmap">Roadmap</a><a href="/invoices">Invoices</a><a href="/profile">Pay me page</a><a href="/agents">For agents</a><a href="/embed">Pay button</a>
+          <a href="/roadmap">Roadmap</a><a href="/invoices">Invoices</a><a href="/profile">Pay me page</a><a href="/agents">For agents</a><a href="/embed">Checkout button</a>
         </nav>
         <p className="lp-foot2-fine">© 2026 NearZap. Built solo for the NEAR Hackathon.</p>
       </div>
+      <h2 className="lp-word" aria-label="NearZap">
+        <span>Near</span><Logo /><span>Zap</span>
+      </h2>
     </footer>
   );
 }

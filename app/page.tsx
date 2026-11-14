@@ -55,9 +55,9 @@ export default function Landing() {
       <section className="lp-embed">
         <div className="lp-embed-card rise">
           <div className="lp-embed-copy">
-            <h2>Put a Pay button on any website</h2>
-            <p>Paste two lines. Visitors choose any chain and token, and you receive exactly what they send.</p>
-            <a className="lp-btn dark" href="/embed">Get your button</a>
+            <h2>Add a checkout button to any website</h2>
+            <p>Paste two lines on any page that takes a snippet. Visitors pay from whatever wallet and chain they hold, and you receive exactly what they send.</p>
+            <a className="lp-btn dark" href="/embed">Get your checkout button</a>
           </div>
           <div className="lp-embed-demo" data-ui aria-hidden="true">
             <div className="lp-embed-site"><b>Your site</b><span>Design course, $25</span><i className="lp-embed-pay"><Bolt />Pay with any crypto</i></div>
