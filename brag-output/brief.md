@@ -19,7 +19,6 @@ Extra cuts: vertical 9:16 after approval (not now)
 SCENES
 1 [0:00–7.2] Hook, building a real invoice in the /new form: Client name "Kite Studio"; + Add line items: "Logo design" 1 x 35.00, + Add another line: "Revisions" 3 x 5.00; the amount becomes a live total ending at $50.00; Ada / ada.near pre-filled; More options due date 12/01/2026; "Create link for $50.00" -> "Send this link" (Copy link -> Copied, "Invoice created" toast). Text: eyebrow "Invoices, not just payments", headline "Build the invoice. Send one link." (v4)
 2 [7.2–11.5] Client opens the invoice: "Invoice for Kite Studio", From Ada, Due 2026-12-01, Amount due $50.00, line-item table, then Pay with USDC / ETH / SOL / BTC and "Ada receives $50.00 USDC". Text: "Your client pays with whatever they hold." (v4)
-2 [0:03.5–0:07.5] The card's token list fans out one row per beat: USDC on Base 50.000 USDC, ETH on Ethereum 0.0272 ETH, SOL on Solana 0.6882 SOL, BTC on Bitcoin 0.000759 BTC. Text: "Your client pays with whatever they hold."
 3 [0:07.5–0:11] ETH row is picked; card turns into the pay view: Amount to send 0.0272 ETH, Address on Ethereum 0x7a3f…c91e, progress bar fills. Text: "Any chain. Any token."
 4 [0:11–0:14] Slow on purpose: progress completes, big round green Paid pops, "$50.00 received". Text: "You receive exactly $50.00. No gas."
 5 [0:14–0:18] Card slides into the embed demo: "Your site / Design course, $25" with the real "Pay with any crypto" button; two-line snippet types below; cursor clicks the button. Text: "Add a checkout button to any website."
