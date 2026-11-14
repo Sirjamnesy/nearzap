@@ -13,11 +13,11 @@ the client pays in ETH; it lands as a big round "Paid $50.00". Then the same ide
 One white product card travels through every scene on the brand's lime stage.
 
 FORMAT
-Length 22 s · Aspect 16:9 1920x1080 · 30 fps · Engine brag-slim (HTML drawn as a pure function of time, Playwright capture, ffmpeg)
+Length 24 s · Aspect 16:9 1920x1080 · 30 fps · Engine brag-slim (HTML drawn as a pure function of time, Playwright capture, ffmpeg)
 Extra cuts: vertical 9:16 after approval (not now)
 
 SCENES
-1 [0:00–0:03.5] Hook: dark ground, lime stage slides in. Card: "$" then "50" types in, "Copy link" pressed, "Link copied" toast. Text: "Type an amount. Copy the link."
+1 [0:00–5.25] Hook, the real /new form: "New invoice"; amount types 50, Client name "Kite Studio", What's it for "Logo design"; Your name "Ada" / NEAR account "ada.near" pre-filled (Remember my details); click "Create link for $50.00" -> "Send this link" screen with https://nearzap.vercel.app/i/k7m2qx, Copy link -> Copied, "Invoice created" toast. Text: "Type an amount. Copy the link." (v3)
 2 [0:03.5–0:07.5] The card's token list fans out one row per beat: USDC on Base 50.000 USDC, ETH on Ethereum 0.0272 ETH, SOL on Solana 0.6882 SOL, BTC on Bitcoin 0.000759 BTC. Text: "Your client pays with whatever they hold."
 3 [0:07.5–0:11] ETH row is picked; card turns into the pay view: Amount to send 0.0272 ETH, Address on Ethereum 0x7a3f…c91e, progress bar fills. Text: "Any chain. Any token."
 4 [0:11–0:14] Slow on purpose: progress completes, big round green Paid pops, "$50.00 received". Text: "You receive exactly $50.00. No gas."
@@ -70,3 +70,6 @@ ASSUMPTIONS
 
 DELIVERABLES
 brag-output/nearzap-launch-v2.mp4 (poster baked into frame 0), nearzap-launch-v1.jpg, contact sheet, share-copy.txt, source in work/
+
+VERSIONS
+v1 22 s original · v2 checkout-button wording (5058c9e) · v3 scene 1 shows the real create-invoice form and generated link; film 24 s, later scenes +2 s, music gains one bar.

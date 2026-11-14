@@ -52,6 +52,23 @@ body{font-family:"Albert Sans",system-ui,sans-serif;color:#fff;-webkit-font-smoo
 .paybtn{display:inline-flex;align-items:center;gap:14px;height:72px;padding:0 32px;border-radius:999px;background:#0f0f0f;color:#dafa9c;font-weight:600;font-size:26px;transform-origin:center}
 .code{position:absolute;left:1110px;top:610px;width:660px;height:150px;background:#0f0f0f;border-radius:24px;padding:28px 32px;font:500 21px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace;color:#d6d6d6;white-space:pre}
 .code .t{color:#dafa9c}
+/* real /new form + sent screen */
+.nh{font-size:40px;font-weight:700;letter-spacing:-.02em;position:absolute;left:0;top:0}
+.nsub{position:absolute;left:0;right:0;top:58px;font-size:20px;color:#667085;line-height:1.4}
+.nl{position:absolute;font-size:19px;color:#667085}
+.ni{position:absolute;background:#fff;border:1.5px solid #e6e8ec;border-radius:12px;padding:0 18px;font-size:23px;display:flex;align-items:center;color:#0f1419}
+.ni.ph{color:#a3a8b3}
+.ni.foc{border-color:#0a9b63;box-shadow:0 0 0 4px #bfe8d5}
+.nc{display:inline-block;width:3px;height:30px;background:#0f1419;margin-left:2px}
+.nchk{position:absolute;left:0;top:602px;font-size:19px;color:#667085;display:flex;align-items:center;gap:10px}
+.nchk i{width:22px;height:22px;border-radius:5px;background:#0a9b63;display:inline-flex;align-items:center;justify-content:center}
+.nbtn{position:absolute;left:0;right:0;top:660px;height:70px;border-radius:99px;background:#0f0f0f;color:#dafa9c;font-weight:600;font-size:24px;display:flex;align-items:center;justify-content:center}
+.naddr{position:absolute;left:0;right:0;top:136px;font-family:ui-monospace,Menlo,monospace;font-size:23px;background:#f9fafb;border:1.5px solid #e6e8ec;border-radius:12px;padding:20px 20px}
+.nrow{position:absolute;left:0;top:236px;display:flex;gap:12px}
+.nb2{height:62px;border-radius:99px;padding:0 26px;display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:22px}
+.nb2.d{background:#0f0f0f;color:#dafa9c}.nb2.s{border:1.5px solid #e6e8ec;color:#0f1419}
+.nhint{position:absolute;left:0;right:0;top:326px;font-size:19px;color:#667085;line-height:1.45}
+.ntoast{position:absolute;left:50%;top:740px;background:#0f0f0f;color:#fff;border-radius:99px;padding:16px 26px;font-size:21px;display:flex;gap:10px;align-items:center;white-space:nowrap}
 /* cursor */
 #cur{left:0;top:0;width:44px;height:44px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.25))}
 .ripple{position:absolute;width:80px;height:80px;border-radius:50%;border:3px solid #0f0f0f;margin:-40px 0 0 -40px}
@@ -77,6 +94,32 @@ body{font-family:"Albert Sans",system-ui,sans-serif;color:#fff;-webkit-font-smoo
   <div id="stage" class="abs"></div>
 
   <div id="card" class="card">
+    <!-- F: real new-invoice form -->
+    <div id="pF" class="panel">
+      <div class="nh">New invoice</div>
+      <div class="nsub">Enter an amount and get a link to send. Everything else is optional.</div>
+      <div class="nl" style="top:132px;left:0">Amount (USD)</div>
+      <div id="fAmt" class="ni" style="top:162px;left:0;right:0;height:78px;font-size:38px;font-weight:700"></div>
+      <div class="nl" style="top:262px;left:0">Client name (optional)</div>
+      <div id="fCli" class="ni" style="top:292px;left:0;right:0;height:62px"></div>
+      <div class="nl" style="top:376px;left:0">What's it for? (optional)</div>
+      <div id="fWhat" class="ni" style="top:406px;left:0;right:0;height:62px"></div>
+      <div class="nl" style="top:490px;left:0">Your name</div>
+      <div class="ni" style="top:520px;left:0;width:278px;height:62px">Ada</div>
+      <div class="nl" style="top:490px;left:302px">Your NEAR account</div>
+      <div class="ni" style="top:520px;left:302px;right:0;height:62px">ada.near</div>
+      <div class="nchk"><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Remember my details on this device</div>
+      <div id="fBtn" class="nbtn">Create invoice link</div>
+    </div>
+    <!-- S: send this link -->
+    <div id="pS" class="panel">
+      <div class="nh">Send this link</div>
+      <div class="nsub">Send it to Kite Studio. They open it and pay from any chain.</div>
+      <div class="naddr">https://nearzap.vercel.app/i/k7m2qx</div>
+      <div class="nrow"><div id="sCopy" class="nb2 d"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><g id="sCi"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></g><path id="sCk" d="M5 12.5l4.5 4.5L19 7.5" opacity="0"/></svg><span id="sCt">Copy link</span></div><div class="nb2 s">Preview as client</div></div>
+      <div class="nhint">Copy link: paste it into WhatsApp, email or a DM.</div>
+      <div id="sToast" class="ntoast"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dafa9c" stroke-width="2.2" stroke-linecap="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>Invoice created</div>
+    </div>
     <!-- A: invoice -->
     <div id="pA" class="panel">
       <div class="fhead"><span>Invoice for NearZap</span><span class="chip">Payment link</span></div>
@@ -158,32 +201,32 @@ function codeHTML(n) {
 }
 
 // cursor path: [time, x, y]
-const CUR = [ [1.5, 1760, 900], [2.05, 1215, 520], [2.4, 1215, 520], [3.0, 1500, 1100],
-              [6.9, 1840, 980], [7.55, 1430, 630], [8.2, 1430, 630], [8.6, 1700, 1100],
-              [15.6, 1840, 1000], [16.6, 1290, 548], [17.1, 1290, 548], [17.45, 1500, 1100] ];
+const SEGS = [
+  [[3.0, 1800, 1060], [3.55, 1640, 950], [3.9, 1640, 950], [4.5, 1318, 528], [4.95, 1318, 528], [5.35, 1520, 1100]],
+  [[8.9, 1840, 980], [9.55, 1430, 630], [10.2, 1430, 630], [10.6, 1700, 1100]],
+  [[17.6, 1840, 1000], [18.6, 1290, 548], [19.1, 1290, 548], [19.45, 1500, 1100]] ];
 function cursor(t) {
   const c = $('cur'); let vis = 0, x = 0, y = 0;
-  for (let i = 0; i < CUR.length - 1; i += 4) {
-    const seg = CUR.slice(i, i + 4);
-    if (t >= seg[0][0] && t <= seg[3][0]) {
-      vis = 1;
+  for (const seg of SEGS) {
+    const n = seg.length - 1;
+    if (t >= seg[0][0] && t <= seg[n][0]) {
       let a, b;
-      for (let j = 0; j < 3; j++) if (t >= seg[j][0] && t <= seg[j+1][0]) { a = seg[j]; b = seg[j+1]; }
+      for (let j = 0; j < n; j++) if (t >= seg[j][0] && t <= seg[j+1][0]) { a = seg[j]; b = seg[j+1]; }
       const k = eio(p(t, a[0], b[0] - a[0]));
       x = lerp(a[1], b[1], k); y = lerp(a[2], b[2], k);
-      vis = cl(Math.min((t - seg[0][0]) / .2, (seg[3][0] - t) / .25));
+      vis = cl(Math.min((t - seg[0][0]) / .2, (seg[n][0] - t) / .25));
     }
   }
   c.style.opacity = vis; c.style.transform = `translate(${x - 6}px,${y - 4}px)`;
 }
 function ripple(t) {
-  const r = $('ripple'); const clicks = [[2.25, 1215, 520], [7.75, 1430, 630], [16.875, 1290, 548]];
+  const r = $('ripple'); const clicks = [[3.75, 1640, 950], [4.75, 1318, 528], [9.75, 1430, 630], [18.875, 1290, 548]];
   let o = 0, s = 1, x = 0, y = 0;
   for (const [tc, cx, cy] of clicks) { const k = p(t, tc, .5); if (t >= tc && k < 1) { o = (1 - k) * .55; s = .4 + eo(k) * 1.2; x = cx; y = cy; } }
   r.style.opacity = o; r.style.left = x + 'px'; r.style.top = y + 'px'; r.style.transform = `scale(${s})`;
 }
 
-function seek(t) {
+function legacy(t) {
   // brand
   const bIn = eo(p(t, .1, .6)), bOut = eo(p(t, 17.8, .4));
   st($('brand'), bIn * (1 - bOut), 0, (1 - bIn) * -16);
@@ -262,7 +305,6 @@ function seek(t) {
   const pp = t >= 16.75 && t < 17.05 ? 1 - Math.abs((t - 16.9) / .15) : 0;
   $('paybtn').style.transform = `scale(${1 - pp * .05})`;
 
-  cursor(t); ripple(t);
 
   // end card
   const endOn = t >= 18.0;
@@ -275,6 +317,47 @@ function seek(t) {
   $('bB').style.transform = `translate(${(1 - hB) * 5}px,${(1 - hB) * 5}px)`; $('bB').style.opacity = hB;
   const nK = eo(p(t, 18.75, .7)); st($('endname'), nK, 0, (1 - nK) * 40);
   const tK = eo(p(t, 19.15, .7)); st($('endtag'), tK, 0, (1 - tK) * 30);
+}
+// scene 1 is the real /new flow; everything after plays the original timeline 2 s later
+const typ = (str, t, t0, rate) => str.slice(0, Math.max(0, Math.min(str.length, Math.floor((t - t0) / rate) + 1)));
+function field(el, val, ph, focus, t) {
+  const caret = focus && Math.floor(t * 2.6) % 2 === 0 ? '<span class="nc"></span>' : '';
+  el.classList.toggle('ph', !val); el.classList.toggle('foc', !!focus);
+  el.innerHTML = (val || ph).replace(/&/g,'&amp;').replace(/</g,'&lt;') + caret;
+}
+function seek(t) {
+  const L = t < 3 ? t : t < 5 ? 3 : t - 2;
+  legacy(L);
+  $('copy').style.display = 'none';
+  // panel A only once the client view arrives
+  $('pA').style.display = t < 5.24 ? 'none' : 'block';
+  if (t < 7.5) { const k = eo(p(t, 5.25, .45)); st($('pA'), k, 0, (1 - k) * 30); }
+  $('amt').textContent = '50'; $('caret').style.opacity = 0;
+  // form
+  const fOut = ei(p(t, 3.9, .25));
+  $('pF').style.display = t > 4.2 ? 'none' : 'block';
+  st($('pF'), 1 - fOut, 0, -fOut * 30);
+  const amt = t < 1.0 ? '' : t < 1.25 ? '5' : '50';
+  const cli = t < 1.5 ? '' : typ('Kite Studio', t, 1.5, .0833);
+  const what = t < 2.5 ? '' : typ('Logo design', t, 2.5, .0833);
+  field($('fAmt'), amt, '0.00', t > .7 && t < 1.45, t);
+  field($('fCli'), cli, 'Who is this for?', t >= 1.45 && t < 2.45, t);
+  field($('fWhat'), what, 'e.g. Logo design', t >= 2.45 && t < 3.5, t);
+  $('fBtn').textContent = amt === '50' ? 'Create link for $50.00' : 'Create invoice link';
+  const bp = t >= 3.68 && t < 3.88 ? 1 - Math.abs((t - 3.78) / .1) : 0;
+  $('fBtn').style.transform = `scale(${1 - bp * .03})`;
+  // sent screen
+  const sIn = eo(p(t, 4.1, .5)), sOut = ei(p(t, 4.98, .22));
+  $('pS').style.display = (t < 4.05 || t > 5.22) ? 'none' : 'block';
+  st($('pS'), sIn * (1 - sOut), 0, (1 - sIn) * 36 - sOut * 30);
+  const cp = t >= 4.75;
+  $('sCt').textContent = cp ? 'Copied' : 'Copy link';
+  $('sCi').style.opacity = cp ? 0 : 1; $('sCk').style.opacity = cp ? 1 : 0;
+  $('sCopy').style.background = cp ? '#0a9b63' : '#0f0f0f'; $('sCopy').style.color = cp ? '#fff' : '#dafa9c';
+  const tIn = back(p(t, 4.25, .45));
+  st($('sToast'), eo(p(t, 4.25, .25)), 0, (1 - tIn) * 30);
+  $('sToast').style.transform += ' translateX(-50%)';
+  cursor(t); ripple(t);
 }
 window.seek = seek;
 window.ready = document.fonts.ready.then(() => document.fonts.load('600 92px "Albert Sans"'));

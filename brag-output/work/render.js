@@ -2,7 +2,7 @@ const { chromium } = require('playwright');
 const { spawn } = require('child_process');
 const path = require('path');
 (async () => {
-  const FPS = 30, DUR = 22, out = process.argv[2];
+  const FPS = 30, DUR = 24, out = process.argv[2];
   const ff = spawn('ffmpeg', ['-y','-loglevel','error','-f','image2pipe','-framerate',String(FPS),'-c:v','mjpeg','-i','-',
     '-i','music_norm.wav','-c:v','libx264','-preset','slow','-crf','17','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k',
     '-movflags','+faststart','-shortest', out], { stdio: ['pipe','inherit','inherit'] });
