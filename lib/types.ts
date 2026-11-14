@@ -22,7 +22,12 @@ export interface PaymentAttempt {
   updatedAt: string;
   demo: boolean;
   demoDepositAt?: string;   // demo mode only: when the simulated deposit was made
+  partIndex?: number;       // which part (deposit / milestone) of the invoice this attempt pays; undefined = part 0
 }
+
+export interface ReceiveAsset { assetId: string; symbol: string; blockchain: string; decimals: number; price?: number }
+export interface Split { account: string; percent: number }   // share of each payment sent to another NEAR account
+export interface Part { label: string; cents: number }        // a deposit or milestone
 
 export interface Invoice {
   id: string;
@@ -32,15 +37,20 @@ export interface Invoice {
   clientName: string;
   clientEmail?: string;
   currency: "USDC";
-  payout: "intents-balance" | "near-wallet";
+  /** intents-balance: delivered to the payee's NEAR Intents balance (gasless). wallet / near-wallet: sent to an address on the chosen chain. */
+  payout: "intents-balance" | "wallet" | "near-wallet";
+  receive?: ReceiveAsset;   // what the payee receives; USDC on NEAR when absent
+  splits?: Split[];
+  parts?: Part[];           // deposit + balance or milestones; totalCents is their sum
+  handle?: string;          // set when created from a Pay me page
   items: LineItem[];
   totalCents: number;
-  dueDate: string;          // YYYY-MM-DD
+  dueDate: string;          // YYYY-MM-DD, or "" for no due date
   memo?: string;
   attempts: PaymentAttempt[];
 }
 
-export type InvoiceState = "open" | "pending" | "paid" | "refunded" | "overdue";
+export type InvoiceState = "open" | "pending" | "partial" | "paid" | "refunded" | "overdue";
 
 export interface TokenInfo {
   assetId: string; decimals: number; blockchain: string; symbol: string; price?: number;

@@ -3,20 +3,24 @@ import QRCode from "qrcode";
 import { getInvoice, updateInvoice } from "@/lib/store";
 import { getTokens, OneClickError, requestQuote } from "@/lib/oneclick";
 import { refreshInvoice } from "@/lib/refresh";
-import { invoiceState } from "@/lib/invoice";
+import { invoiceState, partState, partsOf } from "@/lib/invoice";
 
 export const dynamic = "force-dynamic";
 const MAX_ATTEMPTS = 10;
 
 export async function POST(req: Request, ctx: { params: Promise<{ id: string }> }) {
   const { id } = await ctx.params;
-  let body: { originAssetId?: string; refundTo?: string; dry?: boolean };
+  let body: { originAssetId?: string; refundTo?: string; dry?: boolean; partIndex?: number };
   try { body = await req.json(); } catch { return NextResponse.json({ error: "Invalid JSON." }, { status: 400 }); }
 
   const inv = await refreshInvoice(id);
   if (!inv) return NextResponse.json({ error: "Invoice not found." }, { status: 404 });
   if (invoiceState(inv) === "paid") return NextResponse.json({ error: "This invoice is already paid." }, { status: 409 });
   if (inv.attempts.length >= MAX_ATTEMPTS) return NextResponse.json({ error: "Too many payment attempts for this invoice." }, { status: 429 });
+
+  const partIndex = Number.isInteger(body.partIndex) ? (body.partIndex as number) : 0;
+  if (partIndex < 0 || partIndex >= partsOf(inv).length) return NextResponse.json({ error: "Unknown payment part." }, { status: 400 });
+  if (partState(inv, partIndex) === "paid") return NextResponse.json({ error: "That payment is already paid." }, { status: 409 });
 
   const refundTo = (body.refundTo ?? "").trim();
   if (refundTo.length < 8 || refundTo.length > 128 || /\s/.test(refundTo))
@@ -26,7 +30,7 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
     const tokens = await getTokens();
     const origin = tokens.find(t => t.assetId === body.originAssetId);
     if (!origin) return NextResponse.json({ error: "Unknown payment token." }, { status: 400 });
-    const attempt = await requestQuote({ invoice: inv, origin, refundTo, dry: !!body.dry });
+    const attempt = await requestQuote({ invoice: inv, origin, refundTo, dry: !!body.dry, partIndex });
     const { dry, ...stored } = attempt;
     if (dry) return NextResponse.json({ dry: true, quote: { amountInFormatted: stored.amountInFormatted, symbol: stored.originSymbol, chain: stored.originChain, deadline: stored.deadline } });
     await updateInvoice(id, i => { i.attempts.push(stored); });

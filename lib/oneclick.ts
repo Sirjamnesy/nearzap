@@ -1,6 +1,6 @@
 import { createHash, randomUUID } from "node:crypto";
-import type { AttemptStatus, Invoice, PaymentAttempt, TokenInfo } from "./types";
-import { centsToUsdcUnits, formatUnits } from "./invoice";
+import type { AttemptStatus, Invoice, PaymentAttempt, ReceiveAsset, TokenInfo } from "./types";
+import { formatUnits, partsOf } from "./invoice";
 
 const BASE = "https://1click.chaindefuser.com";
 export const isDemo = () => process.env.DEMO_MODE === "1";
@@ -68,32 +68,68 @@ export function payableTokens(tokens: TokenInfo[]): TokenInfo[] {
 }
 
 // ---------- quote ----------
-export interface QuoteParams { invoice: Invoice; origin: TokenInfo; refundTo: string; dry: boolean; minutes?: number }
+const STABLE = ["USDC", "USDT", "USDT0", "DAI", "PYUSD", "USDE", "FDUSD"];
 
-export function buildQuoteRequest(p: QuoteParams, payout: TokenInfo) {
+/** What the payee receives: the invoice's chosen asset, or USDC on NEAR. */
+export function receiveAssetFor(inv: Invoice, tokens: TokenInfo[]): ReceiveAsset {
+  if (inv.receive) return tokens.find(t => t.assetId === inv.receive!.assetId) ?? inv.receive;
+  return findPayoutAsset(tokens);
+}
+
+/** USD cents -> smallest unit of the receive asset. Stablecoins are 1:1; other assets use the live price at quote time. */
+export function centsToAssetUnits(cents: number, a: ReceiveAsset): string {
+  if (!Number.isInteger(cents) || cents < 0) throw new Error("cents must be a non-negative integer");
+  if (STABLE.includes(a.symbol.toUpperCase()) || !a.price) {
+    if (!STABLE.includes(a.symbol.toUpperCase())) throw new OneClickError(`No live price for ${a.symbol}; choose a stablecoin to receive.`, 400);
+    return ((BigInt(cents) * 10n ** BigInt(a.decimals)) / 100n).toString();
+  }
+  const micro = BigInt(Math.max(1, Math.round((cents / 100 / a.price) * 1e8)));   // 1e-8 units of the asset
+  return ((micro * 10n ** BigInt(a.decimals)) / 10n ** 8n).toString();
+}
+
+/** App fees for 1Click, which are charged on top of the payer's input. Splits give another account a share of each payment:
+ *  with a total split share S, the payee gets (1-S) of the amount as output and a recipient with share s gets fee = s/(1-S),
+ *  so the payer pays about the invoice amount in total and the shares come out right. */
+export function appFeesFor(inv: Invoice): { fees: { recipient: string; fee: number }[]; payeeShare: number } {
+  const splits = inv.splits ?? [];
+  const S = splits.reduce((n, x) => n + x.percent, 0) / 100;
+  const fees = splits.map(x => ({ recipient: x.account, fee: Math.round((x.percent / 100 / (1 - S)) * 10_000) }));
+  const platform = Number(process.env.APP_FEE_BPS ?? 0), who = process.env.APP_FEE_RECIPIENT;
+  if (platform > 0 && who) fees.push({ recipient: who, fee: platform });
+  return { fees, payeeShare: 1 - S };
+}
+
+export interface QuoteParams { invoice: Invoice; origin: TokenInfo; refundTo: string; dry: boolean; minutes?: number; partIndex?: number }
+
+export function buildQuoteRequest(p: QuoteParams, dest: ReceiveAsset) {
   const toIntents = p.invoice.payout === "intents-balance";
+  const part = partsOf(p.invoice)[p.partIndex ?? 0];
+  const { fees, payeeShare } = appFeesFor(p.invoice);
+  const payeeCents = Math.round(part.cents * payeeShare);
   return {
     dry: p.dry,
-    swapType: "EXACT_OUTPUT",                       // freelancer gets exactly the invoiced USDC
+    swapType: "EXACT_OUTPUT",                       // the payee gets exactly the invoiced amount
     slippageTolerance: 100,                          // 1%
     originAsset: p.origin.assetId,
     depositType: "ORIGIN_CHAIN",
-    destinationAsset: payout.assetId,
-    amount: centsToUsdcUnits(p.invoice.totalCents),
+    destinationAsset: dest.assetId,
+    amount: centsToAssetUnits(payeeCents, dest),
     recipient: p.invoice.freelancerNear,
     recipientType: toIntents ? "INTENTS" : "DESTINATION_CHAIN",
     refundTo: p.refundTo,
     refundType: "ORIGIN_CHAIN",
     deadline: new Date(Date.now() + (p.minutes ?? 30) * 60_000).toISOString(),
+    ...(fees.length ? { appFees: fees } : {}),
   };
 }
 
 export async function requestQuote(p: QuoteParams): Promise<PaymentAttempt & { dry: boolean }> {
   const tokens = await getTokens();
-  const payout = findPayoutAsset(tokens);
+  const dest = receiveAssetFor(p.invoice, tokens);
   const now = new Date().toISOString();
+  const partIndex = p.partIndex ?? 0;
   if (isDemo()) {
-    const usd = p.invoice.totalCents / 100;
+    const usd = partsOf(p.invoice)[partIndex].cents / 100;
     const units = BigInt(Math.ceil((usd / (p.origin.price ?? 1)) * 1.003 * 10 ** Math.min(p.origin.decimals, 9))) *
       10n ** BigInt(Math.max(p.origin.decimals - 9, 0));
     const unitsStr = units.toString();
@@ -101,10 +137,10 @@ export async function requestQuote(p: QuoteParams): Promise<PaymentAttempt & { d
       id: randomUUID(), createdAt: now, originAsset: p.origin.assetId, originSymbol: p.origin.symbol, originChain: p.origin.blockchain,
       depositAddress: "demo-" + randomUUID().replace(/-/g, "").slice(0, 24), amountIn: unitsStr,
       amountInFormatted: formatUnits(unitsStr, p.origin.decimals, 8), deadline: new Date(Date.now() + 30 * 60_000).toISOString(),
-      refundTo: p.refundTo, status: "PENDING_DEPOSIT", txHashes: [], updatedAt: now, demo: true, dry: p.dry,
+      refundTo: p.refundTo, status: "PENDING_DEPOSIT", txHashes: [], updatedAt: now, demo: true, dry: p.dry, partIndex,
     };
   }
-  const res = await call<any>("/v0/quote", { method: "POST", body: JSON.stringify(buildQuoteRequest(p, payout)) });
+  const res = await call<any>("/v0/quote", { method: "POST", body: JSON.stringify(buildQuoteRequest(p, dest)) });
   const q = res?.quote ?? res;
   if (!q?.amountIn || (!p.dry && !q?.depositAddress)) throw new OneClickError("1Click returned an unexpected quote response.");
   return {
@@ -112,7 +148,7 @@ export async function requestQuote(p: QuoteParams): Promise<PaymentAttempt & { d
     depositAddress: q.depositAddress ?? "", amountIn: String(q.amountIn),
     amountInFormatted: q.amountInFormatted ?? formatUnits(String(q.amountIn), p.origin.decimals, 8),
     deadline: q.deadline ?? res?.quoteRequest?.deadline ?? new Date(Date.now() + 30 * 60_000).toISOString(),
-    refundTo: p.refundTo, status: "PENDING_DEPOSIT", txHashes: [], updatedAt: now, demo: false, dry: p.dry,
+    refundTo: p.refundTo, status: "PENDING_DEPOSIT", txHashes: [], updatedAt: now, demo: false, dry: p.dry, partIndex,
   };
 }
 
