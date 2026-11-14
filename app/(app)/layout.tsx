@@ -8,8 +8,8 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       <header className="top">
         <a href="/" className="brand"><Logo /> NearZap</a>
         <nav>
-          <a className="navlink" href="/invoices"><Icon name="invoice" /><span>Invoices</span></a>
-          <a className="navlink" href="/new"><Icon name="plus" /><span>New</span></a>
+          <a className="navlink" href="/invoices" aria-label="Invoices"><Icon name="invoice" /><span>Invoices</span></a>
+          <a className="navlink" href="/new" aria-label="New invoice"><Icon name="plus" /><span>New</span></a>
           <Avatar />
         </nav>
       </header>

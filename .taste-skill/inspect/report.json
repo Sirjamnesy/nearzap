@@ -1,23 +1,22 @@
 {
  "url": "http://localhost:3222/",
- "at": "2026-11-14T16:57:04.258Z",
+ "at": "2026-11-14T17:08:26.884Z",
  "allow": [],
  "viewports": [
   {
    "width": 1440,
    "height": 900,
    "load": "load",
-   "screens": 4,
+   "screens": 3,
    "filled": [
-    1,
     1,
     1,
     1
    ],
    "motion": {
-    "elements": 21,
+    "elements": 14,
     "css": 0,
-    "transitions": 21,
+    "transitions": 14,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -28,9 +27,9 @@
      "h": 900
     },
     "page": {
-     "height": 2926,
-     "screens": 3.3,
-     "words": 296,
+     "height": 2415,
+     "screens": 2.7,
+     "words": 199,
      "img": 0,
      "video": 0,
      "canvas": 0,
@@ -67,7 +66,7 @@
      "align": "left",
      "position": "left",
      "widthRatio": 0.45,
-     "top": 153,
+     "top": 155,
      "tag": "h1",
      "kind": "heading"
     },
@@ -96,7 +95,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.45,
-      "top": 153,
+      "top": 155,
       "tag": "h1",
       "kind": "heading"
      },
@@ -117,7 +116,7 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.29,
-      "top": 269,
+      "top": 271,
       "tag": "div",
       "kind": "heading"
      },
@@ -138,7 +137,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.55,
-      "top": 1002,
+      "top": 1004,
       "tag": "h2",
       "kind": "heading"
      },
@@ -159,7 +158,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.12,
-      "top": 1257,
+      "top": 1259,
       "tag": "span",
       "kind": "heading"
      },
@@ -180,7 +179,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.18,
-      "top": 1257,
+      "top": 1259,
       "tag": "span",
       "kind": "heading"
      },
@@ -201,17 +200,17 @@
       "align": "left",
       "position": "right",
       "widthRatio": 0.15,
-      "top": 1257,
+      "top": 1259,
       "tag": "span",
       "kind": "heading"
      },
      {
-      "text": "Where NearZap goes next",
-      "words": 4,
-      "chars": 23,
+      "text": "Local currencies and agents are next",
+      "words": 6,
+      "chars": 36,
       "lines": 2,
-      "size": 77.8,
-      "vw": 5.4,
+      "size": 51.8,
+      "vw": 3.6,
       "font": "Albert Sans",
       "weight": 600,
       "tracking": -0.035,
@@ -221,8 +220,8 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.5,
-      "top": 1850,
+      "widthRatio": 0.43,
+      "top": 1825,
       "tag": "h2",
       "kind": "heading"
      },
@@ -243,7 +242,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.29,
-      "top": 2556,
+      "top": 2045,
       "tag": "h2",
       "kind": "heading"
      }
@@ -270,24 +269,22 @@
       15,
       16,
       17,
-      18,
       19,
-      26,
       29,
       40,
-      78,
+      52,
       86,
       89
      ],
-     "sizeCount": 11,
+     "sizeCount": 9,
      "notLoaded": [],
      "body": {
       "font": "Albert Sans",
-      "size": 17,
-      "leading": 1.4,
+      "size": 19,
+      "leading": 1.5,
       "weight": 400,
       "tracking": 0,
-      "contrast": 16.6
+      "contrast": 19.2
      },
      "measureChars": 50,
      "max": {
@@ -303,18 +300,18 @@
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.04,
-     "centerShare": 0.03,
+     "upperShare": 0.06,
+     "centerShare": 0.05,
      "smallText": 0
     },
     "eyebrows": [],
     "numbered": [],
     "color": {
-     "bodyBg": "#f6f7f9",
+     "bodyBg": "#f6f7f4",
      "bodyBgHsl": {
-      "h": 220,
-      "s": 0.2,
-      "l": 0.97
+      "h": 80,
+      "s": 0.16,
+      "l": 0.96
      },
      "dark": false,
      "sectionBgs": [
@@ -329,7 +326,7 @@
       },
       {
        "color": "#dafa9c",
-       "top": 126,
+       "top": 128,
        "hsl": {
         "h": 80,
         "s": 0.9,
@@ -338,7 +335,7 @@
       },
       {
        "color": "#ffffff",
-       "top": 894,
+       "top": 896,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -349,23 +346,23 @@
      "textColors": [
       {
        "color": "#0f0f0f",
-       "share": 0.51
+       "share": 0.45
       },
       {
        "color": "#ffffff",
-       "share": 0.25
-      },
-      {
-       "color": "#a3a3a3",
-       "share": 0.11
+       "share": 0.24
       },
       {
        "color": "#5b5b5b",
+       "share": 0.16
+      },
+      {
+       "color": "#a3a3a3",
        "share": 0.1
       },
       {
        "color": "#dafa9c",
-       "share": 0.03
+       "share": 0.05
       }
      ],
      "button": {
@@ -380,7 +377,7 @@
      "lowContrast": []
     },
     "buttons": {
-     "count": 2,
+     "count": 3,
      "inHero": 1,
      "radius": "pill",
      "height": 56,
@@ -405,7 +402,7 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 12,
+     "roundedBoxes": 9,
      "boxRadius": 20,
      "squareMedia": 0,
      "roundedMedia": 0,
@@ -417,7 +414,7 @@
     "nav": {
      "links": 6,
      "fixed": false,
-     "height": 54,
+     "height": 56,
      "floatingPill": false,
      "blur": false
     },
@@ -428,7 +425,7 @@
      "w": 1440,
      "h": 900
     },
-    "pageH": 2926,
+    "pageH": 2415,
     "margins": {
      "left": 40,
      "right": 40
@@ -437,7 +434,7 @@
      {
       "sel": "section.lp-hero",
       "tag": "section",
-      "top": 54,
+      "top": 56,
       "height": 840,
       "words": 81,
       "media": 0,
@@ -460,20 +457,20 @@
      {
       "sel": "section#how.lp-how",
       "tag": "section",
-      "top": 894,
-      "height": 866,
+      "top": 896,
+      "height": 842,
       "words": 59,
       "media": 0,
-      "middle": 206,
+      "middle": 216,
       "heading": {
        "text": "How a payment moves",
        "size": 86,
        "tag": "h2"
       },
       "left": 40,
-      "right": 67,
+      "right": 65,
       "textLeft": 40,
-      "textRight": 67,
+      "textRight": 65,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -481,22 +478,22 @@
       "pinned": false
      },
      {
-      "sel": "section#roadmap.lp-road",
+      "sel": "section.lp-teaser",
       "tag": "section",
-      "top": 1760,
-      "height": 692,
-      "words": 109,
+      "top": 1738,
+      "height": 203,
+      "words": 10,
       "media": 0,
-      "middle": 63,
+      "middle": 631,
       "heading": {
-       "text": "Where NearZap goes next",
-       "size": 78,
+       "text": "Local currencies and agents are next",
+       "size": 52,
        "tag": "h2"
       },
       "left": 40,
-      "right": 76,
+      "right": 68,
       "textLeft": 40,
-      "textRight": 76,
+      "textRight": 68,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -506,7 +503,7 @@
      {
       "sel": "section.lp-close",
       "tag": "section",
-      "top": 2451,
+      "top": 1941,
       "height": 412,
       "words": 24,
       "media": 0,
@@ -537,7 +534,7 @@
      {
       "text": "Get paid from any chain",
       "size": 89,
-      "top": 153,
+      "top": 155,
       "firstScreen": true
      }
     ],
@@ -545,26 +542,14 @@
     "edges": [
      {
       "x": 40,
-      "n": 5
+      "n": 4
      },
      {
       "x": 194,
       "n": 2
-     },
-     {
-      "x": 68,
-      "n": 1
-     },
-     {
-      "x": 495,
-      "n": 1
-     },
-     {
-      "x": 1007,
-      "n": 1
      }
     ],
-    "leftBlocks": 10,
+    "leftBlocks": 6,
     "bodySize": 17,
     "stage": false,
     "explains": true,
@@ -592,9 +577,9 @@
     1
    ],
    "motion": {
-    "elements": 21,
+    "elements": 14,
     "css": 0,
-    "transitions": 21,
+    "transitions": 14,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -605,9 +590,9 @@
      "h": 1024
     },
     "page": {
-     "height": 4080,
-     "screens": 4,
-     "words": 283,
+     "height": 3316,
+     "screens": 3.2,
+     "words": 184,
      "img": 0,
      "video": 0,
      "canvas": 0,
@@ -644,7 +629,7 @@
      "align": "left",
      "position": "center",
      "widthRatio": 0.79,
-     "top": 98,
+     "top": 104,
      "tag": "h1",
      "kind": "heading"
     },
@@ -673,7 +658,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.79,
-      "top": 98,
+      "top": 104,
       "tag": "h1",
       "kind": "heading"
      },
@@ -692,9 +677,9 @@
       "italic": false,
       "mono": false,
       "align": "left",
-      "position": "left",
+      "position": "center",
       "widthRatio": 0.54,
-      "top": 647,
+      "top": 653,
       "tag": "div",
       "kind": "heading"
      },
@@ -715,7 +700,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.94,
-      "top": 1176,
+      "top": 1182,
       "tag": "h2",
       "kind": "heading"
      },
@@ -736,7 +721,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.84,
-      "top": 1502,
+      "top": 1508,
       "tag": "b",
       "kind": "heading"
      },
@@ -757,7 +742,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.18,
-      "top": 1762,
+      "top": 1829,
       "tag": "b",
       "kind": "heading"
      },
@@ -778,17 +763,17 @@
       "align": "center",
       "position": "center",
       "widthRatio": 0.07,
-      "top": 2071,
+      "top": 2200,
       "tag": "b",
       "kind": "heading"
      },
      {
-      "text": "Where NearZap goes next",
-      "words": 4,
-      "chars": 23,
+      "text": "Local currencies and agents are next",
+      "words": 6,
+      "chars": 36,
       "lines": 2,
-      "size": 84.5,
-      "vw": 11,
+      "size": 34,
+      "vw": 4.4,
       "font": "Albert Sans",
       "weight": 600,
       "tracking": -0.035,
@@ -797,73 +782,10 @@
       "italic": false,
       "mono": false,
       "align": "left",
-      "position": "center",
-      "widthRatio": 0.94,
-      "top": 2477,
+      "position": "left",
+      "widthRatio": 0.53,
+      "top": 2510,
       "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Next 3 months",
-      "words": 3,
-      "chars": 13,
-      "lines": 1,
-      "size": 26,
-      "vw": 3.4,
-      "font": "Albert Sans",
-      "weight": 600,
-      "tracking": -0.03,
-      "leading": 1.1,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.87,
-      "top": 2792,
-      "tag": "h3",
-      "kind": "heading"
-     },
-     {
-      "text": "Months 4 to 6",
-      "words": 4,
-      "chars": 13,
-      "lines": 1,
-      "size": 26,
-      "vw": 3.4,
-      "font": "Albert Sans",
-      "weight": 600,
-      "tracking": -0.03,
-      "leading": 1.1,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.87,
-      "top": 3000,
-      "tag": "h3",
-      "kind": "heading"
-     },
-     {
-      "text": "Months 7 to 12",
-      "words": 4,
-      "chars": 14,
-      "lines": 1,
-      "size": 26,
-      "vw": 3.4,
-      "font": "Albert Sans",
-      "weight": 600,
-      "tracking": -0.03,
-      "leading": 1.1,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.87,
-      "top": 3208,
-      "tag": "h3",
       "kind": "heading"
      },
      {
@@ -883,18 +805,18 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.38,
-      "top": 3622,
+      "top": 2750,
       "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 11,
+     "count": 8,
      "maxLines": 2,
      "over2Lines": 0,
      "statements": 0,
      "centered": 1,
-     "medianWords": 4,
+     "medianWords": 2,
      "mixedFontHeadings": 0
     },
     "type": {
@@ -910,14 +832,13 @@
       15,
       16,
       17,
-      18,
       20,
-      26,
       28,
+      34,
       77,
       85
      ],
-     "sizeCount": 9,
+     "sizeCount": 8,
      "notLoaded": [],
      "body": {
       "font": "Albert Sans",
@@ -941,18 +862,18 @@
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.04,
-     "centerShare": 0.01,
+     "upperShare": 0.07,
+     "centerShare": 0.02,
      "smallText": 0
     },
     "eyebrows": [],
     "numbered": [],
     "color": {
-     "bodyBg": "#f6f7f9",
+     "bodyBg": "#f6f7f4",
      "bodyBgHsl": {
-      "h": 220,
-      "s": 0.2,
-      "l": 0.97
+      "h": 80,
+      "s": 0.16,
+      "l": 0.96
      },
      "dark": false,
      "sectionBgs": [
@@ -967,7 +888,7 @@
       },
       {
        "color": "#dafa9c",
-       "top": 516,
+       "top": 522,
        "hsl": {
         "h": 80,
         "s": 0.9,
@@ -976,7 +897,7 @@
       },
       {
        "color": "#ffffff",
-       "top": 1053,
+       "top": 1059,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -987,23 +908,23 @@
      "textColors": [
       {
        "color": "#0f0f0f",
-       "share": 0.53
+       "share": 0.48
       },
       {
        "color": "#ffffff",
-       "share": 0.23
-      },
-      {
-       "color": "#a3a3a3",
-       "share": 0.11
+       "share": 0.25
       },
       {
        "color": "#5b5b5b",
-       "share": 0.09
+       "share": 0.15
+      },
+      {
+       "color": "#a3a3a3",
+       "share": 0.08
       },
       {
        "color": "#dafa9c",
-       "share": 0.03
+       "share": 0.05
       }
      ],
      "button": {
@@ -1018,8 +939,8 @@
      "lowContrast": []
     },
     "buttons": {
-     "count": 2,
-     "inHero": 1,
+     "count": 4,
+     "inHero": 2,
      "radius": "pill",
      "height": 56,
      "withShadow": 0,
@@ -1043,7 +964,7 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 13,
+     "roundedBoxes": 10,
      "boxRadius": 20,
      "squareMedia": 0,
      "roundedMedia": 0,
@@ -1055,7 +976,7 @@
     "nav": {
      "links": 2,
      "fixed": false,
-     "height": 54,
+     "height": 60,
      "floatingPill": false,
      "blur": false
     },
@@ -1066,16 +987,16 @@
      "w": 768,
      "h": 1024
     },
-    "pageH": 4080,
+    "pageH": 3316,
     "margins": {
      "left": 23,
-     "right": 23
+     "right": 150
     },
     "sections": [
      {
       "sel": "section.lp-hero",
       "tag": "section",
-      "top": 54,
+      "top": 60,
       "height": 999,
       "words": 81,
       "media": 0,
@@ -1086,9 +1007,9 @@
        "tag": "h1"
       },
       "left": 23,
-      "right": 276,
+      "right": 178,
       "textLeft": 23,
-      "textRight": 276,
+      "textRight": 189,
       "fullBleed": false,
       "footer": false,
       "hero": true,
@@ -1098,8 +1019,8 @@
      {
       "sel": "section#how.lp-how",
       "tag": "section",
-      "top": 1053,
-      "height": 1321,
+      "top": 1059,
+      "height": 1355,
       "words": 59,
       "media": 0,
       "middle": 0,
@@ -1119,22 +1040,22 @@
       "pinned": false
      },
      {
-      "sel": "section#roadmap.lp-road",
+      "sel": "section.lp-teaser",
       "tag": "section",
-      "top": 2374,
-      "height": 1035,
-      "words": 109,
+      "top": 2414,
+      "height": 255,
+      "words": 10,
       "media": 0,
       "middle": 0,
       "heading": {
-       "text": "Where NearZap goes next",
-       "size": 84,
+       "text": "Local currencies and agents are next",
+       "size": 34,
        "tag": "h2"
       },
       "left": 23,
-      "right": 119,
+      "right": 277,
       "textLeft": 23,
-      "textRight": 119,
+      "textRight": 277,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -1144,8 +1065,8 @@
      {
       "sel": "section.lp-close",
       "tag": "section",
-      "top": 3410,
-      "height": 608,
+      "top": 2669,
+      "height": 466,
       "words": 21,
       "media": 0,
       "middle": 0,
@@ -1159,6 +1080,25 @@
       "textLeft": 51,
       "textRight": 296,
       "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.lp-foot.rise",
+      "tag": "footer",
+      "top": 3135,
+      "height": 181,
+      "words": 11,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 23,
+      "right": 493,
+      "textLeft": 23,
+      "textRight": 493,
+      "fullBleed": false,
       "footer": true,
       "hero": false,
       "continues": false,
@@ -1170,7 +1110,7 @@
      {
       "text": "Get paid from any chain",
       "size": 77,
-      "top": 98,
+      "top": 104,
       "firstScreen": true
      }
     ],
@@ -1178,14 +1118,14 @@
     "edges": [
      {
       "x": 23,
-      "n": 5
+      "n": 4
      },
      {
       "x": 51,
-      "n": 5
+      "n": 2
      }
     ],
-    "leftBlocks": 10,
+    "leftBlocks": 6,
     "bodySize": 17,
     "stage": false,
     "explains": false,
@@ -1200,18 +1140,17 @@
    "width": 390,
    "height": 844,
    "load": "load",
-   "screens": 5,
+   "screens": 4,
    "filled": [
-    1,
     1,
     1,
     1,
     1
    ],
    "motion": {
-    "elements": 21,
+    "elements": 14,
     "css": 0,
-    "transitions": 21,
+    "transitions": 14,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -1222,9 +1161,9 @@
      "h": 844
     },
     "page": {
-     "height": 4129,
-     "screens": 4.9,
-     "words": 283,
+     "height": 3181,
+     "screens": 3.8,
+     "words": 184,
      "img": 0,
      "video": 0,
      "canvas": 0,
@@ -1260,8 +1199,8 @@
      "mono": false,
      "align": "left",
      "position": "center",
-     "widthRatio": 0.84,
-     "top": 571,
+     "widthRatio": 0.79,
+     "top": 577,
      "tag": "div",
      "kind": "heading"
     },
@@ -1290,7 +1229,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.79,
-      "top": 98,
+      "top": 104,
       "tag": "h1",
       "kind": "heading"
      },
@@ -1310,8 +1249,8 @@
       "mono": false,
       "align": "left",
       "position": "center",
-      "widthRatio": 0.84,
-      "top": 571,
+      "widthRatio": 0.79,
+      "top": 577,
       "tag": "div",
       "kind": "heading"
      },
@@ -1332,7 +1271,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 1079,
+      "top": 1085,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1353,7 +1292,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.72,
-      "top": 1321,
+      "top": 1327,
       "tag": "b",
       "kind": "heading"
      },
@@ -1374,7 +1313,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.36,
-      "top": 1581,
+      "top": 1674,
       "tag": "b",
       "kind": "heading"
      },
@@ -1395,17 +1334,17 @@
       "align": "center",
       "position": "center",
       "widthRatio": 0.13,
-      "top": 1891,
+      "top": 2071,
       "tag": "b",
       "kind": "heading"
      },
      {
-      "text": "Where NearZap goes next",
-      "words": 4,
-      "chars": 23,
+      "text": "Local currencies and agents are next",
+      "words": 6,
+      "chars": 36,
       "lines": 2,
-      "size": 42.9,
-      "vw": 11,
+      "size": 34,
+      "vw": 8.7,
       "font": "Albert Sans",
       "weight": 600,
       "tracking": -0.035,
@@ -1416,71 +1355,8 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 2337,
+      "top": 2375,
       "tag": "h2",
-      "kind": "heading"
-     },
-     {
-      "text": "Next 3 months",
-      "words": 3,
-      "chars": 13,
-      "lines": 1,
-      "size": 26,
-      "vw": 6.7,
-      "font": "Albert Sans",
-      "weight": 600,
-      "tracking": -0.03,
-      "leading": 1.1,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.77,
-      "top": 2569,
-      "tag": "h3",
-      "kind": "heading"
-     },
-     {
-      "text": "Months 4 to 6",
-      "words": 4,
-      "chars": 13,
-      "lines": 1,
-      "size": 26,
-      "vw": 6.7,
-      "font": "Albert Sans",
-      "weight": 600,
-      "tracking": -0.03,
-      "leading": 1.1,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.77,
-      "top": 2848,
-      "tag": "h3",
-      "kind": "heading"
-     },
-     {
-      "text": "Months 7 to 12",
-      "words": 4,
-      "chars": 14,
-      "lines": 1,
-      "size": 26,
-      "vw": 6.7,
-      "font": "Albert Sans",
-      "weight": 600,
-      "tracking": -0.03,
-      "leading": 1.1,
-      "upper": false,
-      "italic": false,
-      "mono": false,
-      "align": "left",
-      "position": "center",
-      "widthRatio": 0.77,
-      "top": 3151,
-      "tag": "h3",
       "kind": "heading"
      },
      {
@@ -1500,13 +1376,13 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.76,
-      "top": 3624,
+      "top": 2603,
       "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 11,
+     "count": 8,
      "maxLines": 2,
      "over2Lines": 0,
      "statements": 0,
@@ -1527,14 +1403,13 @@
       15,
       16,
       17,
-      18,
       20,
-      26,
       28,
+      34,
       39,
       43
      ],
-     "sizeCount": 9,
+     "sizeCount": 8,
      "notLoaded": [],
      "body": {
       "font": "Albert Sans",
@@ -1558,18 +1433,18 @@
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.04,
-     "centerShare": 0.01,
+     "upperShare": 0.07,
+     "centerShare": 0.02,
      "smallText": 0
     },
     "eyebrows": [],
     "numbered": [],
     "color": {
-     "bodyBg": "#f6f7f9",
+     "bodyBg": "#f6f7f4",
      "bodyBgHsl": {
-      "h": 220,
-      "s": 0.2,
-      "l": 0.97
+      "h": 80,
+      "s": 0.16,
+      "l": 0.96
      },
      "dark": false,
      "sectionBgs": [
@@ -1584,7 +1459,7 @@
       },
       {
        "color": "#dafa9c",
-       "top": 440,
+       "top": 446,
        "hsl": {
         "h": 80,
         "s": 0.9,
@@ -1593,7 +1468,7 @@
       },
       {
        "color": "#ffffff",
-       "top": 484,
+       "top": 490,
        "hsl": {
         "h": 0,
         "s": 0,
@@ -1604,23 +1479,23 @@
      "textColors": [
       {
        "color": "#0f0f0f",
-       "share": 0.53
+       "share": 0.48
       },
       {
        "color": "#ffffff",
-       "share": 0.23
-      },
-      {
-       "color": "#a3a3a3",
-       "share": 0.11
+       "share": 0.25
       },
       {
        "color": "#5b5b5b",
-       "share": 0.09
+       "share": 0.15
+      },
+      {
+       "color": "#a3a3a3",
+       "share": 0.08
       },
       {
        "color": "#dafa9c",
-       "share": 0.03
+       "share": 0.05
       }
      ],
      "button": {
@@ -1635,8 +1510,8 @@
      "lowContrast": []
     },
     "buttons": {
-     "count": 2,
-     "inHero": 1,
+     "count": 4,
+     "inHero": 2,
      "radius": "pill",
      "height": 56,
      "withShadow": 0,
@@ -1660,7 +1535,7 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 13,
+     "roundedBoxes": 10,
      "boxRadius": 20,
      "squareMedia": 0,
      "roundedMedia": 0,
@@ -1672,7 +1547,7 @@
     "nav": {
      "links": 2,
      "fixed": false,
-     "height": 54,
+     "height": 60,
      "floatingPill": false,
      "blur": false
     },
@@ -1683,16 +1558,16 @@
      "w": 390,
      "h": 844
     },
-    "pageH": 4129,
+    "pageH": 3181,
     "margins": {
      "left": 16,
-     "right": 16
+     "right": 27
     },
     "sections": [
      {
       "sel": "section.lp-hero",
       "tag": "section",
-      "top": 54,
+      "top": 60,
       "height": 924,
       "words": 81,
       "media": 0,
@@ -1703,7 +1578,7 @@
        "tag": "h1"
       },
       "left": 16,
-      "right": 24,
+      "right": 27,
       "textLeft": 16,
       "textRight": 27,
       "fullBleed": false,
@@ -1715,8 +1590,8 @@
      {
       "sel": "section#how.lp-how",
       "tag": "section",
-      "top": 978,
-      "height": 1274,
+      "top": 984,
+      "height": 1308,
       "words": 59,
       "media": 0,
       "middle": 0,
@@ -1726,9 +1601,9 @@
        "tag": "h2"
       },
       "left": 16,
-      "right": 46,
+      "right": 34,
       "textLeft": 16,
-      "textRight": 46,
+      "textRight": 34,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -1736,22 +1611,22 @@
       "pinned": false
      },
      {
-      "sel": "section#roadmap.lp-road",
+      "sel": "section.lp-teaser",
       "tag": "section",
-      "top": 2252,
-      "height": 1172,
-      "words": 109,
+      "top": 2292,
+      "height": 243,
+      "words": 10,
       "media": 0,
       "middle": 0,
       "heading": {
-       "text": "Where NearZap goes next",
-       "size": 43,
+       "text": "Local currencies and agents are next",
+       "size": 34,
        "tag": "h2"
       },
       "left": 16,
-      "right": 16,
+      "right": 55,
       "textLeft": 16,
-      "textRight": 16,
+      "textRight": 55,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -1761,8 +1636,8 @@
      {
       "sel": "section.lp-close",
       "tag": "section",
-      "top": 3424,
-      "height": 608,
+      "top": 2535,
+      "height": 466,
       "words": 21,
       "media": 0,
       "middle": 0,
@@ -1776,6 +1651,25 @@
       "textLeft": 44,
       "textRight": 90,
       "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.lp-foot.rise",
+      "tag": "footer",
+      "top": 3001,
+      "height": 181,
+      "words": 11,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 16,
+      "right": 122,
+      "textLeft": 16,
+      "textRight": 122,
+      "fullBleed": false,
       "footer": true,
       "hero": false,
       "continues": false,
@@ -1787,7 +1681,7 @@
      {
       "text": "Get paid from any chain",
       "size": 39,
-      "top": 98,
+      "top": 104,
       "firstScreen": true
      }
     ],
@@ -1795,14 +1689,14 @@
     "edges": [
      {
       "x": 16,
-      "n": 5
+      "n": 4
      },
      {
       "x": 44,
-      "n": 5
+      "n": 2
      }
     ],
-    "leftBlocks": 10,
+    "leftBlocks": 6,
     "bodySize": 17,
     "stage": false,
     "explains": false,
@@ -1817,13 +1711,6 @@
  "findings": [
   {
    "level": "WARN",
-   "id": "size-count",
-   "width": 1440,
-   "message": "11 different font sizes (15, 16, 17, 18, 19, 26, 29, 40, 78, 86, 89).",
-   "fix": "A page needs about five: display, heading, lead, body, small."
-  },
-  {
-   "level": "WARN",
    "id": "no-real-pictures",
    "width": 1440,
    "message": "Only 0 real photograph(s) or clip(s); the rest are interface fragments.",
@@ -1835,6 +1722,20 @@
    "width": 1440,
    "message": "No video anywhere on the page.",
    "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 14 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  },
+  {
+   "level": "FAIL",
+   "id": "off-centre",
+   "width": 768,
+   "message": "The page sits off-centre: its content comes to 23px from the left edge but only to 150px from the right, at 768px.",
+   "fix": "Give the page one pair of equal margins. Check the wrapper for a max-width without margin-inline: auto, a grid with an empty last column, or padding on one side only. If one side is meant to hold air, it must still be closed by something that reaches the margin (a picture, the navigation's last item, a figure)."
   }
  ],
  "images": [

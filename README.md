@@ -84,7 +84,7 @@ Statuses: `open`, `pending`, `partial`, `paid`, `refunded`, `overdue` (only when
 ## Known limits
 
 - No accounts. Invoices are listed from ids kept on your device; clearing browser data loses the list (links still work).
-- No paid alerts or email yet (see the roadmap on the landing page).
+- No paid alerts or email yet (see `/roadmap`).
 - Basic rate limiting is on the API (best effort on the free Vercel plan).
 - Referral shares are capped at 4% total by the 1Click fee limit.
 - Intents-balance payouts are not visible in wallet apps until withdrawn at near-intents.org.
