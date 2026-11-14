@@ -1,5 +1,6 @@
 import { Icon, Logo } from "@/components/Icon";
 import Avatar from "@/components/Avatar";
+import BackButton from "@/components/BackButton";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -12,7 +13,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           <Avatar />
         </nav>
       </header>
-      <main>{children}</main>
+      <main><BackButton />{children}</main>
     </>
   );
 }

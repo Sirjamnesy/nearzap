@@ -102,3 +102,14 @@
   .frag{min-height:0}
 }
 @media(min-width:821px){.frag{min-height:0;height:auto}}
+
+/* roadmap */
+.lp-road{background:var(--bg);padding:clamp(64px,10vh,120px) var(--m) 28px}
+.lp-road h2{font-size:clamp(40px,5.4vw,80px);max-width:14ch}
+.lp-roadsub{color:var(--muted);font-size:18px;margin:20px 0 0;max-width:46ch}
+.lp-phases{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:6px;margin-top:44px}
+.lp-phase{border-radius:20px;padding:28px;min-height:300px;background:var(--surface)}
+.lp-phase h3{font-size:26px;font-weight:600;letter-spacing:-.03em;line-height:1.1;margin:0 0 18px}
+.lp-phase ul{list-style:none;margin:0;padding:0;display:grid;gap:14px;font-size:17px;line-height:1.4}
+.lp-phase.p2{background:var(--accent);color:var(--accent-ink)}.lp-phase.p3{background:#f1f1ec;color:#0f0f0f}
+@media(max-width:820px){.lp-phases{grid-template-columns:1fr}.lp-phase{min-height:0}.lp-road h2{font-size:11vw}.lp-nav nav a:not(:last-child){display:none}}

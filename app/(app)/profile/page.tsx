@@ -63,7 +63,7 @@ export default function ProfilePage() {
         <p><button disabled={busy || handle.length < 3 || !p.name || !p.near} onClick={publish}>{busy ? "Saving…" : p.handle ? "Update my page" : "Create my page"}</button></p>
         <p className="hint">Create my page: publishes a public page with your name and payout settings above. Needs your name and NEAR account. Your address itself is never shown on it.</p>
         {msg && <div className={msg.startsWith("Your") ? "mut" : "err"}>{msg}</div>}
-        {link && (<div className="stack"><CopyRow label="Your link" value={link} copy={link} /><p className="btnrow"><a className="btn sec" href={`/u/${p.handle}`} target="_blank" rel="noreferrer"><Icon name="arrow" /> Open my page</a></p></div>)}
+        {link && (<div className="stack"><CopyRow label="Your link" value={link} copy={link} /><p className="btnrow"><a className="btn sec" href={`/u/${p.handle}`}><Icon name="arrow" /> Open my page</a></p></div>)}
       </div>
 
       <div className="card">

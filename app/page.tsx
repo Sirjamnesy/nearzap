@@ -18,7 +18,7 @@ export default function Landing() {
       <header className="lp-nav">
         <a href="/" className="lp-brand"><Logo size={26} /> NearZap</a>
         <nav aria-label="Main">
-          <a href="#how">How it works</a><a href="/profile">Pay me page</a><a href="/agents">For agents</a><a href="/invoices">Open app</a>
+          <a href="#how">How it works</a><a href="#roadmap">Roadmap</a><a href="/profile">Pay me page</a><a href="/agents">For agents</a><a href="/invoices">Open app</a>
         </nav>
       </header>
 
@@ -50,6 +50,25 @@ export default function Landing() {
           <li className="rise" style={{ ["--d" as string]: "90ms" }}><Bolt />Then your client pays from any chain, with any token.</li>
           <li className="rise" style={{ ["--d" as string]: "180ms" }}><Bolt />Last, it settles and you get the exact amount.</li>
         </ol>
+      </section>
+
+      <section className="lp-road" id="roadmap">
+        <h2 className="rise">Where NearZap goes next</h2>
+        <p className="lp-roadsub rise" style={{ ["--d" as string]: "60ms" }}>Planned, not built yet. Today is the invoice link; this is the next year.</p>
+        <div className="lp-phases">
+          <article className="lp-phase p1 rise" style={{ ["--d" as string]: "0ms" }}>
+            <h3>Next 3 months</h3>
+            <ul><li>Email and push alerts the moment you are paid</li><li>Recurring invoices and gentle payment reminders</li><li>Accounts, so your invoices follow you across devices</li></ul>
+          </article>
+          <article className="lp-phase p2 rise" style={{ ["--d" as string]: "90ms" }}>
+            <h3>Months 4 to 6</h3>
+            <ul><li>Invoice in local currencies: naira, cedi, shilling, euro and pound, priced live</li><li>Cash out to a local bank or mobile money through partners</li><li>Shared workspaces for small teams and agencies</li></ul>
+          </article>
+          <article className="lp-phase p3 rise" style={{ ["--d" as string]: "180ms" }}>
+            <h3>Months 7 to 12</h3>
+            <ul><li>Agents that invoice and pay each other, built on the pay endpoint</li><li>An embeddable Pay button for any website</li><li>Tax-ready reports and exports for your accountant</li></ul>
+          </article>
+        </div>
       </section>
 
       <section className="lp-close">

@@ -16,7 +16,7 @@ Freelancers with international clients get paid in whatever the client happens t
 - **Choose what you receive.** Default is USDC. Any token on the live 1Click list works, delivered to your Intents balance (gasless) or straight to a wallet address on that chain.
 - **Pay me page.** Claim a handle and share `/u/<handle>`: a profile, QR code and amount box. Whoever visits creates an invoice to you in one tap.
 - **Deposits and milestones.** Split an invoice into parts (for example 30/70, or named milestones). Each part is paid on its own and the invoice shows *partial* until all are paid.
-- **Receipts and alerts.** Every paid invoice has a printable receipt at `/r/<id>`. The dashboard polls and shows a notification when an invoice gets paid (works while the dashboard is open; there is no email service).
+- **Receipts.** Every paid invoice has a printable receipt at `/r/<id>`, and the dashboard refreshes statuses on its own.
 - **Referral shares.** Send 1 to 4% of an invoice to up to two other NEAR accounts, taken as 1Click app fees. 1Click caps app fees at 5%, so shares are capped at 4%; the amount you receive stays exact.
 - **Agent-payable.** `GET /api/invoices/<id>/pay` returns HTTP 402 with machine-readable payment options while unpaid, and 200 with a receipt link once paid. `/agents` documents the flow.
 - **Accountant CSV** of your invoices.
@@ -84,7 +84,8 @@ Statuses: `open`, `pending`, `partial`, `paid`, `refunded`, `overdue` (only when
 ## Known limits
 
 - No accounts. Invoices are listed from ids kept on your device; clearing browser data loses the list (links still work).
-- Paid alerts only fire while the dashboard is open.
+- No paid alerts or email yet (see the roadmap on the landing page).
+- Basic rate limiting is on the API (best effort on the free Vercel plan).
 - Referral shares are capped at 4% total by the 1Click fee limit.
 - Intents-balance payouts are not visible in wallet apps until withdrawn at near-intents.org.
 - Demo mode simulates 1Click and is for evaluation only.

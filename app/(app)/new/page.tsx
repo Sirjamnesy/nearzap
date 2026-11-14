@@ -27,6 +27,7 @@ export default function NewInvoice() {
   const [remember, setRemember] = useState(true);
   const [created, setCreated] = useState<{ id: string; link: string } | null>(null);
   const [copied, setCopied] = useState(false);
+  const [toast, setToast] = useState(false);
 
   useEffect(() => {
     const p = loadProfile(); setProfile(p);
@@ -66,7 +67,7 @@ export default function NewInvoice() {
       let p = rememberInvoice(profile, data.invoice.id);
       if (remember) p = { ...rememberUse(p, f.freelancerName, f.freelancerNear), receiveAssetId: receiveId || undefined, payout: f.payout };
       saveProfile(p); setProfile(p);
-      setCreated({ id: data.invoice.id, link: `${window.location.origin}/i/${data.invoice.id}` }); setBusy(false); window.scrollTo(0, 0); return;
+      setCreated({ id: data.invoice.id, link: `${window.location.origin}/i/${data.invoice.id}` }); setToast(true); setTimeout(() => setToast(false), 2600); setBusy(false); window.scrollTo(0, 0); return;
     }
     setErrors(data.errors ?? [data.error ?? "Something went wrong."]); setBusy(false);
   }
@@ -76,17 +77,14 @@ export default function NewInvoice() {
 
   if (created) return (
     <>
-      <div className="paidhero" style={{ paddingTop: 8 }}>
-        <span className="paidcircle" style={{ width: 72, height: 72, boxShadow: "0 0 0 8px var(--accsoft)" }}><Icon name="check" /></span>
-        <h2 style={{ fontSize: 24 }}>Invoice created</h2>
-        <p className="mut">Send this link to {f.clientName.trim() || "your client"}. They open it and pay from any chain.</p>
-      </div>
+      <h1>Send this link</h1>
+      <p className="mut">Send it to {f.clientName.trim() || "your client"}. They open it and pay from any chain.</p>
       <div className="card">
         <div className="addr">{created.link}</div>
         <p className="btnrow">
           <button onClick={() => copy(created.link)}><Icon name={copied ? "check" : "copy"} /> {copied ? "Copied" : "Copy link"}</button>
           {typeof navigator !== "undefined" && "share" in navigator && <button className="sec" onClick={() => share(created.link)}><Icon name="share" /> Share</button>}
-          <a className="btn sec" href={created.link} target="_blank" rel="noreferrer"><Icon name="arrow" /> Preview as client</a>
+          <a className="btn sec" href={created.link}><Icon name="arrow" /> Preview as client</a>
         </p>
         <p className="hint">Copy link: paste it into WhatsApp, email or a DM. Share: opens your phone's share sheet. Preview as client: the page your client will see; you don't need to pay it.</p>
       </div>
@@ -94,6 +92,7 @@ export default function NewInvoice() {
         <span className="ic"><Icon name="wallet" /></span>
         <div className="mut">{f.payout === "wallet" ? "Payments are sent straight to your wallet." : <>Payments land in your NEAR Intents balance. Your wallet app won't show it; check <a href="https://near-intents.org" target="_blank" rel="noreferrer">near-intents.org</a> with the same account.</>}</div>
       </div>
+      {toast && <div className="toast info" role="status"><Icon name="link" /> Invoice created</div>}
       <p className="btnrow"><a className="btn sec" href="/invoices">Back to invoices</a> <a className="btn sec" href="/new">Create another</a></p>
     </>
   );
