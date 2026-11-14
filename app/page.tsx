@@ -18,6 +18,7 @@ export default async function Dashboard() {
         <div className="card"><div className="mut">Outstanding</div><div className="total">{formatUsd(outstanding)}</div></div>
       </div>
       <p><a className="btn" href="/new">New invoice</a> <a className="btn sec" href="/api/export">Export CSV</a></p>
+      <p className="hint">New invoice: make a payment link to send to a client. Export CSV: download all invoices for your records or accountant.</p>
       <div className="card">
         {invoices.length === 0 ? <p className="mut">No invoices yet. Create your first one.</p> : (
           <table><thead><tr><th>Client</th><th>Due</th><th className="r">Amount</th><th>Status</th></tr></thead><tbody>

@@ -1,4 +1,4 @@
-# NearPay Invoices
+# NearZap
 
 **Track:** Real-World Money (`realworld`) · **Built for:** NEAR HACKATHON, Nov 2026
 

@@ -18,3 +18,4 @@ table{width:100%;border-collapse:collapse;font-size:15px}td,th{padding:8px 4px;b
 .total{font-size:30px;font-weight:700}.grid{display:grid;gap:10px}
 
 @media(max-width:560px){.row{grid-template-columns:1fr 1fr}.row>div:first-child{grid-column:1/-1}.row>button{grid-column:2;justify-self:end}}
+.hint{color:var(--mut);font-size:13px;margin:6px 0 10px}

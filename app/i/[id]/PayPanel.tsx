@@ -63,7 +63,8 @@ export default function PayPanel({ invoiceId, initialState, initialAttempts }: {
           {attempt && final && <div className="err">{LABEL[attempt.status]}</div>}
           {preview && <div className="mut">{preview}</div>}
           <div><button className="sec" disabled={busy || !asset || refundTo.length < 8} onClick={() => quote(true)}>Preview price</button>{" "}
-            <button disabled={busy || !asset || refundTo.length < 8} onClick={() => quote(false)}>{busy ? "Working…" : "Get deposit address"}</button></div>
+            <button disabled={busy || !asset || refundTo.length < 8} onClick={() => quote(false)}>{busy ? "Working…" : "Get deposit address"}</button>
+            <p className="hint">Preview price: shows how much you'd send, and commits to nothing. Get deposit address: locks the price and shows where to send it.</p></div>
         </div>
       ) : (
         <div className="grid">
@@ -74,7 +75,8 @@ export default function PayPanel({ invoiceId, initialState, initialAttempts }: {
           <div className="steps" aria-label="progress">{[1, 2, 3, 4].map(n => <div key={n} className={`step ${step >= n ? "on" : ""}`} />)}</div>
           <div id="attempt-status"><b>{LABEL[attempt.status] ?? attempt.status}</b></div>
           {attempt.status === "PENDING_DEPOSIT" && <div><label>Optional: paste your transaction hash to speed up detection</label><input value={txHash} onChange={e => setTxHash(e.target.value)} />
-            <p><button className="sec" disabled={!txHash} onClick={() => act("submit-tx", { txHash })}>Submit hash</button></p></div>}
+            <p><button className="sec" disabled={!txHash} onClick={() => act("submit-tx", { txHash })}>Submit hash</button></p>
+            <p className="hint">Submit hash: optional. Only tells the system about your transfer sooner. Payment is detected automatically either way.</p></div>}
           {demo && attempt.demo && attempt.status === "PENDING_DEPOSIT" && <button onClick={() => act("simulate-deposit")}>DEMO: simulate my deposit</button>}
         </div>
       )}
