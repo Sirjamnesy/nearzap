@@ -9,7 +9,7 @@ Audience: NEAR Hackathon judges and crypto-literate X/Twitter. They know chains,
 They should: get the promise in one view (one link, client pays from any chain, you get the exact amount) and remember the name.
 One message: "Get paid from any chain"
 Concept: "One link, four chains." A $50 invoice is typed and its link copied; the link fans out into USDC / ETH / SOL / BTC;
-the client pays in ETH; it lands as a big round "Paid $50.00". Then the same idea goes onto any website as a Pay button.
+the client pays in ETH; it lands as a big round "Paid $50.00". Then the same idea goes onto any website as a checkout button.
 One white product card travels through every scene on the brand's lime stage.
 
 FORMAT
@@ -21,7 +21,7 @@ SCENES
 2 [0:03.5–0:07.5] The card's token list fans out one row per beat: USDC on Base 50.000 USDC, ETH on Ethereum 0.0272 ETH, SOL on Solana 0.6882 SOL, BTC on Bitcoin 0.000759 BTC. Text: "Your client pays with whatever they hold."
 3 [0:07.5–0:11] ETH row is picked; card turns into the pay view: Amount to send 0.0272 ETH, Address on Ethereum 0x7a3f…c91e, progress bar fills. Text: "Any chain. Any token."
 4 [0:11–0:14] Slow on purpose: progress completes, big round green Paid pops, "$50.00 received". Text: "You receive exactly $50.00. No gas."
-5 [0:14–0:18] Card slides into the embed demo: "Your site / Design course, $25" with the real "Pay with any crypto" button; two-line snippet types below; cursor clicks the button. Text: "Put a Pay button on any website."
+5 [0:14–0:18] Card slides into the embed demo: "Your site / Design course, $25" with the real "Pay with any crypto" button; two-line snippet types below; cursor clicks the button. Text: "Add a checkout button to any website."
 6 [0:18–0:22] End card: everything clears; the two-tone bolt mark draws in, "NearZap" wordmark, subline "Get paid from any chain". Holds ~2.5 s. No URL (per request).
 
 ON-SCREEN COPY (exact words)
@@ -29,7 +29,7 @@ S1 eyebrow "Ten seconds" · headline "Type an amount. Copy the link."
 S2 headline "Your client pays with whatever they hold."
 S3 eyebrow "Whenever they pay" · headline "Any chain. Any token."
 S4 headline "You receive exactly $50.00." · subline "No gas. Nothing to install."
-S5 headline "Put a Pay button on any website." · subline "Paste two lines."
+S5 headline "Add a checkout button to any website." · subline "Paste two lines." (v2: renamed from Pay button, per commit 5058c9e)
 S6 "NearZap" · "Get paid from any chain"
 Card UI text: "Invoice for NearZap", "Payment link", "Amount (USD)", "Your client can pay with", token rows as above, "You receive $50.00 USDC", "Copy link", "Link copied", "Amount to send", "Address on Ethereum", "Paid", "$50.00 received", "Your site", "Design course, $25", "Pay with any crypto", snippet from the landing page.
 
@@ -69,4 +69,4 @@ ASSUMPTIONS
 - No voiceover; text carries the message muted.
 
 DELIVERABLES
-brag-output/nearzap-launch-v1.mp4 (poster baked into frame 0), nearzap-launch-v1.jpg, contact sheet, share-copy.txt, source in work/
+brag-output/nearzap-launch-v2.mp4 (poster baked into frame 0), nearzap-launch-v1.jpg, contact sheet, share-copy.txt, source in work/

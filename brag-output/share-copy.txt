@@ -1,3 +1,3 @@
 NearZap: make a payment link, your client pays with whatever they hold (ETH, SOL, BTC, USDC on Base), and you receive exactly what you asked for. No gas, nothing to install. Built on NEAR Intents for the NEAR Hackathon.
 
-There's also a two-line Pay button for any website. nearzap.vercel.app
+There is also a two-line checkout button for any website. nearzap.vercel.app
