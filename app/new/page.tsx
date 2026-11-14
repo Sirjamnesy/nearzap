@@ -15,14 +15,17 @@ export default function NewInvoice() {
   const [created, setCreated] = useState<{ id: string; link: string } | null>(null);
   const [copied, setCopied] = useState(false);
   useEffect(() => { const p = loadProfile(); setProfile(p); setF(cur => ({ ...cur, freelancerName: cur.freelancerName || p.name, freelancerNear: cur.freelancerNear || p.near })); }, []);
-  const total = items.reduce((s, i) => s + Math.round(parseFloat(i.qty || "0") * toCents(i.price)), 0);
+  const [detailed, setDetailed] = useState(false);
+  const [amount, setAmount] = useState("");
+  const [what, setWhat] = useState("");
+  const total = detailed ? items.reduce((s, i) => s + Math.round(parseFloat(i.qty || "0") * toCents(i.price)), 0) : toCents(amount);
   const set = (k: string) => (e: any) => setF({ ...f, [k]: e.target.value });
   const setItem = (n: number, k: keyof Item, v: string) => setItems(items.map((it, i) => (i === n ? { ...it, [k]: v } : it)));
 
   async function submit(e: React.FormEvent) {
     e.preventDefault(); setBusy(true); setErrors([]);
     const res = await fetch("/api/invoices", { method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...f, items: items.map(i => ({ description: i.description, qty: parseFloat(i.qty), unitCents: toCents(i.price) })) }) });
+      body: JSON.stringify({ ...f, clientName: f.clientName.trim() || "Client", items: detailed ? items.map(i => ({ description: i.description, qty: parseFloat(i.qty), unitCents: toCents(i.price) })) : [{ description: what.trim() || "Payment request", qty: 1, unitCents: toCents(amount) }] }) });
     const data = await res.json();
     if (res.ok) {
       if (remember) saveProfile(rememberUse(profile, f.freelancerName, f.freelancerNear));
@@ -69,22 +72,29 @@ export default function NewInvoice() {
         </select>
         <p className="hint">Intents balance: your USDC waits in your NEAR Intents account, and you withdraw when you like. Wallet: sent straight to your NEAR account.</p>
         <div className="row2">
-          <div><label>Client name</label><input value={f.clientName} onChange={set("clientName")} required /></div>
+          <div><label>Client name (optional)</label><input value={f.clientName} onChange={set("clientName")} /></div>
           <div><label>Due date</label><input type="date" value={f.dueDate} onChange={set("dueDate")} required /></div>
         </div>
       </div>
       <div className="card">
-        <h2>Line items (USD, paid out as USDC)</h2>
-        {items.map((it, n) => (
-          <div className="row" key={n}>
-            <div><label>Description</label><input value={it.description} onChange={e => setItem(n, "description", e.target.value)} required /></div>
-            <div><label>Qty</label><input inputMode="decimal" value={it.qty} onChange={e => setItem(n, "qty", e.target.value)} /></div>
-            <div><label>Unit price</label><input inputMode="decimal" value={it.price} onChange={e => setItem(n, "price", e.target.value)} placeholder="0.00" required /></div>
-            <button type="button" className="sec" aria-label="Remove line" onClick={() => setItems(items.filter((_, i) => i !== n))} disabled={items.length === 1}>×</button>
-          </div>))}
-        <p><button type="button" className="sec" onClick={() => setItems([...items, { description: "", qty: "1", price: "" }])}>+ Add line</button></p>
+        <label>Amount (USD, you receive USDC)</label>
+        {detailed ? <p className="total">${(total / 100).toFixed(2)}</p> : (
+          <input inputMode="decimal" style={{ fontSize: 28, fontWeight: 700 }} value={amount} onChange={e => setAmount(e.target.value)} placeholder="0.00" required />)}
+        {!detailed && <><label>What's it for? (optional)</label><input value={what} onChange={e => setWhat(e.target.value)} placeholder="e.g. Logo design" /></>}
+        {detailed && (<>
+          <h2 style={{ marginTop: 14 }}>Line items</h2>
+          {items.map((it, n) => (
+            <div className="row" key={n}>
+              <div><label>Description</label><input value={it.description} onChange={e => setItem(n, "description", e.target.value)} required /></div>
+              <div><label>Qty</label><input inputMode="decimal" value={it.qty} onChange={e => setItem(n, "qty", e.target.value)} /></div>
+              <div><label>Unit price</label><input inputMode="decimal" value={it.price} onChange={e => setItem(n, "price", e.target.value)} placeholder="0.00" required /></div>
+              <button type="button" className="sec" aria-label="Remove line" onClick={() => setItems(items.filter((_, i) => i !== n))} disabled={items.length === 1}>×</button>
+            </div>))}
+          <p><button type="button" className="sec" onClick={() => setItems([...items, { description: "", qty: "1", price: "" }])}>+ Add another line</button></p>
+        </>)}
+        <p><button type="button" className="sec" onClick={() => { if (!detailed && amount) setItems([{ description: what, qty: "1", price: amount }]); setDetailed(!detailed); }}>{detailed ? "Back to a single amount" : "+ Add line items"}</button></p>
+        <p className="hint">{detailed ? "Back to a single amount: switches to one simple total." : "Add line items: itemise the invoice (description, quantity, price per line). Totally optional."}</p>
         <label>Note (optional)</label><textarea rows={2} value={f.memo} onChange={set("memo")} />
-        <p className="total">${(total / 100).toFixed(2)}</p>
       </div>
       {errors.map((m, i) => <div className="err" key={i}>{m}</div>)}
       <button disabled={busy}>{busy ? "Creating…" : "Create invoice link"}</button>
