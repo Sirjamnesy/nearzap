@@ -3,12 +3,12 @@ import "../landing.css";
 import LandingNav from "@/components/LandingNav";
 import LandingMotion from "@/components/LandingMotion";
 
-export const metadata: Metadata = { title: "NearZap roadmap: the next 6 months", description: "What NearZap plans to build next: alerts, local currencies and agent payments." };
+export const metadata: Metadata = { title: "NearZap roadmap: the next 6 months", description: "What NearZap plans to build next: alerts, payroll, local money and agent payments." };
 
 const phases = [
-  { cls: "p1", when: "Months 1 and 2", title: "Get paid, get told", items: ["Email and push alerts the moment you are paid", "Recurring invoices and gentle payment reminders", "Accounts, so your invoices follow you across devices"] },
-  { cls: "p2", when: "Months 3 and 4", title: "Payroll, remittances and local money", items: ["Payroll: pay a whole team in one run, each person in the token they choose", "Remittances: send money home with a link, received in local currency", "Invoice in naira, cedi, shilling, euro or pound, priced live", "Cash out to a local bank or mobile money through partners"] },
-  { cls: "p3", when: "Months 5 and 6", title: "Agents and shared money", items: ["Agents that earn, spend, negotiate and pay for services or other agents", "Shared budgets, community rewards and collective ownership with Sputnik DAO and Trezu", "An embeddable Pay button and tax-ready reports"] },
+  { cls: "p1", when: "Months 1 and 2", title: "Get paid, get told", items: ["A ping the moment money lands", "Invoices that repeat themselves, with polite nudges for late ones", "Sign in once and see your invoices on any device"] },
+  { cls: "p2", when: "Months 3 and 4", title: "Teams, family and local money", items: ["Payroll: one run pays everyone, each in the coin they prefer", "Remittances: a link that sends money home and lands as local cash", "Price invoices in naira, cedis, shillings, euros or pounds", "Hand money off to a bank or mobile wallet near you"] },
+  { cls: "p3", when: "Months 5 and 6", title: "Agents and shared pots", items: ["Software agents with their own wallets that can earn, spend, haggle and settle with people or with each other", "Pooled budgets, rewards and joint ownership for communities, run through Sputnik DAO and Trezu", "A Pay button for any website, and reports ready for tax time"] },
 ];
 
 export default function Roadmap() {

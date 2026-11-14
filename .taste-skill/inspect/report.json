@@ -1,6 +1,6 @@
 {
  "url": "http://localhost:3222/",
- "at": "2026-11-14T17:30:46.172Z",
+ "at": "2026-11-14T17:41:03.387Z",
  "allow": [],
  "viewports": [
   {
@@ -15,9 +15,9 @@
     1
    ],
    "motion": {
-    "elements": 14,
+    "elements": 13,
     "css": 0,
-    "transitions": 14,
+    "transitions": 13,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -28,13 +28,13 @@
      "h": 900
     },
     "page": {
-     "height": 2710,
-     "screens": 3,
-     "words": 199,
+     "height": 3287,
+     "screens": 3.7,
+     "words": 215,
      "img": 0,
      "video": 0,
      "canvas": 0,
-     "svg": 8,
+     "svg": 14,
      "sections": 4,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
@@ -246,13 +246,55 @@
       "top": 2045,
       "tag": "h2",
       "kind": "heading"
+     },
+     {
+      "text": "Near Zap",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 230,
+      "vw": 16,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 2497,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Get paid from any chain, settled with NEAR Intents.",
+      "words": 9,
+      "chars": 51,
+      "lines": 2,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.28,
+      "top": 2751,
+      "tag": "p",
+      "kind": "statement"
      }
     ],
     "headingSummary": {
-     "count": 8,
+     "count": 10,
      "maxLines": 2,
      "over2Lines": 0,
-     "statements": 0,
+     "statements": 1,
      "centered": 0,
      "medianWords": 4,
      "mixedFontHeadings": 0
@@ -271,13 +313,16 @@
       16,
       17,
       19,
+      20,
+      28,
       29,
       40,
       52,
       86,
-      89
+      89,
+      230
      ],
-     "sizeCount": 9,
+     "sizeCount": 12,
      "notLoaded": [],
      "body": {
       "font": "Albert Sans",
@@ -289,10 +334,10 @@
      },
      "measureChars": 50,
      "max": {
-      "size": 89.3,
-      "vw": 6.2,
+      "size": 230,
+      "vw": 16,
       "font": "Albert Sans",
-      "text": "Get paid from any chain"
+      "text": "Near"
      },
      "monoShare": 0,
      "monoProseShare": 0,
@@ -302,7 +347,7 @@
      "microLabelShare": 0,
      "microSamples": [],
      "upperShare": 0.06,
-     "centerShare": 0.05,
+     "centerShare": 0.04,
      "smallText": 0
     },
     "eyebrows": [],
@@ -342,28 +387,37 @@
         "s": 0,
         "l": 1
        }
+      },
+      {
+       "color": "#2fd98b",
+       "top": 2401,
+       "hsl": {
+        "h": 152,
+        "s": 0.69,
+        "l": 0.52
+       }
       }
      ],
      "textColors": [
       {
        "color": "#0f0f0f",
-       "share": 0.45
+       "share": 0.42
       },
       {
        "color": "#ffffff",
-       "share": 0.24
+       "share": 0.23
       },
       {
        "color": "#5b5b5b",
-       "share": 0.16
+       "share": 0.15
       },
       {
-       "color": "#a3a3a3",
-       "share": 0.1
+       "color": "#0b0b0b",
+       "share": 0.13
       },
       {
        "color": "#dafa9c",
-       "share": 0.05
+       "share": 0.04
       }
      ],
      "button": {
@@ -403,7 +457,7 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 10,
+     "roundedBoxes": 9,
      "boxRadius": 20,
      "squareMedia": 0,
      "roundedMedia": 0,
@@ -426,10 +480,10 @@
      "w": 1440,
      "h": 900
     },
-    "pageH": 2710,
+    "pageH": 3287,
     "margins": {
      "left": 40,
-     "right": 40
+     "right": 65
     },
     "sections": [
      {
@@ -525,19 +579,23 @@
       "pinned": false
      },
      {
-      "sel": "div.lp-motif",
-      "tag": "div",
-      "top": 2365,
-      "height": 259,
-      "words": 0,
-      "media": 1,
+      "sel": "footer.lp-foot2",
+      "tag": "footer",
+      "top": 2401,
+      "height": 887,
+      "words": 27,
+      "media": 2,
       "middle": 0,
-      "heading": null,
-      "left": 40,
-      "right": 40,
-      "textLeft": null,
-      "textRight": null,
-      "fullBleed": false,
+      "heading": {
+       "text": "Near",
+       "size": 230,
+       "tag": "h2"
+      },
+      "left": 60,
+      "right": 267,
+      "textLeft": 60,
+      "textRight": 267,
+      "fullBleed": true,
       "footer": true,
       "hero": false,
       "continues": false,
@@ -597,9 +655,9 @@
     1
    ],
    "motion": {
-    "elements": 14,
+    "elements": 13,
     "css": 0,
-    "transitions": 14,
+    "transitions": 13,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -610,13 +668,13 @@
      "h": 1024
     },
     "page": {
-     "height": 3522,
-     "screens": 3.4,
-     "words": 184,
+     "height": 3765,
+     "screens": 3.7,
+     "words": 200,
      "img": 0,
      "video": 0,
      "canvas": 0,
-     "svg": 8,
+     "svg": 14,
      "sections": 4,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
@@ -828,10 +886,31 @@
       "top": 2750,
       "tag": "h2",
       "kind": "heading"
+     },
+     {
+      "text": "Near Zap",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 145.9,
+      "vw": 19,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 3237,
+      "tag": "h2",
+      "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 8,
+     "count": 9,
      "maxLines": 2,
      "over2Lines": 0,
      "statements": 0,
@@ -852,13 +931,15 @@
       15,
       16,
       17,
+      18,
       20,
       28,
       34,
       77,
-      85
+      85,
+      146
      ],
-     "sizeCount": 8,
+     "sizeCount": 10,
      "notLoaded": [],
      "body": {
       "font": "Albert Sans",
@@ -870,10 +951,10 @@
      },
      "measureChars": 50,
      "max": {
-      "size": 84.5,
-      "vw": 11,
+      "size": 145.9,
+      "vw": 19,
       "font": "Albert Sans",
-      "text": "How a payment moves"
+      "text": "Near"
      },
      "monoShare": 0,
      "monoProseShare": 0,
@@ -923,24 +1004,33 @@
         "s": 0,
         "l": 1
        }
+      },
+      {
+       "color": "#2fd98b",
+       "top": 3183,
+       "hsl": {
+        "h": 152,
+        "s": 0.69,
+        "l": 0.52
+       }
       }
      ],
      "textColors": [
       {
        "color": "#0f0f0f",
-       "share": 0.48
+       "share": 0.44
       },
       {
        "color": "#ffffff",
-       "share": 0.25
+       "share": 0.2
       },
       {
        "color": "#5b5b5b",
-       "share": 0.15
+       "share": 0.14
       },
       {
-       "color": "#a3a3a3",
-       "share": 0.08
+       "color": "#0b0b0b",
+       "share": 0.14
       },
       {
        "color": "#dafa9c",
@@ -984,7 +1074,7 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 11,
+     "roundedBoxes": 10,
      "boxRadius": 20,
      "squareMedia": 0,
      "roundedMedia": 0,
@@ -1007,10 +1097,10 @@
      "w": 768,
      "h": 1024
     },
-    "pageH": 3522,
+    "pageH": 3765,
     "margins": {
      "left": 23,
-     "right": 150
+     "right": 39
     },
     "sections": [
      {
@@ -1106,38 +1196,23 @@
       "pinned": false
      },
      {
-      "sel": "div.lp-motif",
-      "tag": "div",
-      "top": 3147,
-      "height": 170,
-      "words": 0,
+      "sel": "footer.lp-foot2",
+      "tag": "footer",
+      "top": 3183,
+      "height": 582,
+      "words": 27,
       "media": 1,
       "middle": 0,
-      "heading": null,
-      "left": null,
-      "right": null,
-      "textLeft": null,
-      "textRight": null,
-      "fullBleed": true,
-      "footer": false,
-      "hero": false,
-      "continues": false,
-      "pinned": false
-     },
-     {
-      "sel": "footer.lp-foot.rise",
-      "tag": "footer",
-      "top": 3341,
-      "height": 181,
-      "words": 11,
-      "media": 0,
-      "middle": 0,
-      "heading": null,
+      "heading": {
+       "text": "Near",
+       "size": 146,
+       "tag": "h2"
+      },
       "left": 23,
-      "right": 493,
+      "right": 39,
       "textLeft": 23,
-      "textRight": 493,
-      "fullBleed": false,
+      "textRight": 39,
+      "fullBleed": true,
       "footer": true,
       "hero": false,
       "continues": false,
@@ -1188,9 +1263,9 @@
     1
    ],
    "motion": {
-    "elements": 14,
+    "elements": 13,
     "css": 0,
-    "transitions": 14,
+    "transitions": 13,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -1201,13 +1276,13 @@
      "h": 844
     },
     "page": {
-     "height": 3387,
-     "screens": 4,
-     "words": 184,
+     "height": 3608,
+     "screens": 4.3,
+     "words": 200,
      "img": 0,
      "video": 0,
      "canvas": 0,
-     "svg": 8,
+     "svg": 14,
      "sections": 4,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
@@ -1419,10 +1494,31 @@
       "top": 2603,
       "tag": "h2",
       "kind": "heading"
+     },
+     {
+      "text": "Near Zap",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 74.1,
+      "vw": 19,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3089,
+      "tag": "h2",
+      "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 8,
+     "count": 9,
      "maxLines": 2,
      "over2Lines": 0,
      "statements": 0,
@@ -1443,13 +1539,15 @@
       15,
       16,
       17,
+      18,
       20,
       28,
       34,
       39,
-      43
+      43,
+      74
      ],
-     "sizeCount": 8,
+     "sizeCount": 10,
      "notLoaded": [],
      "body": {
       "font": "Albert Sans",
@@ -1461,10 +1559,10 @@
      },
      "measureChars": 42,
      "max": {
-      "size": 44,
-      "vw": 11.3,
+      "size": 74.1,
+      "vw": 19,
       "font": "Albert Sans",
-      "text": "$"
+      "text": "Near"
      },
      "monoShare": 0,
      "monoProseShare": 0,
@@ -1514,24 +1612,33 @@
         "s": 0,
         "l": 1
        }
+      },
+      {
+       "color": "#2fd98b",
+       "top": 3049,
+       "hsl": {
+        "h": 152,
+        "s": 0.69,
+        "l": 0.52
+       }
       }
      ],
      "textColors": [
       {
        "color": "#0f0f0f",
-       "share": 0.48
+       "share": 0.44
       },
       {
        "color": "#ffffff",
-       "share": 0.25
+       "share": 0.2
       },
       {
        "color": "#5b5b5b",
-       "share": 0.15
+       "share": 0.14
       },
       {
-       "color": "#a3a3a3",
-       "share": 0.08
+       "color": "#0b0b0b",
+       "share": 0.14
       },
       {
        "color": "#dafa9c",
@@ -1575,7 +1682,7 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 11,
+     "roundedBoxes": 10,
      "boxRadius": 20,
      "squareMedia": 0,
      "roundedMedia": 0,
@@ -1598,10 +1705,10 @@
      "w": 390,
      "h": 844
     },
-    "pageH": 3387,
+    "pageH": 3608,
     "margins": {
      "left": 16,
-     "right": 27
+     "right": 16
     },
     "sections": [
      {
@@ -1697,38 +1804,23 @@
       "pinned": false
      },
      {
-      "sel": "div.lp-motif",
-      "tag": "div",
-      "top": 3013,
-      "height": 170,
-      "words": 0,
+      "sel": "footer.lp-foot2",
+      "tag": "footer",
+      "top": 3049,
+      "height": 559,
+      "words": 27,
       "media": 1,
       "middle": 0,
-      "heading": null,
-      "left": null,
-      "right": null,
-      "textLeft": null,
-      "textRight": null,
-      "fullBleed": true,
-      "footer": false,
-      "hero": false,
-      "continues": false,
-      "pinned": false
-     },
-     {
-      "sel": "footer.lp-foot.rise",
-      "tag": "footer",
-      "top": 3207,
-      "height": 181,
-      "words": 11,
-      "media": 0,
-      "middle": 0,
-      "heading": null,
+      "heading": {
+       "text": "Near",
+       "size": 74,
+       "tag": "h2"
+      },
       "left": 16,
-      "right": 122,
+      "right": 16,
       "textLeft": 16,
-      "textRight": 122,
-      "fullBleed": false,
+      "textRight": 16,
+      "fullBleed": true,
       "footer": true,
       "hero": false,
       "continues": false,
@@ -1770,6 +1862,17 @@
  "findings": [
   {
    "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "12 different font sizes (15, 16, 17, 19, 20, 28, 29, 40, 52, 86, 89, 230).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
    "id": "no-real-pictures",
    "width": 1440,
    "message": "Only 0 real photograph(s) or clip(s); the rest are interface fragments.",
@@ -1784,17 +1887,20 @@
   },
   {
    "level": "WARN",
-   "id": "still-page",
+   "id": "off-centre",
    "width": 1440,
-   "message": "Little motion: 14 element(s) moved while the page loaded and scrolled.",
-   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+   "message": "The margins differ: 40px on the left, 65px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page.",
+   "alsoAt": [
+    768
+   ]
   },
   {
-   "level": "FAIL",
-   "id": "off-centre",
-   "width": 768,
-   "message": "The page sits off-centre: its content comes to 23px from the left edge but only to 150px from the right, at 768px.",
-   "fix": "Give the page one pair of equal margins. Check the wrapper for a max-width without margin-inline: auto, a grid with an empty last column, or padding on one side only. If one side is meant to hold air, it must still be closed by something that reaches the margin (a picture, the navigation's last item, a figure)."
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 13 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
   }
  ],
  "images": [

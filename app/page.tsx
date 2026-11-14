@@ -2,7 +2,7 @@ import "./landing.css";
 import LandingFragment from "@/components/LandingFragment";
 import LandingMotion from "@/components/LandingMotion";
 import LandingNav from "@/components/LandingNav";
-import FooterMotif from "@/components/FooterMotif";
+import LandingFooter from "@/components/LandingFooter";
 
 const Bolt = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 32 32" aria-hidden="true"><path d="M18.2 3.5L7 18h7.4l-1.2 10.5L25 13.5h-7.6z" /></svg>
@@ -70,11 +70,7 @@ export default function Landing() {
         <div className="lp-tile t-side t-b rise" style={{ ["--d" as string]: "160ms" }}><Bolt /></div>
       </section>
 
-      <FooterMotif />
-      <footer className="lp-foot rise">
-        <span>NearZap · settled with NEAR Intents</span>
-        <nav aria-label="Footer"><a href="/roadmap">Roadmap</a><a href="/invoices">Invoices</a><a href="/profile">Profile</a><a href="/agents">For agents</a></nav>
-      </footer>
+      <LandingFooter />
     </div>
   );
 }

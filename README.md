@@ -24,7 +24,7 @@ Freelancers with international clients get paid in whatever the client happens t
 
 ## Where it goes next
 
-The 6-month plan lives at `/roadmap`: alerts and recurring invoices, then payroll, remittances and local currencies, then agents that earn, spend, negotiate and pay for services, plus shared budgets and community rewards with Sputnik DAO and Trezu. None of that is built yet; the submission covers the invoicing product above.
+The 6-month plan lives at `/roadmap`: alerts and recurring invoices first, then payroll, remittances and local currencies, then agents with their own wallets and pooled community money via Sputnik DAO and Trezu. None of it is built yet; the submission covers the invoicing product above.
 
 ## How NEAR is used
 
