@@ -28,7 +28,7 @@ body{font-family:"Albert Sans",system-ui,sans-serif;color:#fff;-webkit-font-smoo
 .caret{display:inline-block;width:5px;height:72px;background:#0f0f0f;margin-left:4px;transform:translateY(8px)}
 .copybtn{position:absolute;left:0;top:250px;display:inline-flex;align-items:center;gap:12px;background:#0f0f0f;color:#dafa9c;border-radius:99px;padding:20px 34px;font-weight:600;font-size:25px;transform-origin:center}
 .fsub{position:absolute;top:250px;left:0;font-size:21px;color:#5b5b5b}
-.row{position:absolute;left:0;right:0;display:flex;justify-content:space-between;background:#f1f1ec;border-radius:16px;padding:20px 24px;font-size:24px;border:2px solid transparent}
+.row{position:absolute;left:0;right:0;display:flex;justify-content:space-between;background:#f1f1ec;border-radius:16px;padding:16px 22px;font-size:24px;border:2px solid transparent}
 .row b{font-weight:600;font-variant-numeric:tabular-nums}
 .get{position:absolute;left:0;right:0;top:672px;display:flex;justify-content:space-between;align-items:center;background:#0f0f0f;color:#fff;border-radius:18px;padding:24px 26px;font-size:25px}
 .get b{color:#dafa9c;font-size:29px;font-weight:600}
@@ -69,6 +69,20 @@ body{font-family:"Albert Sans",system-ui,sans-serif;color:#fff;-webkit-font-smoo
 .nb2.d{background:#0f0f0f;color:#dafa9c}.nb2.s{border:1.5px solid #e6e8ec;color:#0f1419}
 .nhint{position:absolute;left:0;right:0;top:326px;font-size:19px;color:#667085;line-height:1.45}
 .ntoast{position:absolute;left:50%;top:740px;background:#0f0f0f;color:#fff;border-radius:99px;padding:16px 26px;font-size:21px;display:flex;gap:10px;align-items:center;white-space:nowrap}
+.nsec{position:absolute;height:54px;border-radius:99px;border:1.5px solid #e6e8ec;padding:0 22px;display:inline-flex;align-items:center;gap:8px;font-size:21px;font-weight:600;color:#0f1419;background:#fff}
+.nh2{position:absolute;left:0;top:0;font-size:24px;font-weight:700}
+.ntot{position:absolute;left:0;top:162px;font-size:42px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.nmore{position:absolute;left:0;right:0;top:116px;border:1.5px solid #e6e8ec;border-radius:14px;height:180px}
+.nmore b{position:absolute;left:20px;top:16px;font-size:21px;font-weight:600}
+.ih{position:absolute;left:0;top:0;font-size:34px;font-weight:700;letter-spacing:-.02em}
+.imeta{position:absolute;left:0;top:52px;font-size:20px;color:#667085;display:flex;gap:8px;align-items:center}
+.ibadge{border:1.5px solid #e6e8ec;border-radius:99px;padding:1px 12px;font-size:17px;font-weight:600}
+.itl{position:absolute;left:0;top:98px;font-size:19px;color:#667085}
+.itot{position:absolute;left:0;top:120px;font-size:50px;font-weight:700;letter-spacing:-.02em}
+.itab{position:absolute;left:0;right:0;top:196px;font-size:20px}
+.itab div{display:grid;grid-template-columns:1fr 70px 120px;padding:8px 2px;border-bottom:1.5px solid #e6e8ec}
+.itab div span:nth-child(n+2){text-align:right;font-variant-numeric:tabular-nums}
+.itab .th{color:#667085;font-size:17px}
 /* cursor */
 #cur{left:0;top:0;width:44px;height:44px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.25))}
 .ripple{position:absolute;width:80px;height:80px;border-radius:50%;border:3px solid #0f0f0f;margin:-40px 0 0 -40px}
@@ -85,7 +99,7 @@ body{font-family:"Albert Sans",system-ui,sans-serif;color:#fff;-webkit-font-smoo
     <span>NearZap</span>
   </div>
 
-  <div id="h1" class="abs hl"><div class="eb">Ten seconds</div><div class="h"><span class="ln">Type an amount.</span><span class="ln"><em>Copy the link.</em></span></div></div>
+  <div id="h1" class="abs hl"><div class="eb">Invoices, not just payments</div><div class="h"><span class="ln">Build the invoice.</span><span class="ln"><em>Send one link.</em></span></div></div>
   <div id="h2" class="abs hl"><div class="h"><span class="ln">Your client pays</span><span class="ln">with <em>whatever</em></span><span class="ln"><em>they hold.</em></span></div></div>
   <div id="h3" class="abs hl"><div class="eb">Whenever they pay</div><div class="h"><span class="ln">Any chain.</span><span class="ln"><em>Any token.</em></span></div></div>
   <div id="h4" class="abs hl"><div class="h"><span class="ln">You receive</span><span class="ln">exactly <em>$50.00.</em></span></div><div class="sl">No gas. Nothing to install.</div></div>
@@ -94,23 +108,38 @@ body{font-family:"Albert Sans",system-ui,sans-serif;color:#fff;-webkit-font-smoo
   <div id="stage" class="abs"></div>
 
   <div id="card" class="card">
-    <!-- F: real new-invoice form -->
-    <div id="pF" class="panel">
+    <!-- F: real new-invoice form, invoice mode with line items -->
+    <div id="pF" class="panel"><div id="fIn" style="position:absolute;left:0;right:0;top:0">
       <div class="nh">New invoice</div>
       <div class="nsub">Enter an amount and get a link to send. Everything else is optional.</div>
       <div class="nl" style="top:132px;left:0">Amount (USD)</div>
-      <div id="fAmt" class="ni" style="top:162px;left:0;right:0;height:78px;font-size:38px;font-weight:700"></div>
-      <div class="nl" style="top:262px;left:0">Client name (optional)</div>
-      <div id="fCli" class="ni" style="top:292px;left:0;right:0;height:62px"></div>
-      <div class="nl" style="top:376px;left:0">What's it for? (optional)</div>
-      <div id="fWhat" class="ni" style="top:406px;left:0;right:0;height:62px"></div>
-      <div class="nl" style="top:490px;left:0">Your name</div>
-      <div class="ni" style="top:520px;left:0;width:278px;height:62px">Ada</div>
-      <div class="nl" style="top:490px;left:302px">Your NEAR account</div>
-      <div class="ni" style="top:520px;left:302px;right:0;height:62px">ada.near</div>
-      <div class="nchk"><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Remember my details on this device</div>
-      <div id="fBtn" class="nbtn">Create invoice link</div>
-    </div>
+      <div id="fAmt" class="ni ph" style="top:162px;left:0;right:0;height:70px;font-size:36px;font-weight:700">0.00</div>
+      <div id="fTot" class="ntot">$0.00</div>
+      <div class="nl" style="top:252px;left:0">Client name (optional)</div>
+      <div id="fCli" class="ni" style="top:282px;left:0;right:0;height:60px"></div>
+      <div id="fAddLi" class="nsec" style="left:0;top:362px"><b style="font-size:24px;font-weight:600">+</b> Add line items</div>
+      <div id="fItems" style="position:absolute;left:0;right:0;top:362px">
+        <div class="nh2">Line items</div>
+        <div class="nl" style="top:40px;left:0">Description</div><div class="nl" style="top:40px;left:318px">Qty</div><div class="nl" style="top:40px;left:404px">Unit price</div>
+        <div id="d1" class="ni" style="top:68px;left:0;width:304px;height:58px"></div><div id="q1" class="ni" style="top:68px;left:318px;width:72px;height:58px">1</div><div id="u1" class="ni" style="top:68px;left:404px;right:0;height:58px"></div>
+        <div id="fRow2" style="position:absolute;left:0;right:0;top:142px">
+          <div class="nl" style="top:0;left:0">Description</div><div class="nl" style="top:0;left:318px">Qty</div><div class="nl" style="top:0;left:404px">Unit price</div>
+          <div id="d2" class="ni" style="top:28px;left:0;width:304px;height:58px"></div><div id="q2" class="ni" style="top:28px;left:318px;width:72px;height:58px">1</div><div id="u2" class="ni" style="top:28px;left:404px;right:0;height:58px"></div>
+        </div>
+        <div id="fAddAn" class="nsec" style="left:0;top:142px"><b style="font-size:24px;font-weight:600">+</b> Add another line</div>
+      </div>
+      <div id="fBelow" style="position:absolute;left:0;right:0;top:690px">
+        <div class="nl" style="top:0;left:0">Your name</div>
+        <div class="ni" style="top:30px;left:0;width:278px;height:60px">Ada</div>
+        <div class="nl" style="top:0;left:302px">Your NEAR account</div>
+        <div class="ni" style="top:30px;left:302px;right:0;height:60px">ada.near</div>
+        <div class="nmore"><b>More options</b>
+          <div class="nl" style="top:62px;left:20px">Due date (optional)</div>
+          <div id="fDue" class="ni" style="top:92px;left:20px;right:20px;height:60px"></div>
+        </div>
+        <div id="fBtn" class="nbtn" style="top:320px">Create invoice link</div>
+      </div>
+    </div></div>
     <!-- S: send this link -->
     <div id="pS" class="panel">
       <div class="nh">Send this link</div>
@@ -120,18 +149,20 @@ body{font-family:"Albert Sans",system-ui,sans-serif;color:#fff;-webkit-font-smoo
       <div class="nhint">Copy link: paste it into WhatsApp, email or a DM.</div>
       <div id="sToast" class="ntoast"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dafa9c" stroke-width="2.2" stroke-linecap="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>Invoice created</div>
     </div>
-    <!-- A: invoice -->
+    <!-- A: what the client opens: the invoice, then pay options -->
     <div id="pA" class="panel">
-      <div class="fhead"><span>Invoice for NearZap</span><span class="chip">Payment link</span></div>
-      <div class="flabel">Amount (USD)</div>
-      <div class="famt"><span>$</span><span id="amt"></span><span id="caret" class="caret"></span></div>
-      <div id="copy" class="copybtn"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#dafa9c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><g id="copyico"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></g><path id="checkico" d="M5 12.5l4.5 4.5L19 7.5" opacity="0"/></svg><span id="copytxt">Copy link</span></div>
-      <div id="fsub" class="fsub">Your client can pay with</div>
-      <div id="r0" class="row" style="top:298px"><span>USDC on Base</span><b>50.000 USDC</b></div>
-      <div id="r1" class="row" style="top:390px"><span>ETH on Ethereum</span><b>0.0272 ETH</b></div>
-      <div id="r2" class="row" style="top:482px"><span>SOL on Solana</span><b>0.6882 SOL</b></div>
-      <div id="r3" class="row" style="top:574px"><span>BTC on Bitcoin</span><b>0.000759 BTC</b></div>
-      <div id="get" class="get"><span>You receive</span><b>$50.00 USDC</b></div>
+      <div style="display:none"><span id="amt"></span><span id="caret"></span><div id="copy"><svg><g id="copyico"></g><path id="checkico"/></svg><span id="copytxt"></span></div></div>
+      <div class="ih">Invoice for Kite Studio</div>
+      <div class="imeta">From Ada · Due 2026-12-01 · <span class="ibadge">open</span></div>
+      <div class="itl">Amount due</div>
+      <div class="itot">$50.00</div>
+      <div class="itab"><div class="th"><span>Description</span><span>Qty</span><span>Amount</span></div><div><span>Logo design</span><span>1</span><span>$35.00</span></div><div><span>Revisions</span><span>3</span><span>$15.00</span></div></div>
+      <div id="fsub" class="fsub" style="top:330px">Pay with</div>
+      <div id="r0" class="row" style="top:366px"><span>USDC on Base</span><b>50.000 USDC</b></div>
+      <div id="r1" class="row" style="top:442px"><span>ETH on Ethereum</span><b>0.0272 ETH</b></div>
+      <div id="r2" class="row" style="top:518px"><span>SOL on Solana</span><b>0.6882 SOL</b></div>
+      <div id="r3" class="row" style="top:594px"><span>BTC on Bitcoin</span><b>0.000759 BTC</b></div>
+      <div id="get" class="get" style="top:680px"><span>Ada receives</span><b>$50.00 USDC</b></div>
     </div>
     <!-- B: pay view -->
     <div id="pB" class="panel">
@@ -202,9 +233,10 @@ function codeHTML(n) {
 
 // cursor path: [time, x, y]
 const SEGS = [
-  [[3.0, 1800, 1060], [3.55, 1640, 950], [3.9, 1640, 950], [4.5, 1318, 528], [4.95, 1318, 528], [5.35, 1520, 1100]],
-  [[8.9, 1840, 980], [9.55, 1430, 630], [10.2, 1430, 630], [10.6, 1700, 1100]],
-  [[17.6, 1840, 1000], [18.6, 1290, 548], [19.1, 1290, 548], [19.45, 1500, 1100]] ];
+  [[1.25, 1840, 900], [1.6, 1290, 637], [1.9, 1290, 637], [2.25, 1840, 760], [3.1, 1840, 760], [3.4, 1290, 779], [3.65, 1290, 779], [4.0, 1840, 900],
+   [5.35, 1840, 1000], [5.65, 1640, 993], [5.95, 1640, 993], [6.4, 1318, 528], [6.8, 1318, 528], [7.15, 1520, 1100]],
+  [[10.9, 1840, 980], [11.55, 1430, 726], [12.2, 1430, 726], [12.6, 1700, 1100]],
+  [[19.6, 1840, 1000], [20.6, 1290, 548], [21.1, 1290, 548], [21.45, 1500, 1100]] ];
 function cursor(t) {
   const c = $('cur'); let vis = 0, x = 0, y = 0;
   for (const seg of SEGS) {
@@ -220,7 +252,7 @@ function cursor(t) {
   c.style.opacity = vis; c.style.transform = `translate(${x - 6}px,${y - 4}px)`;
 }
 function ripple(t) {
-  const r = $('ripple'); const clicks = [[3.75, 1640, 950], [4.75, 1318, 528], [9.75, 1430, 630], [18.875, 1290, 548]];
+  const r = $('ripple'); const clicks = [[1.75, 1290, 637], [3.5, 1290, 779], [5.75, 1640, 993], [6.625, 1318, 528], [11.75, 1430, 726], [20.875, 1290, 548]];
   let o = 0, s = 1, x = 0, y = 0;
   for (const [tc, cx, cy] of clicks) { const k = p(t, tc, .5); if (t >= tc && k < 1) { o = (1 - k) * .55; s = .4 + eo(k) * 1.2; x = cx; y = cy; } }
   r.style.opacity = o; r.style.left = x + 'px'; r.style.top = y + 'px'; r.style.transform = `scale(${s})`;
@@ -318,44 +350,58 @@ function legacy(t) {
   const nK = eo(p(t, 18.75, .7)); st($('endname'), nK, 0, (1 - nK) * 40);
   const tK = eo(p(t, 19.15, .7)); st($('endtag'), tK, 0, (1 - tK) * 30);
 }
-// scene 1 is the real /new flow; everything after plays the original timeline 2 s later
-const typ = (str, t, t0, rate) => str.slice(0, Math.max(0, Math.min(str.length, Math.floor((t - t0) / rate) + 1)));
+// scene 1 is the real /new form in invoice mode; everything after plays the original timeline 4 s later
+const typ = (str, t, t0, rate) => t < t0 ? '' : str.slice(0, Math.min(str.length, Math.floor((t - t0) / rate) + 1));
 function field(el, val, ph, focus, t) {
   const caret = focus && Math.floor(t * 2.6) % 2 === 0 ? '<span class="nc"></span>' : '';
   el.classList.toggle('ph', !val); el.classList.toggle('foc', !!focus);
   el.innerHTML = (val || ph).replace(/&/g,'&amp;').replace(/</g,'&lt;') + caret;
 }
+const money = c => '$' + (c / 100).toFixed(2);
 function seek(t) {
-  const L = t < 3 ? t : t < 5 ? 3 : t - 2;
+  const L = t < 3 ? t : t < 7 ? 3 : t - 4;
   legacy(L);
-  $('copy').style.display = 'none';
-  // panel A only once the client view arrives
-  $('pA').style.display = t < 5.24 ? 'none' : 'block';
-  if (t < 7.5) { const k = eo(p(t, 5.25, .45)); st($('pA'), k, 0, (1 - k) * 30); }
-  $('amt').textContent = '50'; $('caret').style.opacity = 0;
+  $('pA').style.display = t < 7.2 ? 'none' : 'block';
+  if (t < 11.5) { const k = eo(p(t, 7.2, .45)); st($('pA'), k, 0, (1 - k) * 30); }
   // form
-  const fOut = ei(p(t, 3.9, .25));
-  $('pF').style.display = t > 4.2 ? 'none' : 'block';
+  const fOut = ei(p(t, 5.9, .22));
+  $('pF').style.display = t > 6.15 ? 'none' : 'block';
   st($('pF'), 1 - fOut, 0, -fOut * 30);
-  const amt = t < 1.0 ? '' : t < 1.25 ? '5' : '50';
-  const cli = t < 1.5 ? '' : typ('Kite Studio', t, 1.5, .0833);
-  const what = t < 2.5 ? '' : typ('Logo design', t, 2.5, .0833);
-  field($('fAmt'), amt, '0.00', t > .7 && t < 1.45, t);
-  field($('fCli'), cli, 'Who is this for?', t >= 1.45 && t < 2.45, t);
-  field($('fWhat'), what, 'e.g. Logo design', t >= 2.45 && t < 3.5, t);
-  $('fBtn').textContent = amt === '50' ? 'Create link for $50.00' : 'Create invoice link';
-  const bp = t >= 3.68 && t < 3.88 ? 1 - Math.abs((t - 3.78) / .1) : 0;
+  const ex = eo(p(t, 1.8, .4)), k2 = eo(p(t, 3.55, .4));
+  const cli = typ('Kite Studio', t, .6, .0833);
+  const d1 = typ('Logo design', t, 2.2, .07), u1 = typ('35.00', t, 3.05, .07);
+  const d2 = typ('Revisions', t, 3.7, .07), q2 = t < 4.45 ? '1' : '3', u2 = typ('5.00', t, 4.55, .07);
+  const due = t < 5.45 ? '' : '12/01/2026';
+  field($('fCli'), cli, 'Who is this for?', t >= .5 && t < 1.6, t);
+  field($('d1'), d1, '', t >= 2.15 && t < 3.0, t); field($('q1'), '1', '', false, t); field($('u1'), u1, '0.00', t >= 3.0 && t < 3.45, t);
+  field($('d2'), d2, '', t >= 3.65 && t < 4.4, t); field($('q2'), q2, '', t >= 4.4 && t < 4.52, t); field($('u2'), u2, '0.00', t >= 4.52 && t < 4.9, t);
+  field($('fDue'), due, 'mm/dd/yyyy', t >= 5.35 && t < 5.7, t);
+  const totC = Math.round(100 * ((parseFloat(u1) || 0) + (parseFloat(q2) || 0) * (t >= 3.55 ? (parseFloat(u2) || 0) : 0)));
+  $('fAmt').style.opacity = 1 - ex; $('fTot').style.opacity = ex;
+  $('fTot').textContent = money(totC);
+  const tp = t >= 4.83 && t < 5.2 ? Math.sin(p(t, 4.83, .37) * Math.PI) : 0;
+  $('fTot').style.transform = `scale(${1 + tp * .06})`; $('fTot').style.transformOrigin = 'left center';
+  $('fTot').style.color = tp > 0 ? '#0a9b63' : '#0f1419';
+  $('fAddLi').style.opacity = 1 - ex; $('fAddLi').style.transform = `scale(${1 - (t >= 1.7 && t < 1.85 ? .04 : 0)})`;
+  $('fItems').style.opacity = ex; $('fItems').style.transform = `translateY(${(1 - ex) * 16}px)`;
+  $('fRow2').style.opacity = k2; $('fRow2').style.transform = `translateY(${(1 - k2) * -20}px)`;
+  $('fAddAn').style.transform = `translateY(${k2 * 102}px) scale(${1 - (t >= 3.45 && t < 3.6 ? .04 : 0)})`;
+  $('fBelow').style.transform = `translateY(${-(1 - ex) * 142 - (1 - k2) * 102}px)`;
+  const sc = eio(p(t, 4.95, .45)) * 260;
+  $('fIn').style.transform = `translateY(${-sc}px)`;
+  $('fBtn').textContent = totC > 0 ? `Create link for ${money(totC)}` : 'Create invoice link';
+  const bp = t >= 5.68 && t < 5.88 ? 1 - Math.abs((t - 5.78) / .1) : 0;
   $('fBtn').style.transform = `scale(${1 - bp * .03})`;
   // sent screen
-  const sIn = eo(p(t, 4.1, .5)), sOut = ei(p(t, 4.98, .22));
-  $('pS').style.display = (t < 4.05 || t > 5.22) ? 'none' : 'block';
+  const sIn = eo(p(t, 6.05, .45)), sOut = ei(p(t, 6.95, .22));
+  $('pS').style.display = (t < 6.0 || t > 7.19) ? 'none' : 'block';
   st($('pS'), sIn * (1 - sOut), 0, (1 - sIn) * 36 - sOut * 30);
-  const cp = t >= 4.75;
+  const cp = t >= 6.625;
   $('sCt').textContent = cp ? 'Copied' : 'Copy link';
   $('sCi').style.opacity = cp ? 0 : 1; $('sCk').style.opacity = cp ? 1 : 0;
   $('sCopy').style.background = cp ? '#0a9b63' : '#0f0f0f'; $('sCopy').style.color = cp ? '#fff' : '#dafa9c';
-  const tIn = back(p(t, 4.25, .45));
-  st($('sToast'), eo(p(t, 4.25, .25)), 0, (1 - tIn) * 30);
+  const tIn = back(p(t, 6.125, .45));
+  st($('sToast'), eo(p(t, 6.125, .25)), 0, (1 - tIn) * 30);
   $('sToast').style.transform += ' translateX(-50%)';
   cursor(t); ripple(t);
 }
