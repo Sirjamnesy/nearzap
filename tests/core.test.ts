@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
-import { centsToUsdcUnits, formatUnits, formatUsd, invoiceState, totalCents, validateInput, validNearAccount } from "../lib/invoice";
+import { centsToUsdcUnits, formatUnits, formatUsd, invoiceState, partState, totalCents, validAddress, validateInput, validNearAccount } from "../lib/invoice";
 import { invoicesToCsv, CSV_HEADER } from "../lib/csv";
-import { buildQuoteRequest, extractTxHashes, normaliseStatus, findPayoutAsset, payableTokens } from "../lib/oneclick";
+import { appFeesFor, buildQuoteRequest, centsToAssetUnits, extractTxHashes, normaliseStatus, findPayoutAsset, payableTokens } from "../lib/oneclick";
 import type { Invoice, PaymentAttempt, TokenInfo } from "../lib/types";
 
 const attempt = (over: Partial<PaymentAttempt> = {}): PaymentAttempt => ({
@@ -23,7 +23,7 @@ describe("money", () => {
 
 describe("validation", () => {
   it("accepts a good NEAR account and rejects junk", () => { expect(validNearAccount("alice.near")).toBe(true); expect(validNearAccount("Alice.near")).toBe(false); expect(validNearAccount("a")).toBe(false); expect(validNearAccount("bad..near")).toBe(false); });
-  it("returns errors for an empty invoice", () => expect(validateInput({}).length).toBeGreaterThan(3));
+  it("returns errors for an empty invoice", () => expect(validateInput({}).length).toBeGreaterThanOrEqual(3));
   it("accepts a valid invoice", () => expect(validateInput({ freelancerName: "Ada", freelancerNear: "ada.near", clientName: "Acme", dueDate: "2026-12-01", items: [{ description: "x", qty: 1, unitCents: 100 }] })).toEqual([]));
 });
 
@@ -78,4 +78,56 @@ describe("payable token list", () => {
     const out = payableTokens([T("ETH", "eth", 1800), T("PEPE", "eth", 0.1), T("USDC(DEPRECATED)", "bsc"), T("USDC", "base"), T("ABG", "near", 0), T("USDT", "eth"), T("SOL", "sol", 0)]);
     expect(out.map(t => t.symbol)).toEqual(["USDC", "USDT", "ETH"]);
   });
+});
+
+describe("deposit and milestone parts", () => {
+  const parts = [{ label: "Deposit", cents: 5000 }, { label: "Balance", cents: 5000 }];
+  const base = () => inv({ totalCents: 10000, parts, attempts: [] });
+  it("is partial after one part is paid and paid after both", () => {
+    const one = base(); one.attempts = [attempt({ status: "SUCCESS", partIndex: 0 })];
+    expect(partState(one, 0)).toBe("paid"); expect(partState(one, 1)).toBe("open"); expect(invoiceState(one)).toBe("partial");
+    const both = base(); both.attempts = [attempt({ status: "SUCCESS", partIndex: 0 }), attempt({ id: "a2", status: "SUCCESS", partIndex: 1 })];
+    expect(invoiceState(both)).toBe("paid");
+  });
+  it("quotes only the selected part", () => {
+    const dest = { assetId: "d", symbol: "USDC", blockchain: "near", decimals: 6 };
+    const origin = { assetId: "o", symbol: "ETH", blockchain: "eth", decimals: 18 };
+    const q = buildQuoteRequest({ invoice: base(), origin, refundTo: "0xme", dry: true, partIndex: 1 }, dest);
+    expect(q.amount).toBe("50000000");
+  });
+  it("rejects parts that do not add up", () => {
+    const e = validateInput({ freelancerName: "Ada", freelancerNear: "ada.near", items: [{ description: "x", qty: 1, unitCents: 10000 }], parts: [{ label: "a", cents: 1000 }, { label: "b", cents: 1000 }] });
+    expect(e.join(" ")).toMatch(/add up/);
+  });
+});
+
+describe("receive asset and addresses", () => {
+  it("converts cents exactly for stablecoins and by price for others", () => {
+    expect(centsToAssetUnits(1234, { assetId: "u", symbol: "USDC", blockchain: "base", decimals: 6 })).toBe("12340000");
+    expect(centsToAssetUnits(3000, { assetId: "e", symbol: "ETH", blockchain: "eth", decimals: 18, price: 3000 })).toBe("10000000000000000");
+    expect(() => centsToAssetUnits(100, { assetId: "x", symbol: "XYZ", blockchain: "eth", decimals: 18 })).toThrow();
+  });
+  it("checks addresses by chain", () => {
+    expect(validAddress("base", "0x" + "a".repeat(40))).toBe(true);
+    expect(validAddress("base", "alice.near")).toBe(false);
+    expect(validAddress("sol", "4Nd1mYQq1g1nQjL3m6kqZ8mB5uJ8v9x7r3tYq2WcQp5D")).toBe(true);
+    expect(validAddress("near", "alice.near")).toBe(true);
+  });
+  it("requires an address for the chosen chain when delivering to a wallet", () => {
+    const e = validateInput({ freelancerName: "Ada", freelancerNear: "ada.near", payout: "wallet", receive: { assetId: "u", symbol: "USDC", blockchain: "base", decimals: 6 }, items: [{ description: "x", qty: 1, unitCents: 100 }] });
+    expect(e.join(" ")).toMatch(/base address/);
+  });
+});
+
+describe("referral shares", () => {
+  it("grosses up the fee so the payer pays about the invoice amount", () => {
+    const { fees, payeeShare } = appFeesFor(inv({ splits: [{ account: "ref.near", percent: 4 }] }));
+    expect(payeeShare).toBeCloseTo(0.96); expect(fees).toEqual([{ recipient: "ref.near", fee: 417 }]);
+    expect(fees[0].fee).toBeLessThanOrEqual(500);
+  });
+  it("rejects shares above the 1Click fee cap", () => {
+    const e = validateInput({ freelancerName: "Ada", freelancerNear: "ada.near", items: [{ description: "x", qty: 1, unitCents: 100 }], splits: [{ account: "ref.near", percent: 20 }] });
+    expect(e.join(" ")).toMatch(/between 1% and 4%/);
+  });
+  it("adds no app fees by default", () => { expect(appFeesFor(inv()).fees).toEqual([]); });
 });

@@ -1,0 +1,1582 @@
+{
+ "url": "http://localhost:3222/",
+ "at": "2026-11-14T16:30:56.390Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 0,
+    "transitions": 16,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 2234,
+     "screens": 2.5,
+     "words": 187,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 5,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 4,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Get paid from any chain",
+     "words": 5,
+     "chars": 23,
+     "lines": 2,
+     "size": 89.3,
+     "vw": 6.2,
+     "font": "Albert Sans",
+     "weight": 600,
+     "tracking": -0.035,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.45,
+     "top": 153,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Get paid from any chain",
+     "words": 5,
+     "lines": 2,
+     "size": 89.3,
+     "font": "Albert Sans"
+    },
+    "headings": [
+     {
+      "text": "Get paid from any chain",
+      "words": 5,
+      "chars": 23,
+      "lines": 2,
+      "size": 89.3,
+      "vw": 6.2,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.45,
+      "top": 153,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "$",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.29,
+      "top": 269,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "How a payment moves",
+      "words": 4,
+      "chars": 19,
+      "lines": 2,
+      "size": 86.4,
+      "vw": 6,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.55,
+      "top": 1002,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Ten seconds",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 28.8,
+      "vw": 2,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.12,
+      "top": 1257,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Whenever they pay",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 28.8,
+      "vw": 2,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.18,
+      "top": 1257,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "A minute or two",
+      "words": 4,
+      "chars": 15,
+      "lines": 1,
+      "size": 28.8,
+      "vw": 2,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.15,
+      "top": 1257,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Make your first link",
+      "words": 4,
+      "chars": 20,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.29,
+      "top": 1865,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Albert Sans",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      15,
+      16,
+      17,
+      19,
+      29,
+      40,
+      86,
+      89
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Albert Sans",
+      "size": 19,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 19.2
+     },
+     "measureChars": 50,
+     "max": {
+      "size": 89.3,
+      "vw": 6.2,
+      "font": "Albert Sans",
+      "text": "Get paid from any chain"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.06,
+     "centerShare": 0.05,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f6f7f9",
+     "bodyBgHsl": {
+      "h": 220,
+      "s": 0.2,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#0f0f0f",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.06
+       }
+      },
+      {
+       "color": "#dafa9c",
+       "top": 126,
+       "hsl": {
+        "h": 80,
+        "s": 0.9,
+        "l": 0.8
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 894,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0f0f0f",
+       "share": 0.46
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.22
+      },
+      {
+       "color": "#5b5b5b",
+       "share": 0.17
+      },
+      {
+       "color": "#a3a3a3",
+       "share": 0.1
+      },
+      {
+       "color": "#dafa9c",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#dafa9c",
+      "hsl": {
+       "h": 80,
+       "s": 0.9,
+       "l": 0.8
+      },
+      "fg": "#0f0f0f"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": "pill",
+     "height": 56,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Create an invoice"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 9,
+     "boxRadius": 20,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 5,
+     "fixed": false,
+     "height": 54,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 2234,
+    "margins": {
+     "left": 40,
+     "right": 40
+    },
+    "sections": [
+     {
+      "sel": "section.lp-hero",
+      "tag": "section",
+      "top": 54,
+      "height": 840,
+      "words": 81,
+      "media": 0,
+      "middle": 148,
+      "heading": {
+       "text": "Get paid from any chain",
+       "size": 89,
+       "tag": "h1"
+      },
+      "left": 40,
+      "right": 294,
+      "textLeft": 40,
+      "textRight": 305,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#how.lp-how",
+      "tag": "section",
+      "top": 894,
+      "height": 866,
+      "words": 59,
+      "media": 0,
+      "middle": 206,
+      "heading": {
+       "text": "How a payment moves",
+       "size": 86,
+       "tag": "h2"
+      },
+      "left": 40,
+      "right": 67,
+      "textLeft": 40,
+      "textRight": 67,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.lp-close",
+      "tag": "section",
+      "top": 1760,
+      "height": 412,
+      "words": 24,
+      "media": 0,
+      "middle": 396,
+      "heading": {
+       "text": "Make your first link",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 194,
+      "right": 273,
+      "textLeft": 194,
+      "textRight": 273,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 636,
+      "height": 356
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Get paid from any chain",
+      "size": 89,
+      "top": 153,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 40,
+      "n": 3
+     },
+     {
+      "x": 194,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 5,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.27,
+    "voidBox": {
+     "x": 0,
+     "y": 660,
+     "w": 1440,
+     "h": 240
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 0,
+    "transitions": 16,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 3045,
+     "screens": 3,
+     "words": 175,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 5,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Get paid from any chain",
+     "words": 5,
+     "chars": 23,
+     "lines": 2,
+     "size": 76.8,
+     "vw": 10,
+     "font": "Albert Sans",
+     "weight": 600,
+     "tracking": -0.035,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.79,
+     "top": 98,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Get paid from any chain",
+     "words": 5,
+     "lines": 2,
+     "size": 76.8,
+     "font": "Albert Sans"
+    },
+    "headings": [
+     {
+      "text": "Get paid from any chain",
+      "words": 5,
+      "chars": 23,
+      "lines": 2,
+      "size": 76.8,
+      "vw": 10,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 98,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "$",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 44,
+      "vw": 5.7,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.54,
+      "top": 647,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "How a payment moves",
+      "words": 4,
+      "chars": 19,
+      "lines": 2,
+      "size": 84.5,
+      "vw": 11,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 1176,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "$50.00",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 26,
+      "vw": 3.4,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 1502,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "0.0166 ETH",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 26,
+      "vw": 3.4,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.18,
+      "top": 1762,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "Paid",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 26,
+      "vw": 3.4,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.07,
+      "top": 2071,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "Make your first link",
+      "words": 4,
+      "chars": 20,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.38,
+      "top": 2587,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Albert Sans",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      15,
+      16,
+      17,
+      20,
+      28,
+      77,
+      85
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Albert Sans",
+      "size": 17,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 19.2
+     },
+     "measureChars": 50,
+     "max": {
+      "size": 84.5,
+      "vw": 11,
+      "font": "Albert Sans",
+      "text": "How a payment moves"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.07,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f6f7f9",
+     "bodyBgHsl": {
+      "h": 220,
+      "s": 0.2,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#0f0f0f",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.06
+       }
+      },
+      {
+       "color": "#dafa9c",
+       "top": 516,
+       "hsl": {
+        "h": 80,
+        "s": 0.9,
+        "l": 0.8
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 1053,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0f0f0f",
+       "share": 0.49
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.2
+      },
+      {
+       "color": "#5b5b5b",
+       "share": 0.16
+      },
+      {
+       "color": "#a3a3a3",
+       "share": 0.11
+      },
+      {
+       "color": "#dafa9c",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#dafa9c",
+      "hsl": {
+       "h": 80,
+       "s": 0.9,
+       "l": 0.8
+      },
+      "fg": "#0f0f0f"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": "pill",
+     "height": 56,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Create an invoice"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 10,
+     "boxRadius": 20,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 54,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 3045,
+    "margins": {
+     "left": 23,
+     "right": 23
+    },
+    "sections": [
+     {
+      "sel": "section.lp-hero",
+      "tag": "section",
+      "top": 54,
+      "height": 999,
+      "words": 81,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Get paid from any chain",
+       "size": 77,
+       "tag": "h1"
+      },
+      "left": 23,
+      "right": 276,
+      "textLeft": 23,
+      "textRight": 276,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#how.lp-how",
+      "tag": "section",
+      "top": 1053,
+      "height": 1321,
+      "words": 59,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "How a payment moves",
+       "size": 84,
+       "tag": "h2"
+      },
+      "left": 23,
+      "right": 150,
+      "textLeft": 23,
+      "textRight": 150,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.lp-close",
+      "tag": "section",
+      "top": 2374,
+      "height": 608,
+      "words": 21,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Make your first link",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 51,
+      "right": 296,
+      "textLeft": 51,
+      "textRight": 296,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Get paid from any chain",
+      "size": 77,
+      "top": 98,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 23,
+      "n": 3
+     },
+     {
+      "x": 51,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 5,
+    "bodySize": 17,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 0,
+    "transitions": 16,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 2957,
+     "screens": 3.5,
+     "words": 175,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 5,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "$",
+     "words": 1,
+     "chars": 1,
+     "lines": 1,
+     "size": 44,
+     "vw": 11.3,
+     "font": "Albert Sans",
+     "weight": 600,
+     "tracking": -0.03,
+     "leading": 1.1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.84,
+     "top": 571,
+     "tag": "div",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Get paid from any chain",
+     "words": 5,
+     "lines": 2,
+     "size": 39,
+     "font": "Albert Sans"
+    },
+    "headings": [
+     {
+      "text": "Get paid from any chain",
+      "words": 5,
+      "chars": 23,
+      "lines": 2,
+      "size": 39,
+      "vw": 10,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 98,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "$",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 44,
+      "vw": 11.3,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 571,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "How a payment moves",
+      "words": 4,
+      "chars": 19,
+      "lines": 2,
+      "size": 42.9,
+      "vw": 11,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1079,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "$50.00",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 26,
+      "vw": 6.7,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.72,
+      "top": 1321,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "0.0166 ETH",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 26,
+      "vw": 6.7,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 1581,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "Paid",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 26,
+      "vw": 6.7,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.13,
+      "top": 1891,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "Make your first link",
+      "words": 4,
+      "chars": 20,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 2452,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Albert Sans",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      15,
+      16,
+      17,
+      20,
+      28,
+      39,
+      43
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Albert Sans",
+      "size": 17,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 19.2
+     },
+     "measureChars": 42,
+     "max": {
+      "size": 44,
+      "vw": 11.3,
+      "font": "Albert Sans",
+      "text": "$"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.07,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f6f7f9",
+     "bodyBgHsl": {
+      "h": 220,
+      "s": 0.2,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#0f0f0f",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.06
+       }
+      },
+      {
+       "color": "#dafa9c",
+       "top": 440,
+       "hsl": {
+        "h": 80,
+        "s": 0.9,
+        "l": 0.8
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 484,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0f0f0f",
+       "share": 0.49
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.2
+      },
+      {
+       "color": "#5b5b5b",
+       "share": 0.16
+      },
+      {
+       "color": "#a3a3a3",
+       "share": 0.11
+      },
+      {
+       "color": "#dafa9c",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#dafa9c",
+      "hsl": {
+       "h": 80,
+       "s": 0.9,
+       "l": 0.8
+      },
+      "fg": "#0f0f0f"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": "pill",
+     "height": 56,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Create an invoice"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 10,
+     "boxRadius": 20,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 54,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 2957,
+    "margins": {
+     "left": 16,
+     "right": 24
+    },
+    "sections": [
+     {
+      "sel": "section.lp-hero",
+      "tag": "section",
+      "top": 54,
+      "height": 924,
+      "words": 81,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Get paid from any chain",
+       "size": 39,
+       "tag": "h1"
+      },
+      "left": 16,
+      "right": 24,
+      "textLeft": 16,
+      "textRight": 27,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#how.lp-how",
+      "tag": "section",
+      "top": 978,
+      "height": 1274,
+      "words": 59,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "How a payment moves",
+       "size": 43,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 46,
+      "textLeft": 16,
+      "textRight": 46,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.lp-close",
+      "tag": "section",
+      "top": 2252,
+      "height": 608,
+      "words": 21,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Make your first link",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 44,
+      "right": 90,
+      "textLeft": 44,
+      "textRight": 90,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Get paid from any chain",
+      "size": 39,
+      "top": 98,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 16,
+      "n": 3
+     },
+     {
+      "x": 44,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 5,
+    "bodySize": 17,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "no-real-pictures",
+   "width": 1440,
+   "message": "Only 0 real photograph(s) or clip(s); the rest are interface fragments.",
+   "fix": "Add two or more real pictures of the customer's world from scripts/assets.mjs, not stock of people at laptops."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/home/claude/nearzap/.taste-skill/inspect/desktop-fold.jpg",
+   "pages": [
+    "/home/claude/nearzap/.taste-skill/inspect/desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/home/claude/nearzap/.taste-skill/inspect/tablet-fold.jpg",
+   "pages": [
+    "/home/claude/nearzap/.taste-skill/inspect/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/home/claude/nearzap/.taste-skill/inspect/mobile-fold.jpg",
+   "pages": [
+    "/home/claude/nearzap/.taste-skill/inspect/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

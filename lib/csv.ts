@@ -21,7 +21,7 @@ export function invoicesToCsv(invoices: Invoice[], now = new Date()): string {
     for (const it of inv.items) {
       const amount = (Math.round(it.qty * it.unitCents) / 100).toFixed(2);
       rows.push([
-        inv.id, inv.createdAt.slice(0, 10), inv.dueDate, inv.clientName,
+        inv.id, inv.createdAt.slice(0, 10), inv.dueDate || "", inv.clientName,
         `${it.qty} x ${it.description}`, state, amount,
         paid ? paid.updatedAt.slice(0, 10) : "",
         paid ? `${paid.originSymbol} on ${paid.originChain}` : "",

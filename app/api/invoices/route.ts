@@ -1,17 +1,10 @@
 import { NextResponse } from "next/server";
-import { createInvoice, listInvoices, newId } from "@/lib/store";
+import { createInvoice, newId } from "@/lib/store";
 import { totalCents, validateInput, type InvoiceInput } from "@/lib/invoice";
 import { getTokens } from "@/lib/oneclick";
-import { refreshInvoice } from "@/lib/refresh";
 import type { Invoice } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
-
-export async function GET() {
-  const all = await listInvoices();
-  const fresh = await Promise.all(all.map(i => refreshInvoice(i.id).then(r => r ?? i)));
-  return NextResponse.json({ invoices: fresh });
-}
 
 export async function POST(req: Request) {
   let body: Partial<InvoiceInput>;
