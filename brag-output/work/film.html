@@ -1,0 +1,283 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Albert Sans";src:url(fonts/albert-latin.woff2) format("woff2");font-weight:100 900;font-display:block}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#0f0f0f}
+body{font-family:"Albert Sans",system-ui,sans-serif;color:#fff;-webkit-font-smoothing:antialiased}
+#v{position:absolute;inset:0;overflow:hidden}
+.abs{position:absolute}
+.bolt{display:block}
+/* brand top-left */
+#brand{left:120px;top:72px;display:flex;align-items:center;gap:14px;font-weight:600;font-size:28px;letter-spacing:-.01em}
+/* headlines */
+.hl{left:120px;top:0;width:760px;height:1080px;display:flex;flex-direction:column;justify-content:center}
+.eb{font-size:24px;color:#a3a3a3;font-weight:500;margin-bottom:26px;letter-spacing:.01em}
+.h{font-size:92px;line-height:1;letter-spacing:-.035em;font-weight:600}
+.h .ln{display:block}
+.h em{font-style:normal;color:#dafa9c}
+.sl{font-size:30px;color:#d6d6d6;margin-top:30px;font-weight:400}
+/* stage */
+#stage{left:960px;top:110px;width:960px;height:970px;background:#dafa9c;clip-path:polygon(9% 0,100% 0,100% 100%,0 100%,0 38%,13% 38%)}
+.card{position:absolute;left:1110px;top:210px;width:660px;height:900px;background:#fff;color:#0f0f0f;border-radius:30px 30px 0 0;padding:38px 40px;font-size:24px;overflow:hidden}
+.panel{position:absolute;left:40px;right:40px;top:38px}
+.fhead{display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:25px}
+.chip{background:#0f0f0f;color:#dafa9c;border-radius:99px;padding:6px 18px;font-size:21px;font-weight:500}
+.flabel{font-size:21px;color:#5b5b5b;margin:34px 0 2px}
+.famt{font-size:84px;font-weight:600;letter-spacing:-.03em;line-height:1.1;display:flex;align-items:baseline;gap:6px;height:96px}
+.caret{display:inline-block;width:5px;height:72px;background:#0f0f0f;margin-left:4px;transform:translateY(8px)}
+.copybtn{position:absolute;left:0;top:250px;display:inline-flex;align-items:center;gap:12px;background:#0f0f0f;color:#dafa9c;border-radius:99px;padding:20px 34px;font-weight:600;font-size:25px;transform-origin:center}
+.fsub{position:absolute;top:250px;left:0;font-size:21px;color:#5b5b5b}
+.row{position:absolute;left:0;right:0;display:flex;justify-content:space-between;background:#f1f1ec;border-radius:16px;padding:20px 24px;font-size:24px;border:2px solid transparent}
+.row b{font-weight:600;font-variant-numeric:tabular-nums}
+.get{position:absolute;left:0;right:0;top:672px;display:flex;justify-content:space-between;align-items:center;background:#0f0f0f;color:#fff;border-radius:18px;padding:24px 26px;font-size:25px}
+.get b{color:#dafa9c;font-size:29px;font-weight:600}
+/* pay view */
+.crow{position:absolute;left:0;right:0;display:flex;align-items:center;justify-content:space-between;background:#f9fafb;border:1.5px solid #e6e8ec;border-radius:18px;padding:18px 18px 18px 24px}
+.crow .k{font-size:19px;color:#667085}.crow .vv{font-size:30px;font-weight:650;margin-top:2px}.crow .mono{font-family:ui-monospace,Menlo,monospace;font-size:24px;font-weight:500}
+.ib{width:56px;height:56px;border-radius:50%;border:1.5px solid #e6e8ec;background:#fff;display:flex;align-items:center;justify-content:center}
+.steps{position:absolute;left:0;right:0;top:470px;display:flex;gap:10px}
+.step{flex:1;height:10px;border-radius:5px;background:#e6e8ec;overflow:hidden}.step i{display:block;height:100%;background:#0a9b63;width:0}
+.status{position:absolute;left:0;top:500px;font-size:21px;color:#667085}
+/* paid */
+.paidwrap{position:absolute;left:0;right:0;top:130px;display:flex;flex-direction:column;align-items:center}
+.ring{position:relative;width:220px;height:220px}
+.pc{position:absolute;inset:0;border-radius:50%;background:#0a9b63;display:flex;align-items:center;justify-content:center}
+.pt{font-size:66px;font-weight:650;letter-spacing:-.03em;margin-top:44px}
+.pr{font-size:36px;color:#0f1419;font-weight:500;margin-top:6px}
+/* embed */
+.site{position:absolute;left:1110px;top:250px;width:660px;background:#fff;color:#0f0f0f;border-radius:30px;padding:40px 42px 46px}
+.site b{display:block;font-size:22px;color:#6b6b6b;font-weight:500}
+.site span{display:block;font-size:40px;font-weight:600;letter-spacing:-.02em;margin:8px 0 28px}
+.paybtn{display:inline-flex;align-items:center;gap:14px;height:72px;padding:0 32px;border-radius:999px;background:#0f0f0f;color:#dafa9c;font-weight:600;font-size:26px;transform-origin:center}
+.code{position:absolute;left:1110px;top:610px;width:660px;height:150px;background:#0f0f0f;border-radius:24px;padding:28px 32px;font:500 21px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace;color:#d6d6d6;white-space:pre}
+.code .t{color:#dafa9c}
+/* cursor */
+#cur{left:0;top:0;width:44px;height:44px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.25))}
+.ripple{position:absolute;width:80px;height:80px;border-radius:50%;border:3px solid #0f0f0f;margin:-40px 0 0 -40px}
+/* end */
+#end{inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+#endmark{position:relative;width:220px;height:220px}
+#endmark svg{position:absolute;inset:0}
+#endname{font-size:132px;font-weight:600;letter-spacing:-.04em;margin-top:40px;line-height:1}
+#endtag{font-size:46px;color:#dafa9c;margin-top:22px;font-weight:400}
+</style></head>
+<body><div id="v">
+  <div id="brand" class="abs">
+    <svg class="bolt" width="44" height="44" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="#0b0b0b"/><rect x=".5" y=".5" width="31" height="31" rx="8.5" fill="none" stroke="#dafa9c" stroke-opacity=".35"/><polygon points="20,2.5 5.5,18.5 13.8,18.5 11.5,29.5" fill="#dafa9c"/><polygon points="20,2.5 18.2,13 26.5,13 11.5,29.5" fill="#2fd98b"/></svg>
+    <span>NearZap</span>
+  </div>
+
+  <div id="h1" class="abs hl"><div class="eb">Ten seconds</div><div class="h"><span class="ln">Type an amount.</span><span class="ln"><em>Copy the link.</em></span></div></div>
+  <div id="h2" class="abs hl"><div class="h"><span class="ln">Your client pays</span><span class="ln">with <em>whatever</em></span><span class="ln"><em>they hold.</em></span></div></div>
+  <div id="h3" class="abs hl"><div class="eb">Whenever they pay</div><div class="h"><span class="ln">Any chain.</span><span class="ln"><em>Any token.</em></span></div></div>
+  <div id="h4" class="abs hl"><div class="h"><span class="ln">You receive</span><span class="ln">exactly <em>$50.00.</em></span></div><div class="sl">No gas. Nothing to install.</div></div>
+  <div id="h5" class="abs hl"><div class="h"><span class="ln">Put a Pay button</span><span class="ln"><em>on any website.</em></span></div><div class="sl">Paste two lines.</div></div>
+
+  <div id="stage" class="abs"></div>
+
+  <div id="card" class="card">
+    <!-- A: invoice -->
+    <div id="pA" class="panel">
+      <div class="fhead"><span>Invoice for NearZap</span><span class="chip">Payment link</span></div>
+      <div class="flabel">Amount (USD)</div>
+      <div class="famt"><span>$</span><span id="amt"></span><span id="caret" class="caret"></span></div>
+      <div id="copy" class="copybtn"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#dafa9c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><g id="copyico"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></g><path id="checkico" d="M5 12.5l4.5 4.5L19 7.5" opacity="0"/></svg><span id="copytxt">Copy link</span></div>
+      <div id="fsub" class="fsub">Your client can pay with</div>
+      <div id="r0" class="row" style="top:298px"><span>USDC on Base</span><b>50.000 USDC</b></div>
+      <div id="r1" class="row" style="top:390px"><span>ETH on Ethereum</span><b>0.0272 ETH</b></div>
+      <div id="r2" class="row" style="top:482px"><span>SOL on Solana</span><b>0.6882 SOL</b></div>
+      <div id="r3" class="row" style="top:574px"><span>BTC on Bitcoin</span><b>0.000759 BTC</b></div>
+      <div id="get" class="get"><span>You receive</span><b>$50.00 USDC</b></div>
+    </div>
+    <!-- B: pay view -->
+    <div id="pB" class="panel">
+      <div class="fhead"><span>Pay Ada · $50.00</span><span class="chip">ETH on Ethereum</span></div>
+      <div id="c1" class="crow" style="top:110px"><div><div class="k">Amount to send</div><div class="vv">0.0272 ETH</div></div><div class="ib"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f1419" stroke-width="2" stroke-linecap="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></div></div>
+      <div id="c2" class="crow" style="top:250px"><div><div class="k">Address on Ethereum</div><div class="vv mono">0x7a3f…c91e</div></div><div class="ib"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f1419" stroke-width="2" stroke-linecap="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></div></div>
+      <div class="steps" id="steps"><div class="step"><i id="s0"></i></div><div class="step"><i id="s1"></i></div><div class="step"><i id="s2"></i></div></div>
+      <div class="status" id="status" style="top:500px">Waiting for your deposit</div>
+    </div>
+    <!-- C: paid -->
+    <div id="pC" class="panel">
+      <div class="paidwrap">
+        <div class="ring">
+          <svg width="220" height="220" viewBox="0 0 220 220" style="position:absolute;inset:0"><circle id="ringc" cx="110" cy="110" r="104" fill="none" stroke="#0a9b63" stroke-width="6" stroke-linecap="round" stroke-dasharray="653.5" stroke-dashoffset="653.5" transform="rotate(-90 110 110)"/></svg>
+          <div id="pcirc" class="pc"><svg width="110" height="110" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path id="pcheck" d="M5 12.5l4.5 4.5L19 7.5" stroke-dasharray="22" stroke-dashoffset="22"/></svg></div>
+        </div>
+        <div id="ptitle" class="pt">Paid</div>
+        <div id="prec" class="pr">$50.00 received</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="site" class="site"><b>Your site</b><span>Design course, $25</span>
+    <div id="paybtn" class="paybtn"><svg width="28" height="28" viewBox="0 0 32 32"><polygon points="20,2.5 5.5,18.5 13.8,18.5 11.5,29.5" fill="#dafa9c"/><polygon points="20,2.5 18.2,13 26.5,13 11.5,29.5" fill="#2fd98b"/></svg>Pay with any crypto</div>
+  </div>
+  <div id="code" class="code"></div>
+
+  <div id="ripple" class="ripple"></div>
+  <svg id="cur" class="abs" viewBox="0 0 24 24"><path d="M4 2.5l15 9.2-6.6 1.4 3.9 7.4-2.9 1.5-3.9-7.5L4.6 19z" fill="#0f0f0f" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></svg>
+
+  <div id="end" class="abs">
+    <div id="endmark">
+      <svg viewBox="0 0 32 32" width="220" height="220"><rect id="endbg" width="32" height="32" rx="9" fill="#0b0b0b"/><rect id="endstroke" x=".5" y=".5" width="31" height="31" rx="8.5" fill="none" stroke="#dafa9c" stroke-opacity=".35"/><polygon id="bA" points="20,2.5 5.5,18.5 13.8,18.5 11.5,29.5" fill="#dafa9c"/><polygon id="bB" points="20,2.5 18.2,13 26.5,13 11.5,29.5" fill="#2fd98b"/></svg>
+    </div>
+    <div id="endname">NearZap</div>
+    <div id="endtag">Get paid from any chain</div>
+  </div>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+const cl = x => Math.max(0, Math.min(1, x));
+const eo = x => x >= 1 ? 1 : 1 - Math.pow(2, -10 * x);          // expo out (site --ease)
+const ei = x => x * x * x;
+const eio = x => x < .5 ? 4*x*x*x : 1 - Math.pow(-2*x+2, 3)/2;
+const back = x => { const c = 1.5; x = x - 1; return 1 + (c + 1) * x*x*x + c * x*x; }; // slight overshoot
+const p = (t, t0, d) => cl((t - t0) / d);
+const lerp = (a, b, k) => a + (b - a) * k;
+function st(el, o, x, y, s) { el.style.opacity = o; el.style.transform = `translate(${x||0}px,${y||0}px) scale(${s==null?1:s})`; }
+
+// headline in/out by line
+const HL = [ ['h1', 0.35, 3.15], ['h2', 3.7, 7.2], ['h3', 7.7, 10.7], ['h4', 11.25, 13.7], ['h5', 14.2, 17.65] ];
+function headline(t, id, tin, tout) {
+  const root = $(id); const kids = [...root.querySelectorAll('.eb,.ln,.sl')];
+  const out = eo(p(t, tout, .35));
+  root.style.display = (t < tin - .01 || t > tout + .4) ? 'none' : 'flex';
+  kids.forEach((k, i) => {
+    const a = eo(p(t, tin + i * .09, .6));
+    k.style.opacity = a * (1 - out);
+    k.style.transform = `translateY(${(1 - a) * 34 - out * 18}px)`;
+  });
+}
+
+const CODE = `<div class="nearzap-button"\n  data-handle="ada"></div>\n<script async src=".../embed.js"></scr` + `ipt>`;
+function codeHTML(n) {
+  const s = CODE.slice(0, n).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  return s.replace(/(nearzap-button|data-handle|embed\.js)/g, '<span class="t">$1</span>');
+}
+
+// cursor path: [time, x, y]
+const CUR = [ [1.5, 1760, 900], [2.05, 1215, 520], [2.4, 1215, 520], [3.0, 1500, 1100],
+              [6.9, 1840, 980], [7.55, 1430, 630], [8.2, 1430, 630], [8.6, 1700, 1100],
+              [15.6, 1840, 1000], [16.6, 1290, 548], [17.1, 1290, 548], [17.45, 1500, 1100] ];
+function cursor(t) {
+  const c = $('cur'); let vis = 0, x = 0, y = 0;
+  for (let i = 0; i < CUR.length - 1; i += 4) {
+    const seg = CUR.slice(i, i + 4);
+    if (t >= seg[0][0] && t <= seg[3][0]) {
+      vis = 1;
+      let a, b;
+      for (let j = 0; j < 3; j++) if (t >= seg[j][0] && t <= seg[j+1][0]) { a = seg[j]; b = seg[j+1]; }
+      const k = eio(p(t, a[0], b[0] - a[0]));
+      x = lerp(a[1], b[1], k); y = lerp(a[2], b[2], k);
+      vis = cl(Math.min((t - seg[0][0]) / .2, (seg[3][0] - t) / .25));
+    }
+  }
+  c.style.opacity = vis; c.style.transform = `translate(${x - 6}px,${y - 4}px)`;
+}
+function ripple(t) {
+  const r = $('ripple'); const clicks = [[2.25, 1215, 520], [7.75, 1430, 630], [16.875, 1290, 548]];
+  let o = 0, s = 1, x = 0, y = 0;
+  for (const [tc, cx, cy] of clicks) { const k = p(t, tc, .5); if (t >= tc && k < 1) { o = (1 - k) * .55; s = .4 + eo(k) * 1.2; x = cx; y = cy; } }
+  r.style.opacity = o; r.style.left = x + 'px'; r.style.top = y + 'px'; r.style.transform = `scale(${s})`;
+}
+
+function seek(t) {
+  // brand
+  const bIn = eo(p(t, .1, .6)), bOut = eo(p(t, 17.8, .4));
+  st($('brand'), bIn * (1 - bOut), 0, (1 - bIn) * -16);
+
+  HL.forEach(h => headline(t, ...h));
+
+  // stage
+  const sgIn = eo(p(t, 0, .8)), sgOut = eio(p(t, 17.6, .45));
+  st($('stage'), 1, (1 - sgIn) * 960 + sgOut * 960, 0);
+
+  // card enter / exit (exits down at 14.0 for embed)
+  const cIn = eo(p(t, .2, .9)), cOut = ei(p(t, 13.85, .45));
+  st($('card'), 1, 0, (1 - cIn) * 900 + cOut * 950);
+  $('card').style.display = t > 14.4 ? 'none' : 'block';
+
+  // panel A
+  const aOut = ei(p(t, 8.0, .3));
+  st($('pA'), 1 - aOut, 0, -aOut * 30);
+  const typed = t < 1.0 ? '' : t < 1.25 ? '5' : '50';
+  $('amt').textContent = typed;
+  $('caret').style.opacity = (t < 2.2 && (Math.floor(t * 2.4) % 2 === 0 || (t > .9 && t < 1.5))) ? 1 : 0;
+  // copy button
+  const press = t >= 2.2 && t < 2.45 ? 1 - Math.abs((t - 2.325) / .125) : 0;
+  const copied = t >= 2.3;
+  const cbOut = eo(p(t, 3.5, .35));
+  st($('copy'), 1 - cbOut, 0, cbOut * -10, (1 - press * .05) * (1 - cbOut * .1));
+  $('copytxt').textContent = copied ? 'Link copied' : 'Copy link';
+  $('copyico').style.opacity = copied ? 0 : 1; $('checkico').style.opacity = copied ? 1 : 0;
+  $('copy').style.background = copied ? '#0a9b63' : '#0f0f0f';
+  $('copy').style.color = copied ? '#fff' : '#dafa9c';
+  $('checkico').style.stroke = '#fff';
+  // token rows on beats
+  const fsIn = eo(p(t, 3.75, .5)); st($('fsub'), fsIn, 0, (1 - fsIn) * 16);
+  [4.0, 4.5, 5.0, 5.5].forEach((tb, i) => {
+    const k = back(p(t, tb, .45)), o = eo(p(t, tb, .3));
+    const r = $('r' + i);
+    // ETH pick
+    let s = 1, bc = 'transparent', bg = '#f1f1ec', dim = 1;
+    if (i === 1) { const pk = eo(p(t, 7.7, .3)); bc = pk > 0 ? `rgba(10,155,99,${pk})` : 'transparent'; s = 1 + pk * .03 - (t > 7.7 && t < 7.85 ? .02 : 0); bg = pk > 0 ? '#e7f7ef' : bg; }
+    else dim = 1 - eo(p(t, 7.7, .3)) * .55;
+    r.style.opacity = o * dim; r.style.transform = `translateY(${(1 - k) * 40}px) scale(${s})`;
+    r.style.borderColor = bc; r.style.background = bg;
+  });
+  const gIn = back(p(t, 6.0, .5)); st($('get'), eo(p(t, 6.0, .3)), 0, (1 - gIn) * 40);
+
+  // panel B
+  const bIn2 = eo(p(t, 8.35, .55)), bOut2 = ei(p(t, 10.95, .3));
+  $('pB').style.display = t < 8.3 || t > 11.3 ? 'none' : 'block';
+  st($('pB'), bIn2 * (1 - bOut2), 0, (1 - bIn2) * 40 - bOut2 * 30);
+  [['c1', 8.5], ['c2', 8.75]].forEach(([id, tb]) => { const k = eo(p(t, tb, .5)); st($(id), k, 0, (1 - k) * 30); });
+  $('s0').style.width = (eo(p(t, 9.0, .5)) * 100) + '%';
+  $('s1').style.width = (eio(p(t, 9.5, 1.0)) * 100) + '%';
+  $('s2').style.width = (eio(p(t, 10.4, .55)) * 100) + '%';
+  $('status').textContent = t < 9.5 ? 'Waiting for your deposit' : t < 10.4 ? 'Deposit seen, swapping' : 'Settling';
+  const stIn = eo(p(t, 9.0, .4)); $('status').style.opacity = stIn;
+
+  // panel C: paid (slow on purpose, pop on downbeat 12.0)
+  $('pC').style.display = t < 11.2 ? 'none' : 'block';
+  const ringK = eio(p(t, 11.3, .7));
+  $('ringc').style.strokeDashoffset = 653.5 * (1 - ringK);
+  $('ringc').style.opacity = 1 - eo(p(t, 12.0, .3));
+  const pop = back(p(t, 12.0, .55));
+  $('pcirc').style.transform = `scale(${t < 12 ? 0 : pop})`;
+  $('pcirc').style.boxShadow = `0 0 0 ${eo(p(t, 12.1, .6)) * 18}px #e7f7ef`;
+  $('pcheck').style.strokeDashoffset = 22 * (1 - eo(p(t, 12.2, .45)));
+  const ptK = eo(p(t, 12.35, .6)); st($('ptitle'), ptK, 0, (1 - ptK) * 30);
+  const prK = eo(p(t, 12.55, .6)); st($('prec'), prK, 0, (1 - prK) * 24);
+
+  // embed (scene 5)
+  const sIn = eo(p(t, 14.2, .8)), eOut = ei(p(t, 17.45, .3));
+  $('site').style.display = $('code').style.display = (t < 14.1 || t > 17.8) ? 'none' : 'block';
+  st($('site'), 1 - eOut, 0, (1 - sIn) * 900 - eOut * 40, 1 - eOut * .04);
+  const cdIn = eo(p(t, 14.55, .8)); st($('code'), 1 - eOut, 0, (1 - cdIn) * 700 - eOut * 40, 1 - eOut * .04);
+  const nChars = Math.floor(cl((t - 15.0) / 1.4) * CODE.length);
+  $('code').innerHTML = codeHTML(nChars) + ((t > 14.9 && t < 16.9 && Math.floor(t * 3) % 2 === 0) ? '<span style="background:#dafa9c">&nbsp;</span>' : '');
+  const pp = t >= 16.75 && t < 17.05 ? 1 - Math.abs((t - 16.9) / .15) : 0;
+  $('paybtn').style.transform = `scale(${1 - pp * .05})`;
+
+  cursor(t); ripple(t);
+
+  // end card
+  const endOn = t >= 18.0;
+  $('end').style.display = endOn ? 'flex' : 'none';
+  const bgK = back(p(t, 18.15, .6));
+  $('endmark').style.transform = `scale(${lerp(.6, 1, bgK)})`;
+  $('endmark').style.opacity = eo(p(t, 18.15, .35));
+  const hA = eo(p(t, 18.35, .7)), hB = eo(p(t, 18.45, .7));
+  $('bA').style.transform = `translate(${(1 - hA) * -5}px,${(1 - hA) * -5}px)`; $('bA').style.opacity = hA;
+  $('bB').style.transform = `translate(${(1 - hB) * 5}px,${(1 - hB) * 5}px)`; $('bB').style.opacity = hB;
+  const nK = eo(p(t, 18.75, .7)); st($('endname'), nK, 0, (1 - nK) * 40);
+  const tK = eo(p(t, 19.15, .7)); st($('endtag'), tK, 0, (1 - tK) * 30);
+}
+window.seek = seek;
+window.ready = document.fonts.ready.then(() => document.fonts.load('600 92px "Albert Sans"'));
+seek(0);
+</script>
+</body></html>
