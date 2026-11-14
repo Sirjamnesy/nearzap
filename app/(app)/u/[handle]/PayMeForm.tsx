@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { Icon } from "@/components/Icon";
 
-export default function PayMeForm({ handle, first }: { handle: string; first: string }) {
-  const [amount, setAmount] = useState(""); const [note, setNote] = useState(""); const [busy, setBusy] = useState(false); const [err, setErr] = useState("");
+export default function PayMeForm({ handle, first, initialAmount = "" }: { handle: string; first: string; initialAmount?: string }) {
+  const [amount, setAmount] = useState(initialAmount); const [note, setNote] = useState(""); const [busy, setBusy] = useState(false); const [err, setErr] = useState("");
   async function go(e: React.FormEvent) {
     e.preventDefault(); setBusy(true); setErr("");
     const res = await fetch(`/api/payees/${handle}/invoice`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ amountCents: Math.round(parseFloat(amount || "0") * 100), note }) });

@@ -17,6 +17,7 @@ const P: Record<string, ReactNode> = {
   print: <><path d="M7 9V4h10v5" /><rect x="4" y="9" width="16" height="8" rx="2" /><path d="M7 14h10v6H7z" /></>,
   split: <><path d="M12 20v-6" /><path d="M12 14c0-4-6-4-6-9M12 14c0-4 6-4 6-9" /></>,
   layers: <><path d="M12 4l8 4-8 4-8-4z" /><path d="M4 12.5l8 4 8-4" /><path d="M4 16.5l8 4 8-4" /></>,
+  code: <><path d="m8 8-4 4 4 4" /><path d="m16 8 4 4-4 4" /><path d="m13.5 5-3 14" /></>,
   bot: <><rect x="5" y="8" width="14" height="10" rx="3" /><path d="M12 8V4.5" /><circle cx="12" cy="4" r="1" /><circle cx="9.3" cy="13" r="1" /><circle cx="14.7" cy="13" r="1" /></>,
   home: <><path d="M4 11l8-6.5 8 6.5" /><path d="M6 10v9h12v-9" /></>,
   download: <><path d="M12 4v11" /><path d="M7.5 11l4.5 4.5 4.5-4.5" /><path d="M5 19.5h14" /></>,
