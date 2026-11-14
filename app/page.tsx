@@ -53,15 +53,15 @@ export default function Landing() {
       </section>
 
       <section className="lp-embed">
-        <div className="lp-embed-in rise">
-          <div>
+        <div className="lp-embed-card rise">
+          <div className="lp-embed-copy">
             <h2>Put a Pay button on any website</h2>
             <p>Paste two lines. Visitors choose any chain and token, and you receive exactly what they send.</p>
-            <a className="lp-btn" href="/embed">Get your button</a>
+            <a className="lp-btn dark" href="/embed">Get your button</a>
           </div>
-          <div className="lp-embed-demo" data-ui>
+          <div className="lp-embed-demo" data-ui aria-hidden="true">
+            <div className="lp-embed-site"><b>Your site</b><span>Design course, $25</span><i className="lp-embed-pay"><Bolt />Pay with any crypto</i></div>
             <pre><code>{`<div class="nearzap-button"\n  data-handle="ada"></div>\n<script async src=".../embed.js"></script>`}</code></pre>
-            <span className="lp-embed-btn"><Bolt />Pay with any crypto</span>
           </div>
         </div>
       </section>

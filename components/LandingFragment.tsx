@@ -24,7 +24,7 @@ export default function LandingFragment() {
   const usd = useMemo(() => Math.max(0, parseFloat(amount) || 0), [amount]);
   return (
     <div className="frag" data-ui>
-      <div className="frag-head"><span>Invoice for Acme</span><span className="frag-chip">Payment link</span></div>
+      <div className="frag-head"><span>Invoice for NearZap</span><span className="frag-chip">Payment link</span></div>
       <label className="frag-label" htmlFor="frag-amount">Amount (USD)</label>
       <div className="frag-amount"><span>$</span><input id="frag-amount" inputMode="decimal" value={amount} onChange={e => setAmount(e.target.value)} aria-label="Amount in US dollars" /></div>
       <div className="frag-sub">Your client can pay with</div>

@@ -1,6 +1,6 @@
 {
  "url": "http://localhost:3222/",
- "at": "2026-11-14T17:41:03.387Z",
+ "at": "2026-11-14T18:31:53.539Z",
  "allow": [],
  "viewports": [
   {
@@ -15,9 +15,9 @@
     1
    ],
    "motion": {
-    "elements": 13,
+    "elements": 14,
     "css": 0,
-    "transitions": 13,
+    "transitions": 14,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -28,21 +28,21 @@
      "h": 900
     },
     "page": {
-     "height": 3287,
-     "screens": 3.7,
-     "words": 215,
+     "height": 3514,
+     "screens": 3.9,
+     "words": 260,
      "img": 0,
      "video": 0,
      "canvas": 0,
-     "svg": 14,
-     "sections": 4,
+     "svg": 13,
+     "sections": 5,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 5,
+     "uiFragments": 6,
      "uiAbuse": false,
      "realPictures": 0,
      "videoCount": 0,
-     "uiPictures": 4,
+     "uiPictures": 5,
      "pictureSamples": [],
      "blendText": 0,
      "sideScrollers": 0,
@@ -206,6 +206,27 @@
       "kind": "heading"
      },
      {
+      "text": "Put a Pay button on any website",
+      "words": 7,
+      "chars": 31,
+      "lines": 2,
+      "size": 57.6,
+      "vw": 4,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 1795,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
       "text": "Payroll, remittances and agents are next",
       "words": 6,
       "chars": 40,
@@ -222,7 +243,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.43,
-      "top": 1825,
+      "top": 2322,
       "tag": "h2",
       "kind": "heading"
      },
@@ -243,7 +264,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.29,
-      "top": 2045,
+      "top": 2543,
       "tag": "h2",
       "kind": "heading"
      },
@@ -252,8 +273,8 @@
       "words": 2,
       "chars": 8,
       "lines": 1,
-      "size": 230,
-      "vw": 16,
+      "size": 220,
+      "vw": 15.3,
       "font": "Albert Sans",
       "weight": 600,
       "tracking": -0.035,
@@ -264,7 +285,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 2497,
+      "top": 2946,
       "tag": "h2",
       "kind": "heading"
      },
@@ -284,14 +305,14 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.28,
-      "top": 2751,
+      "widthRatio": 0.31,
+      "top": 3190,
       "tag": "p",
       "kind": "statement"
      }
     ],
     "headingSummary": {
-     "count": 10,
+     "count": 11,
      "maxLines": 2,
      "over2Lines": 0,
      "statements": 1,
@@ -303,26 +324,33 @@
      "families": [
       {
        "family": "Albert Sans",
-       "share": 1,
+       "share": 0.93,
        "mono": false
+      },
+      {
+       "family": "monospace",
+       "share": 0.07,
+       "mono": true
       }
      ],
-     "familyCount": 1,
+     "familyCount": 2,
      "sizes": [
       15,
       16,
       17,
+      18,
       19,
       20,
       28,
       29,
       40,
       52,
+      58,
       86,
       89,
-      230
+      220
      ],
-     "sizeCount": 12,
+     "sizeCount": 14,
      "notLoaded": [],
      "body": {
       "font": "Albert Sans",
@@ -334,19 +362,21 @@
      },
      "measureChars": 50,
      "max": {
-      "size": 230,
-      "vw": 16,
+      "size": 220,
+      "vw": 15.3,
       "font": "Albert Sans",
       "text": "Near"
      },
-     "monoShare": 0,
+     "monoShare": 0.07,
      "monoProseShare": 0,
-     "monoFamilies": [],
+     "monoFamilies": [
+      "monospace"
+     ],
      "monoSamples": [],
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.06,
+     "upperShare": 0.04,
      "centerShare": 0.04,
      "smallText": 0
     },
@@ -387,37 +417,28 @@
         "s": 0,
         "l": 1
        }
-      },
-      {
-       "color": "#2fd98b",
-       "top": 2401,
-       "hsl": {
-        "h": 152,
-        "s": 0.69,
-        "l": 0.52
-       }
       }
      ],
      "textColors": [
       {
        "color": "#0f0f0f",
-       "share": 0.42
+       "share": 0.44
       },
       {
        "color": "#ffffff",
-       "share": 0.23
+       "share": 0.19
       },
       {
        "color": "#5b5b5b",
-       "share": 0.15
+       "share": 0.12
       },
       {
-       "color": "#0b0b0b",
-       "share": 0.13
+       "color": "#d6d6d6",
+       "share": 0.07
       },
       {
-       "color": "#dafa9c",
-       "share": 0.04
+       "color": "#2c3320",
+       "share": 0.06
       }
      ],
      "button": {
@@ -432,7 +453,7 @@
      "lowContrast": []
     },
     "buttons": {
-     "count": 3,
+     "count": 4,
      "inHero": 1,
      "radius": "pill",
      "height": 56,
@@ -457,7 +478,7 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 9,
+     "roundedBoxes": 12,
      "boxRadius": 20,
      "squareMedia": 0,
      "roundedMedia": 0,
@@ -467,7 +488,7 @@
     },
     "heroMedia": [],
     "nav": {
-     "links": 6,
+     "links": 7,
      "fixed": false,
      "height": 56,
      "floatingPill": false,
@@ -480,7 +501,7 @@
      "w": 1440,
      "h": 900
     },
-    "pageH": 3287,
+    "pageH": 3514,
     "margins": {
      "left": 40,
      "right": 65
@@ -533,9 +554,32 @@
       "pinned": false
      },
      {
-      "sel": "section.lp-teaser",
+      "sel": "section.lp-embed",
       "tag": "section",
       "top": 1738,
+      "height": 497,
+      "words": 46,
+      "media": 0,
+      "middle": 250,
+      "heading": {
+       "text": "Put a Pay button on any website",
+       "size": 58,
+       "tag": "h2"
+      },
+      "left": 98,
+      "right": 344,
+      "textLeft": 98,
+      "textRight": 344,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.lp-teaser",
+      "tag": "section",
+      "top": 2235,
       "height": 203,
       "words": 10,
       "media": 0,
@@ -558,7 +602,7 @@
      {
       "sel": "section.lp-close",
       "tag": "section",
-      "top": 1941,
+      "top": 2438,
       "height": 412,
       "words": 24,
       "media": 0,
@@ -581,21 +625,21 @@
      {
       "sel": "footer.lp-foot2",
       "tag": "footer",
-      "top": 2401,
-      "height": 887,
-      "words": 27,
-      "media": 2,
-      "middle": 0,
+      "top": 2850,
+      "height": 665,
+      "words": 29,
+      "media": 1,
+      "middle": 13,
       "heading": {
        "text": "Near",
-       "size": 230,
+       "size": 220,
        "tag": "h2"
       },
       "left": 60,
-      "right": 267,
+      "right": 316,
       "textLeft": 60,
-      "textRight": 267,
-      "fullBleed": true,
+      "textRight": 316,
+      "fullBleed": false,
       "footer": true,
       "hero": false,
       "continues": false,
@@ -623,11 +667,15 @@
       "n": 4
      },
      {
+      "x": 98,
+      "n": 2
+     },
+     {
       "x": 194,
       "n": 2
      }
     ],
-    "leftBlocks": 6,
+    "leftBlocks": 8,
     "bodySize": 17,
     "stage": false,
     "explains": true,
@@ -647,17 +695,18 @@
    "width": 768,
    "height": 1024,
    "load": "load",
-   "screens": 4,
+   "screens": 5,
    "filled": [
+    1,
     1,
     1,
     1,
     1
    ],
    "motion": {
-    "elements": 13,
+    "elements": 12,
     "css": 0,
-    "transitions": 13,
+    "transitions": 12,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -668,21 +717,21 @@
      "h": 1024
     },
     "page": {
-     "height": 3765,
-     "screens": 3.7,
-     "words": 200,
+     "height": 4102,
+     "screens": 4,
+     "words": 243,
      "img": 0,
      "video": 0,
      "canvas": 0,
-     "svg": 14,
-     "sections": 4,
+     "svg": 13,
+     "sections": 5,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 5,
+     "uiFragments": 6,
      "uiAbuse": false,
      "realPictures": 0,
      "videoCount": 0,
-     "uiPictures": 1,
+     "uiPictures": 2,
      "pictureSamples": [],
      "blendText": 0,
      "sideScrollers": 0,
@@ -846,6 +895,27 @@
       "kind": "heading"
      },
      {
+      "text": "Put a Pay button on any website",
+      "words": 7,
+      "chars": 31,
+      "lines": 2,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 2445,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
       "text": "Payroll, remittances and agents are next",
       "words": 6,
       "chars": 40,
@@ -862,7 +932,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.53,
-      "top": 2510,
+      "top": 3167,
       "tag": "h2",
       "kind": "heading"
      },
@@ -883,7 +953,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.38,
-      "top": 2750,
+      "top": 3407,
       "tag": "h2",
       "kind": "heading"
      },
@@ -892,8 +962,8 @@
       "words": 2,
       "chars": 8,
       "lines": 1,
-      "size": 145.9,
-      "vw": 19,
+      "size": 130.6,
+      "vw": 17,
       "font": "Albert Sans",
       "weight": 600,
       "tracking": -0.035,
@@ -904,13 +974,13 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.94,
-      "top": 3237,
+      "top": 3724,
       "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 9,
+     "count": 10,
      "maxLines": 2,
      "over2Lines": 0,
      "statements": 0,
@@ -922,11 +992,16 @@
      "families": [
       {
        "family": "Albert Sans",
-       "share": 1,
+       "share": 0.93,
        "mono": false
+      },
+      {
+       "family": "monospace",
+       "share": 0.07,
+       "mono": true
       }
      ],
-     "familyCount": 1,
+     "familyCount": 2,
      "sizes": [
       15,
       16,
@@ -934,12 +1009,13 @@
       18,
       20,
       28,
+      32,
       34,
       77,
       85,
-      146
+      131
      ],
-     "sizeCount": 10,
+     "sizeCount": 11,
      "notLoaded": [],
      "body": {
       "font": "Albert Sans",
@@ -951,20 +1027,22 @@
      },
      "measureChars": 50,
      "max": {
-      "size": 145.9,
-      "vw": 19,
+      "size": 130.6,
+      "vw": 17,
       "font": "Albert Sans",
       "text": "Near"
      },
-     "monoShare": 0,
+     "monoShare": 0.07,
      "monoProseShare": 0,
-     "monoFamilies": [],
+     "monoFamilies": [
+      "monospace"
+     ],
      "monoSamples": [],
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.06,
-     "centerShare": 0.02,
+     "upperShare": 0.05,
+     "centerShare": 0.01,
      "smallText": 0
     },
     "eyebrows": [],
@@ -1004,37 +1082,28 @@
         "s": 0,
         "l": 1
        }
-      },
-      {
-       "color": "#2fd98b",
-       "top": 3183,
-       "hsl": {
-        "h": 152,
-        "s": 0.69,
-        "l": 0.52
-       }
       }
      ],
      "textColors": [
       {
        "color": "#0f0f0f",
-       "share": 0.44
+       "share": 0.46
       },
       {
        "color": "#ffffff",
-       "share": 0.2
+       "share": 0.16
       },
       {
        "color": "#5b5b5b",
-       "share": 0.14
+       "share": 0.11
       },
       {
-       "color": "#0b0b0b",
-       "share": 0.14
+       "color": "#d6d6d6",
+       "share": 0.07
       },
       {
-       "color": "#dafa9c",
-       "share": 0.05
+       "color": "#2c3320",
+       "share": 0.07
       }
      ],
      "button": {
@@ -1049,7 +1118,7 @@
      "lowContrast": []
     },
     "buttons": {
-     "count": 4,
+     "count": 5,
      "inHero": 2,
      "radius": "pill",
      "height": 56,
@@ -1074,8 +1143,8 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 10,
-     "boxRadius": 20,
+     "roundedBoxes": 11,
+     "boxRadius": 16,
      "squareMedia": 0,
      "roundedMedia": 0,
      "mediaRadius": 0,
@@ -1097,10 +1166,10 @@
      "w": 768,
      "h": 1024
     },
-    "pageH": 3765,
+    "pageH": 4102,
     "margins": {
      "left": 23,
-     "right": 39
+     "right": 113
     },
     "sections": [
      {
@@ -1150,9 +1219,32 @@
       "pinned": false
      },
      {
-      "sel": "section.lp-teaser",
+      "sel": "section.lp-embed",
       "tag": "section",
       "top": 2414,
+      "height": 657,
+      "words": 46,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Put a Pay button on any website",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 54,
+      "right": 320,
+      "textLeft": 54,
+      "textRight": 320,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.lp-teaser",
+      "tag": "section",
+      "top": 3071,
       "height": 255,
       "words": 10,
       "media": 0,
@@ -1175,8 +1267,8 @@
      {
       "sel": "section.lp-close",
       "tag": "section",
-      "top": 2669,
-      "height": 466,
+      "top": 3326,
+      "height": 344,
       "words": 21,
       "media": 0,
       "middle": 0,
@@ -1198,21 +1290,21 @@
      {
       "sel": "footer.lp-foot2",
       "tag": "footer",
-      "top": 3183,
-      "height": 582,
-      "words": 27,
-      "media": 1,
+      "top": 3670,
+      "height": 432,
+      "words": 29,
+      "media": 0,
       "middle": 0,
       "heading": {
        "text": "Near",
-       "size": 146,
+       "size": 131,
        "tag": "h2"
       },
       "left": 23,
-      "right": 39,
+      "right": 113,
       "textLeft": 23,
-      "textRight": 39,
-      "fullBleed": true,
+      "textRight": 113,
+      "fullBleed": false,
       "footer": true,
       "hero": false,
       "continues": false,
@@ -1236,10 +1328,10 @@
      },
      {
       "x": 51,
-      "n": 2
+      "n": 4
      }
     ],
-    "leftBlocks": 6,
+    "leftBlocks": 8,
     "bodySize": 17,
     "stage": false,
     "explains": false,
@@ -1263,9 +1355,9 @@
     1
    ],
    "motion": {
-    "elements": 13,
+    "elements": 12,
     "css": 0,
-    "transitions": 13,
+    "transitions": 12,
     "scripted": 0,
     "videos": 0,
     "playingVideos": 0
@@ -1276,21 +1368,21 @@
      "h": 844
     },
     "page": {
-     "height": 3608,
-     "screens": 4.3,
-     "words": 200,
+     "height": 3943,
+     "screens": 4.7,
+     "words": 243,
      "img": 0,
      "video": 0,
      "canvas": 0,
-     "svg": 14,
-     "sections": 4,
+     "svg": 13,
+     "sections": 5,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
-     "uiFragments": 5,
+     "uiFragments": 6,
      "uiAbuse": false,
      "realPictures": 0,
      "videoCount": 0,
-     "uiPictures": 1,
+     "uiPictures": 2,
      "pictureSamples": [],
      "blendText": 0,
      "sideScrollers": 0,
@@ -1454,6 +1546,48 @@
       "kind": "heading"
      },
      {
+      "text": "Put a Pay button on any website",
+      "words": 7,
+      "chars": 31,
+      "lines": 2,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.7,
+      "top": 2316,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Design course, $25",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Albert Sans",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.51,
+      "top": 2635,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
       "text": "Payroll, remittances and agents are next",
       "words": 6,
       "chars": 40,
@@ -1470,7 +1604,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 2375,
+      "top": 3027,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1491,7 +1625,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.76,
-      "top": 2603,
+      "top": 3254,
       "tag": "h2",
       "kind": "heading"
      },
@@ -1500,8 +1634,8 @@
       "words": 2,
       "chars": 8,
       "lines": 1,
-      "size": 74.1,
-      "vw": 19,
+      "size": 66.3,
+      "vw": 17,
       "font": "Albert Sans",
       "weight": 600,
       "tracking": -0.035,
@@ -1512,13 +1646,13 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.92,
-      "top": 3089,
+      "top": 3570,
       "tag": "h2",
       "kind": "heading"
      }
     ],
     "headingSummary": {
-     "count": 9,
+     "count": 11,
      "maxLines": 2,
      "over2Lines": 0,
      "statements": 0,
@@ -1530,11 +1664,16 @@
      "families": [
       {
        "family": "Albert Sans",
-       "share": 1,
+       "share": 0.93,
        "mono": false
+      },
+      {
+       "family": "monospace",
+       "share": 0.07,
+       "mono": true
       }
      ],
-     "familyCount": 1,
+     "familyCount": 2,
      "sizes": [
       15,
       16,
@@ -1542,12 +1681,13 @@
       18,
       20,
       28,
+      32,
       34,
       39,
       43,
-      74
+      66
      ],
-     "sizeCount": 10,
+     "sizeCount": 11,
      "notLoaded": [],
      "body": {
       "font": "Albert Sans",
@@ -1559,20 +1699,22 @@
      },
      "measureChars": 42,
      "max": {
-      "size": 74.1,
-      "vw": 19,
+      "size": 66.3,
+      "vw": 17,
       "font": "Albert Sans",
       "text": "Near"
      },
-     "monoShare": 0,
+     "monoShare": 0.07,
      "monoProseShare": 0,
-     "monoFamilies": [],
+     "monoFamilies": [
+      "monospace"
+     ],
      "monoSamples": [],
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.06,
-     "centerShare": 0.02,
+     "upperShare": 0.05,
+     "centerShare": 0.01,
      "smallText": 0
     },
     "eyebrows": [],
@@ -1612,37 +1754,28 @@
         "s": 0,
         "l": 1
        }
-      },
-      {
-       "color": "#2fd98b",
-       "top": 3049,
-       "hsl": {
-        "h": 152,
-        "s": 0.69,
-        "l": 0.52
-       }
       }
      ],
      "textColors": [
       {
        "color": "#0f0f0f",
-       "share": 0.44
+       "share": 0.46
       },
       {
        "color": "#ffffff",
-       "share": 0.2
+       "share": 0.16
       },
       {
        "color": "#5b5b5b",
-       "share": 0.14
+       "share": 0.11
       },
       {
-       "color": "#0b0b0b",
-       "share": 0.14
+       "color": "#d6d6d6",
+       "share": 0.07
       },
       {
-       "color": "#dafa9c",
-       "share": 0.05
+       "color": "#2c3320",
+       "share": 0.07
       }
      ],
      "button": {
@@ -1657,7 +1790,7 @@
      "lowContrast": []
     },
     "buttons": {
-     "count": 4,
+     "count": 5,
      "inHero": 2,
      "radius": "pill",
      "height": 56,
@@ -1682,8 +1815,8 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 10,
-     "boxRadius": 20,
+     "roundedBoxes": 11,
+     "boxRadius": 16,
      "squareMedia": 0,
      "roundedMedia": 0,
      "mediaRadius": 0,
@@ -1705,10 +1838,10 @@
      "w": 390,
      "h": 844
     },
-    "pageH": 3608,
+    "pageH": 3943,
     "margins": {
      "left": 16,
-     "right": 16
+     "right": 27
     },
     "sections": [
      {
@@ -1758,9 +1891,32 @@
       "pinned": false
      },
      {
-      "sel": "section.lp-teaser",
+      "sel": "section.lp-embed",
       "tag": "section",
       "top": 2292,
+      "height": 651,
+      "words": 46,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Put a Pay button on any website",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 40,
+      "right": 45,
+      "textLeft": 40,
+      "textRight": 45,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.lp-teaser",
+      "tag": "section",
+      "top": 2944,
       "height": 243,
       "words": 10,
       "media": 0,
@@ -1783,8 +1939,8 @@
      {
       "sel": "section.lp-close",
       "tag": "section",
-      "top": 2535,
-      "height": 466,
+      "top": 3186,
+      "height": 344,
       "words": 21,
       "media": 0,
       "middle": 0,
@@ -1806,21 +1962,21 @@
      {
       "sel": "footer.lp-foot2",
       "tag": "footer",
-      "top": 3049,
-      "height": 559,
-      "words": 27,
-      "media": 1,
+      "top": 3530,
+      "height": 413,
+      "words": 29,
+      "media": 0,
       "middle": 0,
       "heading": {
        "text": "Near",
-       "size": 74,
+       "size": 66,
        "tag": "h2"
       },
       "left": 16,
-      "right": 16,
+      "right": 53,
       "textLeft": 16,
-      "textRight": 16,
-      "fullBleed": true,
+      "textRight": 53,
+      "fullBleed": false,
       "footer": true,
       "hero": false,
       "continues": false,
@@ -1843,11 +1999,11 @@
       "n": 4
      },
      {
-      "x": 44,
-      "n": 2
+      "x": 40,
+      "n": 4
      }
     ],
-    "leftBlocks": 6,
+    "leftBlocks": 8,
     "bodySize": 17,
     "stage": false,
     "explains": false,
@@ -1864,7 +2020,7 @@
    "level": "WARN",
    "id": "size-count",
    "width": 1440,
-   "message": "12 different font sizes (15, 16, 17, 19, 20, 28, 29, 40, 52, 86, 89, 230).",
+   "message": "14 different font sizes (15, 16, 17, 18, 19, 20, 28, 29, 40, 52, 58, 86, 89, 220).",
    "fix": "A page needs about five: display, heading, lead, body, small.",
    "alsoAt": [
     768,
@@ -1890,17 +2046,21 @@
    "id": "off-centre",
    "width": 1440,
    "message": "The margins differ: 40px on the left, 65px on the right, at 1440px.",
-   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page.",
-   "alsoAt": [
-    768
-   ]
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
   },
   {
    "level": "WARN",
    "id": "still-page",
    "width": 1440,
-   "message": "Little motion: 13 element(s) moved while the page loaded and scrolled.",
+   "message": "Little motion: 14 element(s) moved while the page loaded and scrolled.",
    "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  },
+  {
+   "level": "FAIL",
+   "id": "off-centre",
+   "width": 768,
+   "message": "The page sits off-centre: its content comes to 23px from the left edge but only to 113px from the right, at 768px.",
+   "fix": "Give the page one pair of equal margins. Check the wrapper for a max-width without margin-inline: auto, a grid with an empty last column, or padding on one side only. If one side is meant to hold air, it must still be closed by something that reaches the margin (a picture, the navigation's last item, a figure)."
   }
  ],
  "images": [
