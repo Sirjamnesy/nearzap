@@ -35,9 +35,10 @@ export function Icon({ name, size = 18, className }: { name: keyof typeof P | st
 export function Logo({ size = 28 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden="true">
-      <defs><linearGradient id="nz-bolt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#dafa9c" /><stop offset="1" stopColor="#2fd98b" /></linearGradient></defs>
-      <rect width="32" height="32" rx="10" fill="#0f0f0f" />
-      <path d="M19.4 3.8L6.8 18.6h7.5l-1.9 9.6L25.2 13.4h-7.4z" fill="url(#nz-bolt)" stroke="url(#nz-bolt)" strokeWidth="1" strokeLinejoin="round" />
+      <rect width="32" height="32" rx="9" fill="#0b0b0b" />
+      <rect x=".5" y=".5" width="31" height="31" rx="8.5" fill="none" stroke="#dafa9c" strokeOpacity=".35" />
+      <polygon points="20,2.5 5.5,18.5 13.8,18.5 11.5,29.5" fill="#dafa9c" />
+      <polygon points="20,2.5 18.2,13 26.5,13 11.5,29.5" fill="#2fd98b" />
     </svg>
   );
 }

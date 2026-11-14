@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import { refreshInvoice } from "@/lib/refresh";
-import { formatUsd, invoiceState, partsOf } from "@/lib/invoice";
+import { formatUsd, invoiceState, partsOf, partState } from "@/lib/invoice";
 import PayPanel from "./PayPanel";
+import OwnerGate from "./OwnerGate";
 
 export const dynamic = "force-dynamic";
 
@@ -18,6 +19,11 @@ export default async function InvoicePage({ params }: { params: Promise<{ id: st
     receiveLabel: inv.receive ? `${inv.receive.symbol} on ${inv.receive.blockchain}` : "USDC on NEAR",
     deliverLabel: inv.payout === "intents-balance" ? "NEAR Intents balance" : "Wallet",
   };
+  const receivedCents = parts.reduce((sum, p, n) => sum + (partState(inv, n) === "paid" ? p.cents : 0), 0);
+  const owner = {
+    id: inv.id, state, totalLabel: formatUsd(inv.totalCents), receivedLabel: formatUsd(receivedCents), multi: parts.length > 1, paid: state === "paid",
+    parts: parts.map((p, i) => ({ label: p.label, amount: formatUsd(p.cents), state: partState(inv, i) })),
+  };
   const showItems = inv.items.length > 1 || (inv.items[0] && !["Payment request", `Payment to ${inv.freelancerName}`].includes(inv.items[0].description));
   return (
     <>
@@ -31,9 +37,9 @@ export default async function InvoicePage({ params }: { params: Promise<{ id: st
             {inv.items.map((it, n) => (<tr key={n}><td>{it.description}</td><td className="r">{it.qty}</td><td className="r">{formatUsd(Math.round(it.qty * it.unitCents))}</td></tr>))}
           </tbody></table>)}
         {inv.memo && <p className="mut">{inv.memo}</p>}
-        <p className="hint">Pay from any supported chain with the token you already hold.</p>
+        
       </div>
-      <PayPanel info={info} initialAttempts={inv.attempts} />
+      <OwnerGate data={owner}><PayPanel info={info} initialAttempts={inv.attempts} /></OwnerGate>
     </>
   );
 }

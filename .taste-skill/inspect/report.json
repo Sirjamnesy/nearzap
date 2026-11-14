@@ -1,14 +1,15 @@
 {
  "url": "http://localhost:3222/",
- "at": "2026-11-14T17:08:26.884Z",
+ "at": "2026-11-14T17:30:46.172Z",
  "allow": [],
  "viewports": [
   {
    "width": 1440,
    "height": 900,
    "load": "load",
-   "screens": 3,
+   "screens": 4,
    "filled": [
+    1,
     1,
     1,
     1
@@ -27,13 +28,13 @@
      "h": 900
     },
     "page": {
-     "height": 2415,
-     "screens": 2.7,
+     "height": 2710,
+     "screens": 3,
      "words": 199,
      "img": 0,
      "video": 0,
      "canvas": 0,
-     "svg": 7,
+     "svg": 8,
      "sections": 4,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
@@ -205,9 +206,9 @@
       "kind": "heading"
      },
      {
-      "text": "Local currencies and agents are next",
+      "text": "Payroll, remittances and agents are next",
       "words": 6,
-      "chars": 36,
+      "chars": 40,
       "lines": 2,
       "size": 51.8,
       "vw": 3.6,
@@ -402,7 +403,7 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 9,
+     "roundedBoxes": 10,
      "boxRadius": 20,
      "squareMedia": 0,
      "roundedMedia": 0,
@@ -425,7 +426,7 @@
      "w": 1440,
      "h": 900
     },
-    "pageH": 2415,
+    "pageH": 2710,
     "margins": {
      "left": 40,
      "right": 40
@@ -484,9 +485,9 @@
       "height": 203,
       "words": 10,
       "media": 0,
-      "middle": 631,
+      "middle": 559,
       "heading": {
-       "text": "Local currencies and agents are next",
+       "text": "Payroll, remittances and agents are next",
        "size": 52,
        "tag": "h2"
       },
@@ -517,6 +518,25 @@
       "right": 273,
       "textLeft": 194,
       "textRight": 273,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div.lp-motif",
+      "tag": "div",
+      "top": 2365,
+      "height": 259,
+      "words": 0,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 40,
+      "right": 40,
+      "textLeft": null,
+      "textRight": null,
       "fullBleed": false,
       "footer": true,
       "hero": false,
@@ -590,13 +610,13 @@
      "h": 1024
     },
     "page": {
-     "height": 3316,
-     "screens": 3.2,
+     "height": 3522,
+     "screens": 3.4,
      "words": 184,
      "img": 0,
      "video": 0,
      "canvas": 0,
-     "svg": 7,
+     "svg": 8,
      "sections": 4,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
@@ -768,9 +788,9 @@
       "kind": "heading"
      },
      {
-      "text": "Local currencies and agents are next",
+      "text": "Payroll, remittances and agents are next",
       "words": 6,
-      "chars": 36,
+      "chars": 40,
       "lines": 2,
       "size": 34,
       "vw": 4.4,
@@ -862,7 +882,7 @@
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.07,
+     "upperShare": 0.06,
      "centerShare": 0.02,
      "smallText": 0
     },
@@ -964,7 +984,7 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 10,
+     "roundedBoxes": 11,
      "boxRadius": 20,
      "squareMedia": 0,
      "roundedMedia": 0,
@@ -987,7 +1007,7 @@
      "w": 768,
      "h": 1024
     },
-    "pageH": 3316,
+    "pageH": 3522,
     "margins": {
      "left": 23,
      "right": 150
@@ -1048,7 +1068,7 @@
       "media": 0,
       "middle": 0,
       "heading": {
-       "text": "Local currencies and agents are next",
+       "text": "Payroll, remittances and agents are next",
        "size": 34,
        "tag": "h2"
       },
@@ -1086,9 +1106,28 @@
       "pinned": false
      },
      {
+      "sel": "div.lp-motif",
+      "tag": "div",
+      "top": 3147,
+      "height": 170,
+      "words": 0,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": null,
+      "right": null,
+      "textLeft": null,
+      "textRight": null,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
       "sel": "footer.lp-foot.rise",
       "tag": "footer",
-      "top": 3135,
+      "top": 3341,
       "height": 181,
       "words": 11,
       "media": 0,
@@ -1140,8 +1179,9 @@
    "width": 390,
    "height": 844,
    "load": "load",
-   "screens": 4,
+   "screens": 5,
    "filled": [
+    1,
     1,
     1,
     1,
@@ -1161,13 +1201,13 @@
      "h": 844
     },
     "page": {
-     "height": 3181,
-     "screens": 3.8,
+     "height": 3387,
+     "screens": 4,
      "words": 184,
      "img": 0,
      "video": 0,
      "canvas": 0,
-     "svg": 7,
+     "svg": 8,
      "sections": 4,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
@@ -1339,9 +1379,9 @@
       "kind": "heading"
      },
      {
-      "text": "Local currencies and agents are next",
+      "text": "Payroll, remittances and agents are next",
       "words": 6,
-      "chars": 36,
+      "chars": 40,
       "lines": 2,
       "size": 34,
       "vw": 8.7,
@@ -1433,7 +1473,7 @@
      "microLabels": 0,
      "microLabelShare": 0,
      "microSamples": [],
-     "upperShare": 0.07,
+     "upperShare": 0.06,
      "centerShare": 0.02,
      "smallText": 0
     },
@@ -1535,7 +1575,7 @@
      "outlinedBoxes": 0,
      "dashed": 0,
      "blurred": 0,
-     "roundedBoxes": 10,
+     "roundedBoxes": 11,
      "boxRadius": 20,
      "squareMedia": 0,
      "roundedMedia": 0,
@@ -1558,7 +1598,7 @@
      "w": 390,
      "h": 844
     },
-    "pageH": 3181,
+    "pageH": 3387,
     "margins": {
      "left": 16,
      "right": 27
@@ -1619,14 +1659,14 @@
       "media": 0,
       "middle": 0,
       "heading": {
-       "text": "Local currencies and agents are next",
+       "text": "Payroll, remittances and agents are next",
        "size": 34,
        "tag": "h2"
       },
       "left": 16,
-      "right": 55,
+      "right": 73,
       "textLeft": 16,
-      "textRight": 55,
+      "textRight": 73,
       "fullBleed": false,
       "footer": false,
       "hero": false,
@@ -1657,9 +1697,28 @@
       "pinned": false
      },
      {
+      "sel": "div.lp-motif",
+      "tag": "div",
+      "top": 3013,
+      "height": 170,
+      "words": 0,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": null,
+      "right": null,
+      "textLeft": null,
+      "textRight": null,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
       "sel": "footer.lp-foot.rise",
       "tag": "footer",
-      "top": 3001,
+      "top": 3207,
       "height": 181,
       "words": 11,
       "media": 0,

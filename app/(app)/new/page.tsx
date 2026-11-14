@@ -107,6 +107,7 @@ export default function NewInvoice() {
         {mode === "milestones" ? <p className="total">{usd(msTotal)} <span className="mut">from your payments below</span></p>
           : detailed ? <p className="total">{usd(baseTotal)}</p>
           : <input inputMode="decimal" style={{ fontSize: 30, fontWeight: 700 }} value={amount} onChange={e => setAmount(e.target.value)} placeholder="0.00" required />}
+        <label>Client name (optional)</label><input value={f.clientName} onChange={set("clientName")} placeholder="Who is this for?" />
         {!detailed && mode !== "milestones" && <><label>What's it for? (optional)</label><input value={what} onChange={e => setWhat(e.target.value)} placeholder="e.g. Logo design" /></>}
         {detailed && mode !== "milestones" && (<>
           <h2 style={{ marginTop: 14 }}>Line items</h2>
@@ -121,7 +122,6 @@ export default function NewInvoice() {
         </>)}
         {mode !== "milestones" && <p><button type="button" className="sec" onClick={() => { if (!detailed && amount) setItems([{ description: what, qty: "1", price: amount }]); setDetailed(!detailed); }}>{detailed ? "Back to a single amount" : <><Icon name="plus" size={16} /> Add line items</>}</button></p>}
         <p className="hint">{detailed ? "Back to a single amount: switches to one simple total." : "Add line items: itemise the invoice (description, quantity, price per line). Optional."}</p>
-        <label>Client name (optional)</label><input value={f.clientName} onChange={set("clientName")} placeholder="Who is this for?" />
       </div>
 
       <div className="card">

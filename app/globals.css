@@ -79,3 +79,10 @@ button.sec,.btn.sec,.iconbtn,.backbtn{color:var(--fg)}
 .pill{background:#fbfdf6}
 ::selection{background:var(--lime)}
 @media(max-width:560px){main{padding-bottom:calc(70px + env(safe-area-inset-bottom))}}
+
+/* header: thumb-sized buttons */
+.navlink{min-height:44px;min-width:44px;justify-content:center}.navlink svg{width:22px;height:22px}
+.avatar{width:44px;height:44px;font-size:15px}
+@media(max-width:560px){header.top{padding:10px 12px}header.top nav{gap:8px}.navlink{width:44px;height:44px;padding:0;border:1px solid var(--line);background:#fff}.navlink svg{width:22px;height:22px}}
+.badge.big{font-size:14px;padding:5px 14px;text-transform:capitalize}
+.statusline{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0}

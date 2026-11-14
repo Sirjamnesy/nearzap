@@ -22,6 +22,10 @@ Freelancers with international clients get paid in whatever the client happens t
 - **Accountant CSV** of your invoices.
 - **Profile** remembers your name, NEAR account and defaults on this device. There is no login: invoices you create are kept in your browser, and a Pay me page is edited with a private key stored on your device.
 
+## Where it goes next
+
+The 6-month plan lives at `/roadmap`: alerts and recurring invoices, then payroll, remittances and local currencies, then agents that earn, spend, negotiate and pay for services, plus shared budgets and community rewards with Sputnik DAO and Trezu. None of that is built yet; the submission covers the invoicing product above.
+
 ## How NEAR is used
 
 | Piece | What it does here |

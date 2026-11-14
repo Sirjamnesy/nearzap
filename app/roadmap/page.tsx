@@ -7,8 +7,8 @@ export const metadata: Metadata = { title: "NearZap roadmap: the next 6 months",
 
 const phases = [
   { cls: "p1", when: "Months 1 and 2", title: "Get paid, get told", items: ["Email and push alerts the moment you are paid", "Recurring invoices and gentle payment reminders", "Accounts, so your invoices follow you across devices"] },
-  { cls: "p2", when: "Months 3 and 4", title: "Local money", items: ["Invoice in naira, cedi, shilling, euro or pound, priced live", "Cash out to a local bank or mobile money through partners", "Shared workspaces for small teams and agencies"] },
-  { cls: "p3", when: "Months 5 and 6", title: "Agents and embeds", items: ["Agents that invoice and pay each other, built on the pay endpoint", "An embeddable Pay button for any website", "Tax-ready reports and exports for your accountant"] },
+  { cls: "p2", when: "Months 3 and 4", title: "Payroll, remittances and local money", items: ["Payroll: pay a whole team in one run, each person in the token they choose", "Remittances: send money home with a link, received in local currency", "Invoice in naira, cedi, shilling, euro or pound, priced live", "Cash out to a local bank or mobile money through partners"] },
+  { cls: "p3", when: "Months 5 and 6", title: "Agents and shared money", items: ["Agents that earn, spend, negotiate and pay for services or other agents", "Shared budgets, community rewards and collective ownership with Sputnik DAO and Trezu", "An embeddable Pay button and tax-ready reports"] },
 ];
 
 export default function Roadmap() {
