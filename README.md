@@ -22,9 +22,9 @@ Freelancers with international clients get paid in whatever the client happens t
 - **Accountant CSV** of your invoices.
 - **Profile** remembers your name, NEAR account and defaults on this device. There is no login: invoices you create are kept in your browser, and a Pay me page is edited with a private key stored on your device.
 
-## Pay button for any site
+## Checkout button for any site
 
-`/embed` generates a two-line snippet (`public/embed.js`) that renders a Pay button linking to your Pay me page, with an optional prefilled amount. No keys, nothing to host.
+`/embed` generates a two-line snippet (`public/embed.js`) that renders a Pay button linking to your Pay me page, with an optional prefilled amount. No keys, nothing to host. It is a link to a Pay me page, not yet a full on-page checkout or a Shopify app (both on the roadmap).
 
 ## Where it goes next
 

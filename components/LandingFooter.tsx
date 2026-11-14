@@ -15,7 +15,7 @@ export default function LandingFooter() {
           <svg viewBox="0 0 24 24" {...stroke}><path d="M21 12a8.5 8.5 0 0 1-12.4 7.5L3 21l1.6-5.4A8.5 8.5 0 1 1 21 12z" /></svg>
         </div>
         <nav className="lp-foot2-nav" aria-label="Footer">
-          <a href="/roadmap">Roadmap</a><a href="/invoices">Invoices</a><a href="/profile">Pay me page</a><a href="/agents">For agents</a><a href="/embed">Pay button</a>
+          <a href="/roadmap">Roadmap</a><a href="/invoices">Invoices</a><a href="/profile">Pay me page</a><a href="/agents">For agents</a><a href="/embed">Checkout button</a>
         </nav>
         <p className="lp-foot2-fine">© 2026 NearZap. Built solo for the NEAR Hackathon.</p>
       </div>

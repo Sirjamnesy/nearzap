@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Logo } from "./Icon";
 
-const links = [["#how", "How it works"], ["/roadmap", "Roadmap"], ["/profile", "Pay me page"], ["/agents", "For agents"], ["/embed", "Pay button"], ["/invoices", "Open app"]];
+const links = [["#how", "How it works"], ["/roadmap", "Roadmap"], ["/profile", "Pay me page"], ["/agents", "For agents"], ["/embed", "Checkout button"], ["/invoices", "Open app"]];
 
 /** Landing header: inline links on desktop, a hamburger sheet on phones. */
 export default function LandingNav() {
