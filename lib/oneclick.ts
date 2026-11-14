@@ -56,10 +56,15 @@ export function findPayoutAsset(tokens: TokenInfo[]): TokenInfo {
   return t;
 }
 
-/** Tokens a payer may choose: anything except the payout asset itself, stable + major assets first. */
+/** Major assets a payer is likely to hold. The live list has hundreds of long-tail and deprecated tokens; a checkout should not show them. */
+const COMMON = ["USDC", "USDT", "USDT0", "DAI", "ETH", "WETH", "BTC", "WBTC", "cbBTC", "SOL", "NEAR", "wNEAR", "BNB", "AVAX", "POL", "ARB", "OP", "XRP", "DOGE", "LTC", "SUI", "TRX", "ADA", "APT", "TON"];
+
+/** Tokens a payer may choose: common assets with a price, never deprecated, stablecoins first. The payout asset itself stays selectable (an on-NEAR payer pays in USDC directly). */
 export function payableTokens(tokens: TokenInfo[]): TokenInfo[] {
-  const rank = (t: TokenInfo) => (["USDC", "USDT"].includes(t.symbol.toUpperCase()) ? 0 : ["ETH", "BTC", "SOL", "NEAR", "wNEAR"].includes(t.symbol) ? 1 : 2);
-  return tokens.filter(t => t.price !== undefined).sort((a, b) => rank(a) - rank(b) || a.symbol.localeCompare(b.symbol) || a.blockchain.localeCompare(b.blockchain));
+  const order = (t: TokenInfo) => COMMON.indexOf(t.symbol);
+  return tokens
+    .filter(t => (t.price ?? 0) > 0 && !/deprecated/i.test(t.symbol) && COMMON.includes(t.symbol))
+    .sort((a, b) => order(a) - order(b) || a.blockchain.localeCompare(b.blockchain));
 }
 
 // ---------- quote ----------

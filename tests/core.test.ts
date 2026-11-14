@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { centsToUsdcUnits, formatUnits, formatUsd, invoiceState, totalCents, validateInput, validNearAccount } from "../lib/invoice";
 import { invoicesToCsv, CSV_HEADER } from "../lib/csv";
-import { buildQuoteRequest, extractTxHashes, normaliseStatus, findPayoutAsset } from "../lib/oneclick";
+import { buildQuoteRequest, extractTxHashes, normaliseStatus, findPayoutAsset, payableTokens } from "../lib/oneclick";
 import type { Invoice, PaymentAttempt, TokenInfo } from "../lib/types";
 
 const attempt = (over: Partial<PaymentAttempt> = {}): PaymentAttempt => ({
@@ -69,5 +69,13 @@ describe("1click mapping", () => {
     expect(extractTxHashes({})).toEqual([]);
     expect(extractTxHashes({ swapDetails: { originChainTxHashes: [{ hash: "0x1", explorerUrl: "https://e/0x1" }], destinationChainTxHashes: [{ hash: "N1" }] } }))
       .toEqual([{ kind: "origin", hash: "0x1", url: "https://e/0x1" }, { kind: "destination", hash: "N1", url: undefined }]);
+  });
+});
+
+describe("payable token list", () => {
+  const T = (symbol: string, blockchain: string, price: number | undefined = 1): TokenInfo => ({ assetId: `${symbol}-${blockchain}`, decimals: 6, blockchain, symbol, price });
+  it("keeps common priced assets, drops deprecated, unpriced and long-tail tokens, stablecoins first", () => {
+    const out = payableTokens([T("ETH", "eth", 1800), T("PEPE", "eth", 0.1), T("USDC(DEPRECATED)", "bsc"), T("USDC", "base"), T("ABG", "near", 0), T("USDT", "eth"), T("SOL", "sol", 0)]);
+    expect(out.map(t => t.symbol)).toEqual(["USDC", "USDT", "ETH"]);
   });
 });
