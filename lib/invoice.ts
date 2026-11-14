@@ -65,6 +65,8 @@ export function validNearAccount(a: string): boolean {
   return a.length >= 2 && a.length <= 64 && NEAR_ACCOUNT.test(a);
 }
 
+/** 1Click caps app fees at 5% (500 bps) per quote. The share is paid as an app fee, grossed up so the payer still pays about the invoice amount, so 4% keeps it under the cap. */
+export const MAX_SPLIT_TOTAL = 4;
 const EVM = ["eth", "base", "arb", "op", "bsc", "pol", "avax", "gnosis", "bera", "monad", "aurora", "adi", "xlayer", "plasma"];
 /** Format check for an address on a chain. Strict where the format is well known, lenient otherwise. */
 export function validAddress(chain: string, a: string): boolean {
@@ -106,13 +108,13 @@ export function validateInput(i: Partial<InvoiceInput>): string[] {
     if (i.parts.reduce((s, p) => s + p.cents, 0) !== total) e.push("Payments must add up to the invoice total.");
   }
   if (i.splits?.length) {
-    if (i.splits.length > 2) e.push("At most 2 split recipients.");
+    if (i.splits.length > 2) e.push("At most 2 recipients.");
     for (const sp of i.splits) {
       if (!validNearAccount(sp.account ?? "")) e.push("Split recipients must be NEAR accounts.");
-      if (!(sp.percent >= 1 && sp.percent <= 40)) e.push("Each split must be between 1% and 40%.");
+      if (!(sp.percent >= 1 && sp.percent <= MAX_SPLIT_TOTAL)) e.push(`Each share must be between 1% and ${MAX_SPLIT_TOTAL}%.`);
       if (sp.account === i.freelancerNear) e.push("A split recipient must be a different account from yours.");
     }
-    if (i.splits.reduce((s, x) => s + x.percent, 0) > 50) e.push("Splits cannot total more than 50%.");
+    if (i.splits.reduce((s, x) => s + x.percent, 0) > MAX_SPLIT_TOTAL) e.push(`Shares cannot total more than ${MAX_SPLIT_TOTAL}%.`);
   }
   return e;
 }

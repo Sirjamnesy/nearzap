@@ -9,7 +9,7 @@ export async function GET() {
   const origin = tokens.find(t => t.symbol === "USDC" && t.blockchain === "base");
   if (!origin) return NextResponse.json({ error: "no base usdc" });
   const inv = { id: "diag", createdAt: "", currency: "USDC", payout: "intents-balance", freelancerName: "x", freelancerNear: "6370077e1dc2f04a3f3a714c93fc3b789c7121a1f35a7a5eeb3b423c7b6d0d53",
-    clientName: "c", items: [], totalCents: 100, dueDate: "", attempts: [], splits: [{ account: "near", percent: 20 }] } as unknown as Invoice;
+    clientName: "c", items: [], totalCents: 100, dueDate: "", attempts: [], splits: [{ account: "near", percent: 4 }] } as unknown as Invoice;
   const out: Record<string, unknown> = { request: buildQuoteRequest({ invoice: inv, origin, refundTo: "0x0000000000000000000000000000000000000001", dry: true }, receiveAssetFor(inv, tokens)) };
   try { const q = await requestQuote({ invoice: inv, origin, refundTo: "0x0000000000000000000000000000000000000001", dry: true }); out.ok = { amountIn: q.amountInFormatted, symbol: q.originSymbol }; }
   catch (e: any) { out.error = e.message; }
